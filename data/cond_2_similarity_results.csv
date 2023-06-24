@@ -1,0 +1,1471 @@
+trial,block,stimId1,stimID2,category1,category2,response,rt,condition,id,phase
+1,0,C1250,A250,Alpha,Alpha,0.0,4057,2,12160,similarity
+2,0,C1250,B750,Gamma,Beta,0.9999999999999998,5683,2,12160,similarity
+3,0,C1250,B850,Gamma,Beta,2.0,2330,2,12160,similarity
+4,0,C1250,C1050,Gamma,Gamma,3.0,2098,2,12160,similarity
+5,0,C1250,B550,Gamma,Beta,0.9999999999999998,2464,2,12160,similarity
+6,0,C1250,C1150,Gamma,Gamma,4.0,2332,2,12160,similarity
+7,0,C1250,B950,Gamma, Beta,3.0,1546,2,12160,similarity
+8,0,C1250,A50,Gamma,Alpha,0.0,2659,2,12160,similarity
+9,0,C1250,A150,Gamma,Alpha,0.0,1363,2,12160,similarity
+10,0,C1250,B650,Gamma,Beta,2.0,2932,2,12160,similarity
+11,0,C1250,C1450,Gamma,Gamma,5.0,4653,2,12160,similarity
+12,0,C1250,A450,Gamma,Alpha,2.0,3572,2,12160,similarity
+13,0,C1250,C1350,Gamma,Gamma,5.0,2578,2,12160,similarity
+14,0,C1250,A350,Gamma,Alpha,0.9999999999999998,6722,2,12160,similarity
+2,1,A250,B750,Alpha,Beta,0.9999999999999998,3599,2,12160,similarity
+3,1,A250,B850,Alpha,Beta,0.0,2043,2,12160,similarity
+4,1,A250,C1050,Alpha,Gamma,0.0,1074,2,12160,similarity
+5,1,A250,B550,Alpha,Beta,0.9999999999999998,2159,2,12160,similarity
+6,1,A250,C1150,Alpha,Gamma,0.0,2027,2,12160,similarity
+7,1,A250,B950,Alpha, Beta,0.0,824,2,12160,similarity
+8,1,A250,A50,Alpha,Alpha,0.9999999999999998,3155,2,12160,similarity
+9,1,A250,A150,Alpha,Alpha,2.0,1881,2,12160,similarity
+10,1,A250,B650,Alpha,Beta,2.0,2864,2,12160,similarity
+11,1,A250,C1450,Alpha,Gamma,0.0,2667,2,12160,similarity
+12,1,A250,A450,Alpha,Alpha,3.0,13171,2,12160,similarity
+13,1,A250,C1350,Alpha,Gamma,0.0,1844,2,12160,similarity
+14,1,A250,A350,Alpha,Alpha,3.0,2406,2,12160,similarity
+3,2,B750,B850,Beta,Beta,4.0,1717,2,12160,similarity
+4,2,B750,C1050,Beta,Gamma,3.0,1679,2,12160,similarity
+5,2,B750,B550,Beta,Beta,3.0,2697,2,12160,similarity
+6,2,B750,C1150,Beta,Gamma,2.0,2075,2,12160,similarity
+7,2,B750,B950,Beta, Beta,4.0,7605,2,12160,similarity
+8,2,B750,A50,Beta,Alpha,0.0,1724,2,12160,similarity
+9,2,B750,A150,Beta,Alpha,0.0,1115,2,12160,similarity
+10,2,B750,B650,Beta,Beta,3.0,2321,2,12160,similarity
+11,2,B750,C1450,Beta,Gamma,2.0,2712,2,12160,similarity
+12,2,B750,A450,Beta,Alpha,2.0,8660,2,12160,similarity
+13,2,B750,C1350,Beta,Gamma,0.9999999999999998,6782,2,12160,similarity
+14,2,B750,A350,Beta,Alpha,0.9999999999999998,1787,2,12160,similarity
+4,3,B850,C1050,Beta,Gamma,3.0,3259,2,12160,similarity
+5,3,B850,B550,Beta,Beta,2.0,2952,2,12160,similarity
+6,3,B850,C1150,Beta,Gamma,4.0,4505,2,12160,similarity
+7,3,B850,B950,Beta, Beta,4.0,1425,2,12160,similarity
+8,3,B850,A50,Beta,Alpha,0.0,1690,2,12160,similarity
+9,3,B850,A150,Beta,Alpha,0.0,2290,2,12160,similarity
+10,3,B850,B650,Beta,Beta,3.0,6278,2,12160,similarity
+11,3,B850,C1450,Beta,Gamma,2.0,3812,2,12160,similarity
+12,3,B850,A450,Beta,Alpha,0.9999999999999998,1795,2,12160,similarity
+13,3,B850,C1350,Beta,Gamma,0.9999999999999998,2010,2,12160,similarity
+14,3,B850,A350,Beta,Alpha,0.9999999999999998,3276,2,12160,similarity
+5,4,C1050,B550,Gamma,Beta,0.9999999999999998,1306,2,12160,similarity
+6,4,C1050,C1150,Gamma,Gamma,4.0,2702,2,12160,similarity
+7,4,C1050,B950,Gamma, Beta,5.0,4242,2,12160,similarity
+8,4,C1050,A50,Gamma,Alpha,0.0,1804,2,12160,similarity
+9,4,C1050,A150,Gamma,Alpha,0.0,1020,2,12160,similarity
+10,4,C1050,B650,Gamma,Beta,0.9999999999999998,2776,2,12160,similarity
+11,4,C1050,C1450,Gamma,Gamma,0.9999999999999998,3206,2,12160,similarity
+12,4,C1050,A450,Gamma,Alpha,0.9999999999999998,3132,2,12160,similarity
+13,4,C1050,C1350,Gamma,Gamma,3.0,2960,2,12160,similarity
+14,4,C1050,A350,Gamma,Alpha,0.9999999999999998,5459,2,12160,similarity
+6,5,B550,C1150,Beta,Gamma,0.9999999999999998,1578,2,12160,similarity
+7,5,B550,B950,Beta, Beta,0.9999999999999998,662,2,12160,similarity
+8,5,B550,A50,Beta,Alpha,0.0,2149,2,12160,similarity
+9,5,B550,A150,Beta,Alpha,0.0,931,2,12160,similarity
+10,5,B550,B650,Beta,Beta,3.0,2050,2,12160,similarity
+11,5,B550,C1450,Beta,Gamma,0.9999999999999998,2428,2,12160,similarity
+12,5,B550,A450,Beta,Alpha,4.0,4083,2,12160,similarity
+13,5,B550,C1350,Beta,Gamma,0.9999999999999998,2523,2,12160,similarity
+14,5,B550,A350,Beta,Alpha,0.9999999999999998,2276,2,12160,similarity
+7,6,C1150,B950,Gamma, Beta,2.0,2106,2,12160,similarity
+8,6,C1150,A50,Gamma,Alpha,0.0,2723,2,12160,similarity
+9,6,C1150,A150,Gamma,Alpha,0.0,1130,2,12160,similarity
+10,6,C1150,B650,Gamma,Beta,0.9999999999999998,2441,2,12160,similarity
+11,6,C1150,C1450,Gamma,Gamma,2.0,1907,2,12160,similarity
+12,6,C1150,A450,Gamma,Alpha,0.0,4328,2,12160,similarity
+13,6,C1150,C1350,Gamma,Gamma,3.0,2633,2,12160,similarity
+14,6,C1150,A350,Gamma,Alpha,0.9999999999999998,1810,2,12160,similarity
+8,7,B950,A50, Beta,Alpha,0.0,2146,2,12160,similarity
+9,7,B950,A150, Beta,Alpha,0.0,906,2,12160,similarity
+10,7,B950,B650, Beta,Beta,2.0,5419,2,12160,similarity
+11,7,B950,C1450, Beta,Gamma,0.9999999999999998,2868,2,12160,similarity
+12,7,B950,A450, Beta,Alpha,0.9999999999999998,2086,2,12160,similarity
+13,7,B950,C1350, Beta,Gamma,2.0,2226,2,12160,similarity
+14,7,B950,A350, Beta,Alpha,0.9999999999999998,1771,2,12160,similarity
+9,8,A50,A150,Alpha,Alpha,2.0,6773,2,12160,similarity
+10,8,A50,B650,Alpha,Beta,0.0,1922,2,12160,similarity
+11,8,A50,C1450,Alpha,Gamma,0.0,1419,2,12160,similarity
+12,8,A50,A450,Alpha,Alpha,0.9999999999999998,2209,2,12160,similarity
+13,8,A50,C1350,Alpha,Gamma,0.0,1811,2,12160,similarity
+14,8,A50,A350,Alpha,Alpha,0.9999999999999998,2129,2,12160,similarity
+10,9,A150,B650,Alpha,Beta,0.0,2619,2,12160,similarity
+11,9,A150,C1450,Alpha,Gamma,0.0,866,2,12160,similarity
+12,9,A150,A450,Alpha,Alpha,0.9999999999999998,2199,2,12160,similarity
+13,9,A150,C1350,Alpha,Gamma,0.0,2307,2,12160,similarity
+14,9,A150,A350,Alpha,Alpha,0.9999999999999998,2613,2,12160,similarity
+11,10,B650,C1450,Beta,Gamma,0.9999999999999998,3268,2,12160,similarity
+12,10,B650,A450,Beta,Alpha,2.0,4370,2,12160,similarity
+13,10,B650,C1350,Beta,Gamma,0.9999999999999998,1523,2,12160,similarity
+14,10,B650,A350,Beta,Alpha,2.0,1531,2,12160,similarity
+12,11,C1450,A450,Gamma,Alpha,0.0,3754,2,12160,similarity
+13,11,C1450,C1350,Gamma,Gamma,5.0,4137,2,12160,similarity
+14,11,C1450,A350,Gamma,Alpha,0.9999999999999998,3658,2,12160,similarity
+13,12,A450,C1350,Alpha,Gamma,0.0,4838,2,12160,similarity
+14,12,A450,A350,Alpha,Alpha,4.0,4395,2,12160,similarity
+14,13,C1350,A350,Gamma,Alpha,0.9999999999999998,2355,2,12160,similarity
+1,0,B850,A250,Alpha,Alpha,0.0,5924,2,12163,similarity
+2,0,B850,A50,Beta,Alpha,0.0,2354,2,12163,similarity
+3,0,B850,A450,Beta,Alpha,0.0,1502,2,12163,similarity
+4,0,B850,C1150,Beta,Gamma,0.9999999999999998,4907,2,12163,similarity
+5,0,B850,B950,Beta, Beta,5.0,2736,2,12163,similarity
+6,0,B850,C1450,Beta,Gamma,0.0,2562,2,12163,similarity
+7,0,B850,A350,Beta,Alpha,0.0,1634,2,12163,similarity
+8,0,B850,C1350,Beta,Gamma,0.0,1018,2,12163,similarity
+9,0,B850,B650,Beta,Beta,3.0,2455,2,12163,similarity
+10,0,B850,B550,Beta,Beta,2.0,2201,2,12163,similarity
+11,0,B850,C1050,Beta,Gamma,4.0,2273,2,12163,similarity
+12,0,B850,C1250,Beta,Gamma,3.0,1963,2,12163,similarity
+13,0,B850,A150,Beta,Alpha,0.0,1953,2,12163,similarity
+14,0,B850,B750,Beta,Beta,6.0,3186,2,12163,similarity
+2,1,A250,A50,Alpha,Alpha,0.0,2021,2,12163,similarity
+3,1,A250,A450,Alpha,Alpha,0.0,3116,2,12163,similarity
+4,1,A250,C1150,Alpha,Gamma,0.0,1417,2,12163,similarity
+5,1,A250,B950,Alpha, Beta,0.0,834,2,12163,similarity
+6,1,A250,C1450,Alpha,Gamma,0.0,653,2,12163,similarity
+7,1,A250,A350,Alpha,Alpha,5.0,2537,2,12163,similarity
+8,1,A250,C1350,Alpha,Gamma,0.0,2009,2,12163,similarity
+9,1,A250,B650,Alpha,Beta,0.0,2475,2,12163,similarity
+10,1,A250,B550,Alpha,Beta,0.0,835,2,12163,similarity
+11,1,A250,C1050,Alpha,Gamma,0.0,595,2,12163,similarity
+12,1,A250,C1250,Alpha,Gamma,0.0,712,2,12163,similarity
+13,1,A250,A150,Alpha,Alpha,5.0,2663,2,12163,similarity
+14,1,A250,B750,Alpha,Beta,0.0,1771,2,12163,similarity
+3,2,A50,A450,Alpha,Alpha,0.0,831,2,12163,similarity
+4,2,A50,C1150,Alpha,Gamma,0.0,757,2,12163,similarity
+5,2,A50,B950,Alpha, Beta,0.0,1363,2,12163,similarity
+6,2,A50,C1450,Alpha,Gamma,0.0,668,2,12163,similarity
+7,2,A50,A350,Alpha,Alpha,0.0,946,2,12163,similarity
+8,2,A50,C1350,Alpha,Gamma,0.0,616,2,12163,similarity
+9,2,A50,B650,Alpha,Beta,0.0,1145,2,12163,similarity
+10,2,A50,B550,Alpha,Beta,0.0,1103,2,12163,similarity
+11,2,A50,C1050,Alpha,Gamma,0.0,722,2,12163,similarity
+12,2,A50,C1250,Alpha,Gamma,0.0,717,2,12163,similarity
+13,2,A50,A150,Alpha,Alpha,2.0,2742,2,12163,similarity
+14,2,A50,B750,Alpha,Beta,0.0,2410,2,12163,similarity
+4,3,A450,C1150,Alpha,Gamma,0.0,1786,2,12163,similarity
+5,3,A450,B950,Alpha, Beta,0.0,754,2,12163,similarity
+6,3,A450,C1450,Alpha,Gamma,0.0,755,2,12163,similarity
+7,3,A450,A350,Alpha,Alpha,4.0,3081,2,12163,similarity
+8,3,A450,C1350,Alpha,Gamma,0.0,2113,2,12163,similarity
+9,3,A450,B650,Alpha,Beta,3.0,5133,2,12163,similarity
+10,3,A450,B550,Alpha,Beta,6.0,4498,2,12163,similarity
+11,3,A450,C1050,Alpha,Gamma,0.0,3602,2,12163,similarity
+12,3,A450,C1250,Alpha,Gamma,0.0,657,2,12163,similarity
+13,3,A450,A150,Alpha,Alpha,0.0,1532,2,12163,similarity
+14,3,A450,B750,Alpha,Beta,0.0,2764,2,12163,similarity
+5,4,C1150,B950,Gamma, Beta,6.0,5769,2,12163,similarity
+6,4,C1150,C1450,Gamma,Gamma,0.0,4098,2,12163,similarity
+7,4,C1150,A350,Gamma,Alpha,0.0,1202,2,12163,similarity
+8,4,C1150,C1350,Gamma,Gamma,2.0,3344,2,12163,similarity
+9,4,C1150,B650,Gamma,Beta,0.9999999999999998,2426,2,12163,similarity
+10,4,C1150,B550,Gamma,Beta,0.0,1987,2,12163,similarity
+11,4,C1150,C1050,Gamma,Gamma,6.0,2487,2,12163,similarity
+12,4,C1150,C1250,Gamma,Gamma,6.0,1052,2,12163,similarity
+13,4,C1150,A150,Gamma,Alpha,0.0,2273,2,12163,similarity
+14,4,C1150,B750,Gamma,Beta,0.0,1899,2,12163,similarity
+6,5,B950,C1450, Beta,Gamma,0.0,1274,2,12163,similarity
+7,5,B950,A350, Beta,Alpha,0.0,1491,2,12163,similarity
+8,5,B950,C1350, Beta,Gamma,0.0,1459,2,12163,similarity
+9,5,B950,B650, Beta,Beta,0.9999999999999998,1971,2,12163,similarity
+10,5,B950,B550, Beta,Beta,0.0,1562,2,12163,similarity
+11,5,B950,C1050, Beta,Gamma,6.0,2345,2,12163,similarity
+12,5,B950,C1250, Beta,Gamma,5.0,2962,2,12163,similarity
+13,5,B950,A150, Beta,Alpha,0.0,1835,2,12163,similarity
+14,5,B950,B750, Beta,Beta,5.0,3522,2,12163,similarity
+7,6,C1450,A350,Gamma,Alpha,0.0,1793,2,12163,similarity
+8,6,C1450,C1350,Gamma,Gamma,6.0,8626,2,12163,similarity
+9,6,C1450,B650,Gamma,Beta,0.0,2750,2,12163,similarity
+10,6,C1450,B550,Gamma,Beta,0.0,624,2,12163,similarity
+11,6,C1450,C1050,Gamma,Gamma,0.0,1282,2,12163,similarity
+12,6,C1450,C1250,Gamma,Gamma,4.0,2875,2,12163,similarity
+13,6,C1450,A150,Gamma,Alpha,0.0,2242,2,12163,similarity
+14,6,C1450,B750,Gamma,Beta,0.0,1132,2,12163,similarity
+8,7,A350,C1350,Alpha,Gamma,0.0,738,2,12163,similarity
+9,7,A350,B650,Alpha,Beta,0.9999999999999998,2626,2,12163,similarity
+10,7,A350,B550,Alpha,Beta,2.0,2587,2,12163,similarity
+11,7,A350,C1050,Alpha,Gamma,0.0,1554,2,12163,similarity
+12,7,A350,C1250,Alpha,Gamma,0.0,451,2,12163,similarity
+13,7,A350,A150,Alpha,Alpha,0.0,1278,2,12163,similarity
+14,7,A350,B750,Alpha,Beta,0.0,919,2,12163,similarity
+9,8,C1350,B650,Gamma,Beta,0.0,1074,2,12163,similarity
+10,8,C1350,B550,Gamma,Beta,0.0,741,2,12163,similarity
+11,8,C1350,C1050,Gamma,Gamma,0.0,2089,2,12163,similarity
+12,8,C1350,C1250,Gamma,Gamma,6.0,3787,2,12163,similarity
+13,8,C1350,A150,Gamma,Alpha,0.0,2178,2,12163,similarity
+14,8,C1350,B750,Gamma,Beta,0.0,3516,2,12163,similarity
+10,9,B650,B550,Beta,Beta,6.0,2985,2,12163,similarity
+11,9,B650,C1050,Beta,Gamma,2.0,2506,2,12163,similarity
+12,9,B650,C1250,Beta,Gamma,0.0,2826,2,12163,similarity
+13,9,B650,A150,Beta,Alpha,0.0,1043,2,12163,similarity
+14,9,B650,B750,Beta,Beta,6.0,4433,2,12163,similarity
+11,10,B550,C1050,Beta,Gamma,0.0,2425,2,12163,similarity
+12,10,B550,C1250,Beta,Gamma,0.0,578,2,12163,similarity
+13,10,B550,A150,Beta,Alpha,0.0,770,2,12163,similarity
+14,10,B550,B750,Beta,Beta,0.0,2397,2,12163,similarity
+12,11,C1050,C1250,Gamma,Gamma,4.0,6138,2,12163,similarity
+13,11,C1050,A150,Gamma,Alpha,0.0,1754,2,12163,similarity
+14,11,C1050,B750,Gamma,Beta,0.0,1539,2,12163,similarity
+13,12,C1250,A150,Gamma,Alpha,0.0,907,2,12163,similarity
+14,12,C1250,B750,Gamma,Beta,0.0,874,2,12163,similarity
+14,13,A150,B750,Alpha,Beta,0.0,1171,2,12163,similarity
+1,0,B950,C1350,Gamma,Gamma,4.0,10770,2,12188,similarity
+2,0,B950,A350, Beta,Alpha,0.9999999999999998,8164,2,12188,similarity
+3,0,B950,A450, Beta,Alpha,2.0,5001,2,12188,similarity
+4,0,B950,C1050, Beta,Gamma,6.0,3088,2,12188,similarity
+5,0,B950,C1250, Beta,Gamma,6.0,1650,2,12188,similarity
+6,0,B950,A250, Beta,Alpha,0.9999999999999998,6377,2,12188,similarity
+7,0,B950,A50, Beta,Alpha,0.0,2254,2,12188,similarity
+8,0,B950,C1150, Beta,Gamma,6.0,4624,2,12188,similarity
+9,0,B950,C1450, Beta,Gamma,4.0,6086,2,12188,similarity
+10,0,B950,B550, Beta,Beta,5.0,6291,2,12188,similarity
+11,0,B950,B750, Beta,Beta,5.0,1187,2,12188,similarity
+12,0,B950,B850, Beta,Beta,5.0,923,2,12188,similarity
+13,0,B950,B650, Beta,Beta,5.0,1925,2,12188,similarity
+14,0,B950,A150, Beta,Alpha,0.0,2912,2,12188,similarity
+2,1,C1350,A350,Gamma,Alpha,0.0,2298,2,12188,similarity
+3,1,C1350,A450,Gamma,Alpha,2.0,2933,2,12188,similarity
+4,1,C1350,C1050,Gamma,Gamma,6.0,4342,2,12188,similarity
+5,1,C1350,C1250,Gamma,Gamma,6.0,1429,2,12188,similarity
+6,1,C1350,A250,Gamma,Alpha,0.0,3148,2,12188,similarity
+7,1,C1350,A50,Gamma,Alpha,0.0,652,2,12188,similarity
+8,1,C1350,C1150,Gamma,Gamma,6.0,2928,2,12188,similarity
+9,1,C1350,C1450,Gamma,Gamma,6.0,1554,2,12188,similarity
+10,1,C1350,B550,Gamma,Beta,4.0,2996,2,12188,similarity
+11,1,C1350,B750,Gamma,Beta,4.0,5827,2,12188,similarity
+12,1,C1350,B850,Gamma,Beta,4.0,1203,2,12188,similarity
+13,1,C1350,B650,Gamma,Beta,2.0,6251,2,12188,similarity
+14,1,C1350,A150,Gamma,Alpha,0.0,2506,2,12188,similarity
+3,2,A350,A450,Alpha,Alpha,6.0,4224,2,12188,similarity
+4,2,A350,C1050,Alpha,Gamma,0.9999999999999998,7043,2,12188,similarity
+5,2,A350,C1250,Alpha,Gamma,0.9999999999999998,1507,2,12188,similarity
+6,2,A350,A250,Alpha,Alpha,6.0,2724,2,12188,similarity
+7,2,A350,A50,Alpha,Alpha,5.0,3920,2,12188,similarity
+8,2,A350,C1150,Alpha,Gamma,0.9999999999999998,5546,2,12188,similarity
+9,2,A350,C1450,Alpha,Gamma,0.0,2250,2,12188,similarity
+10,2,A350,B550,Alpha,Beta,5.0,4243,2,12188,similarity
+11,2,A350,B750,Alpha,Beta,3.0,3659,2,12188,similarity
+12,2,A350,B850,Alpha,Beta,3.0,1331,2,12188,similarity
+13,2,A350,B650,Alpha,Beta,3.0,2737,2,12188,similarity
+14,2,A350,A150,Alpha,Alpha,5.0,7751,2,12188,similarity
+4,3,A450,C1050,Alpha,Gamma,3.0,4835,2,12188,similarity
+5,3,A450,C1250,Alpha,Gamma,0.9999999999999998,2611,2,12188,similarity
+6,3,A450,A250,Alpha,Alpha,5.0,3493,2,12188,similarity
+7,3,A450,A50,Alpha,Alpha,2.0,5258,2,12188,similarity
+8,3,A450,C1150,Alpha,Gamma,2.0,4162,2,12188,similarity
+9,3,A450,C1450,Alpha,Gamma,0.0,4464,2,12188,similarity
+10,3,A450,B550,Alpha,Beta,5.0,3517,2,12188,similarity
+11,3,A450,B750,Alpha,Beta,5.0,1482,2,12188,similarity
+12,3,A450,B850,Alpha,Beta,5.0,5923,2,12188,similarity
+13,3,A450,B650,Alpha,Beta,5.0,1706,2,12188,similarity
+14,3,A450,A150,Alpha,Alpha,5.0,1774,2,12188,similarity
+5,4,C1050,C1250,Gamma,Gamma,6.0,3370,2,12188,similarity
+6,4,C1050,A250,Gamma,Alpha,0.9999999999999998,3291,2,12188,similarity
+7,4,C1050,A50,Gamma,Alpha,0.0,2312,2,12188,similarity
+8,4,C1050,C1150,Gamma,Gamma,6.0,2684,2,12188,similarity
+9,4,C1050,C1450,Gamma,Gamma,6.0,2306,2,12188,similarity
+10,4,C1050,B550,Gamma,Beta,5.0,4609,2,12188,similarity
+11,4,C1050,B750,Gamma,Beta,5.0,4008,2,12188,similarity
+12,4,C1050,B850,Gamma,Beta,5.0,1655,2,12188,similarity
+13,4,C1050,B650,Gamma,Beta,5.0,2068,2,12188,similarity
+14,4,C1050,A150,Gamma,Alpha,0.9999999999999998,3311,2,12188,similarity
+6,5,C1250,A250,Gamma,Alpha,0.0,3275,2,12188,similarity
+7,5,C1250,A50,Gamma,Alpha,0.0,1884,2,12188,similarity
+8,5,C1250,C1150,Gamma,Gamma,6.0,3181,2,12188,similarity
+9,5,C1250,C1450,Gamma,Gamma,6.0,883,2,12188,similarity
+10,5,C1250,B550,Gamma,Beta,2.0,6003,2,12188,similarity
+11,5,C1250,B750,Gamma,Beta,4.0,7807,2,12188,similarity
+12,5,C1250,B850,Gamma,Beta,5.0,1995,2,12188,similarity
+13,5,C1250,B650,Gamma,Beta,5.0,1905,2,12188,similarity
+14,5,C1250,A150,Gamma,Alpha,0.9999999999999998,2711,2,12188,similarity
+7,6,A250,A50,Alpha,Alpha,6.0,3752,2,12188,similarity
+8,6,A250,C1150,Alpha,Gamma,0.9999999999999998,5724,2,12188,similarity
+9,6,A250,C1450,Alpha,Gamma,0.0,2908,2,12188,similarity
+10,6,A250,B550,Alpha,Beta,5.0,6177,2,12188,similarity
+11,6,A250,B750,Alpha,Beta,5.0,1496,2,12188,similarity
+12,6,A250,B850,Alpha,Beta,2.0,5512,2,12188,similarity
+13,6,A250,B650,Alpha,Beta,3.0,2461,2,12188,similarity
+14,6,A250,A150,Alpha,Alpha,6.0,2163,2,12188,similarity
+8,7,A50,C1150,Alpha,Gamma,0.0,3651,2,12188,similarity
+9,7,A50,C1450,Alpha,Gamma,0.0,906,2,12188,similarity
+10,7,A50,B550,Alpha,Beta,3.0,4002,2,12188,similarity
+11,7,A50,B750,Alpha,Beta,2.0,2729,2,12188,similarity
+12,7,A50,B850,Alpha,Beta,2.0,709,2,12188,similarity
+13,7,A50,B650,Alpha,Beta,2.0,2112,2,12188,similarity
+14,7,A50,A150,Alpha,Alpha,6.0,2115,2,12188,similarity
+9,8,C1150,C1450,Gamma,Gamma,5.0,2810,2,12188,similarity
+10,8,C1150,B550,Gamma,Beta,4.0,3328,2,12188,similarity
+11,8,C1150,B750,Gamma,Beta,5.0,3823,2,12188,similarity
+12,8,C1150,B850,Gamma,Beta,5.0,1097,2,12188,similarity
+13,8,C1150,B650,Gamma,Beta,5.0,1819,2,12188,similarity
+14,8,C1150,A150,Gamma,Alpha,0.0,3003,2,12188,similarity
+10,9,C1450,B550,Gamma,Beta,3.0,5389,2,12188,similarity
+11,9,C1450,B750,Gamma,Beta,4.0,8835,2,12188,similarity
+12,9,C1450,B850,Gamma,Beta,4.0,2220,2,12188,similarity
+13,9,C1450,B650,Gamma,Beta,4.0,1049,2,12188,similarity
+14,9,C1450,A150,Gamma,Alpha,0.0,2864,2,12188,similarity
+11,10,B550,B750,Beta,Beta,5.0,2978,2,12188,similarity
+12,10,B550,B850,Beta,Beta,5.0,657,2,12188,similarity
+13,10,B550,B650,Beta,Beta,5.0,1479,2,12188,similarity
+14,10,B550,A150,Beta,Alpha,4.0,4882,2,12188,similarity
+12,11,B750,B850,Beta,Beta,6.0,2428,2,12188,similarity
+13,11,B750,B650,Beta,Beta,6.0,785,2,12188,similarity
+14,11,B750,A150,Beta,Alpha,2.0,2763,2,12188,similarity
+13,12,B850,B650,Beta,Beta,6.0,4225,2,12188,similarity
+14,12,B850,A150,Beta,Alpha,2.0,2840,2,12188,similarity
+14,13,B650,A150,Beta,Alpha,2.0,1372,2,12188,similarity
+1,0,C1450,A150,Alpha,Alpha,0.0,9089,2,12192,similarity
+2,0,C1450,C1050,Gamma,Gamma,0.0,11780,2,12192,similarity
+3,0,C1450,C1150,Gamma,Gamma,6.0,6744,2,12192,similarity
+4,0,C1450,B950,Gamma, Beta,0.0,3832,2,12192,similarity
+5,0,C1450,C1350,Gamma,Gamma,6.0,4199,2,12192,similarity
+6,0,C1450,B550,Gamma,Beta,0.0,3843,2,12192,similarity
+7,0,C1450,B850,Gamma,Beta,0.0,5025,2,12192,similarity
+8,0,C1450,B650,Gamma,Beta,0.0,1943,2,12192,similarity
+9,0,C1450,B750,Gamma,Beta,0.0,1391,2,12192,similarity
+10,0,C1450,C1250,Gamma,Gamma,6.0,3358,2,12192,similarity
+11,0,C1450,A250,Gamma,Alpha,0.0,2503,2,12192,similarity
+12,0,C1450,A450,Gamma,Alpha,0.0,1574,2,12192,similarity
+13,0,C1450,A350,Gamma,Alpha,0.0,5474,2,12192,similarity
+14,0,C1450,A50,Gamma,Alpha,0.0,805,2,12192,similarity
+2,1,A150,C1050,Alpha,Gamma,0.0,3588,2,12192,similarity
+3,1,A150,C1150,Alpha,Gamma,0.0,4467,2,12192,similarity
+4,1,A150,B950,Alpha, Beta,0.0,1030,2,12192,similarity
+5,1,A150,C1350,Alpha,Gamma,0.0,988,2,12192,similarity
+6,1,A150,B550,Alpha,Beta,6.0,4091,2,12192,similarity
+7,1,A150,B850,Alpha,Beta,0.0,4604,2,12192,similarity
+8,1,A150,B650,Alpha,Beta,0.0,2195,2,12192,similarity
+9,1,A150,B750,Alpha,Beta,0.0,1026,2,12192,similarity
+10,1,A150,C1250,Alpha,Gamma,0.0,551,2,12192,similarity
+11,1,A150,A250,Alpha,Alpha,6.0,2288,2,12192,similarity
+12,1,A150,A450,Alpha,Alpha,6.0,2709,2,12192,similarity
+13,1,A150,A350,Alpha,Alpha,6.0,1070,2,12192,similarity
+14,1,A150,A50,Alpha,Alpha,6.0,2699,2,12192,similarity
+3,2,C1050,C1150,Gamma,Gamma,6.0,26098,2,12192,similarity
+4,2,C1050,B950,Gamma, Beta,6.0,3433,2,12192,similarity
+5,2,C1050,C1350,Gamma,Gamma,0.0,12344,2,12192,similarity
+6,2,C1050,B550,Gamma,Beta,6.0,4947,2,12192,similarity
+7,2,C1050,B850,Gamma,Beta,6.0,1549,2,12192,similarity
+8,2,C1050,B650,Gamma,Beta,6.0,1854,2,12192,similarity
+9,2,C1050,B750,Gamma,Beta,6.0,1244,2,12192,similarity
+10,2,C1050,C1250,Gamma,Gamma,0.0,13760,2,12192,similarity
+11,2,C1050,A250,Gamma,Alpha,0.0,8381,2,12192,similarity
+12,2,C1050,A450,Gamma,Alpha,0.0,5266,2,12192,similarity
+13,2,C1050,A350,Gamma,Alpha,0.0,2790,2,12192,similarity
+14,2,C1050,A50,Gamma,Alpha,0.0,2317,2,12192,similarity
+4,3,C1150,B950,Gamma, Beta,0.0,5783,2,12192,similarity
+5,3,C1150,C1350,Gamma,Gamma,6.0,4110,2,12192,similarity
+6,3,C1150,B550,Gamma,Beta,0.0,15206,2,12192,similarity
+7,3,C1150,B850,Gamma,Beta,0.0,5397,2,12192,similarity
+8,3,C1150,B650,Gamma,Beta,0.0,7350,2,12192,similarity
+9,3,C1150,B750,Gamma,Beta,0.0,2327,2,12192,similarity
+10,3,C1150,C1250,Gamma,Gamma,6.0,6495,2,12192,similarity
+11,3,C1150,A250,Gamma,Alpha,0.0,3945,2,12192,similarity
+12,3,C1150,A450,Gamma,Alpha,0.0,6665,2,12192,similarity
+13,3,C1150,A350,Gamma,Alpha,0.0,1820,2,12192,similarity
+14,3,C1150,A50,Gamma,Alpha,0.0,6402,2,12192,similarity
+5,4,B950,C1350, Beta,Gamma,0.0,7763,2,12192,similarity
+6,4,B950,B550, Beta,Beta,6.0,7409,2,12192,similarity
+7,4,B950,B850, Beta,Beta,6.0,2476,2,12192,similarity
+8,4,B950,B650, Beta,Beta,6.0,984,2,12192,similarity
+9,4,B950,B750, Beta,Beta,6.0,957,2,12192,similarity
+10,4,B950,C1250, Beta,Gamma,0.0,4446,2,12192,similarity
+11,4,B950,A250, Beta,Alpha,0.0,4994,2,12192,similarity
+12,4,B950,A450, Beta,Alpha,0.0,13905,2,12192,similarity
+13,4,B950,A350, Beta,Alpha,0.0,2505,2,12192,similarity
+14,4,B950,A50, Beta,Alpha,0.0,1709,2,12192,similarity
+6,5,C1350,B550,Gamma,Beta,0.0,2677,2,12192,similarity
+7,5,C1350,B850,Gamma,Beta,0.0,1956,2,12192,similarity
+8,5,C1350,B650,Gamma,Beta,0.0,2890,2,12192,similarity
+9,5,C1350,B750,Gamma,Beta,0.0,7134,2,12192,similarity
+10,5,C1350,C1250,Gamma,Gamma,6.0,8199,2,12192,similarity
+11,5,C1350,A250,Gamma,Alpha,0.0,2226,2,12192,similarity
+12,5,C1350,A450,Gamma,Alpha,0.0,4089,2,12192,similarity
+13,5,C1350,A350,Gamma,Alpha,0.0,4588,2,12192,similarity
+14,5,C1350,A50,Gamma,Alpha,0.0,810,2,12192,similarity
+7,6,B550,B850,Beta,Beta,6.0,7088,2,12192,similarity
+8,6,B550,B650,Beta,Beta,6.0,1412,2,12192,similarity
+9,6,B550,B750,Beta,Beta,6.0,1130,2,12192,similarity
+10,6,B550,C1250,Beta,Gamma,0.0,3052,2,12192,similarity
+11,6,B550,A250,Beta,Alpha,0.0,5152,2,12192,similarity
+12,6,B550,A450,Beta,Alpha,0.0,8127,2,12192,similarity
+13,6,B550,A350,Beta,Alpha,0.0,5521,2,12192,similarity
+14,6,B550,A50,Beta,Alpha,0.0,6305,2,12192,similarity
+8,7,B850,B650,Beta,Beta,6.0,3129,2,12192,similarity
+9,7,B850,B750,Beta,Beta,6.0,1993,2,12192,similarity
+10,7,B850,C1250,Beta,Gamma,0.0,18435,2,12192,similarity
+11,7,B850,A250,Beta,Alpha,0.0,2625,2,12192,similarity
+12,7,B850,A450,Beta,Alpha,6.0,3216,2,12192,similarity
+13,7,B850,A350,Beta,Alpha,0.0,14119,2,12192,similarity
+14,7,B850,A50,Beta,Alpha,0.0,1364,2,12192,similarity
+9,8,B650,B750,Beta,Beta,6.0,9437,2,12192,similarity
+10,8,B650,C1250,Beta,Gamma,0.0,3945,2,12192,similarity
+11,8,B650,A250,Beta,Alpha,0.0,3296,2,12192,similarity
+12,8,B650,A450,Beta,Alpha,6.0,4083,2,12192,similarity
+13,8,B650,A350,Beta,Alpha,0.0,2863,2,12192,similarity
+14,8,B650,A50,Beta,Alpha,0.0,1778,2,12192,similarity
+10,9,B750,C1250,Beta,Gamma,0.0,2882,2,12192,similarity
+11,9,B750,A250,Beta,Alpha,0.0,3013,2,12192,similarity
+12,9,B750,A450,Beta,Alpha,6.0,2867,2,12192,similarity
+13,9,B750,A350,Beta,Alpha,0.0,2375,2,12192,similarity
+14,9,B750,A50,Beta,Alpha,0.0,1555,2,12192,similarity
+11,10,C1250,A250,Gamma,Alpha,0.0,1978,2,12192,similarity
+12,10,C1250,A450,Gamma,Alpha,0.0,5735,2,12192,similarity
+13,10,C1250,A350,Gamma,Alpha,0.0,4305,2,12192,similarity
+14,10,C1250,A50,Gamma,Alpha,0.0,1499,2,12192,similarity
+12,11,A250,A450,Alpha,Alpha,6.0,5529,2,12192,similarity
+13,11,A250,A350,Alpha,Alpha,6.0,1298,2,12192,similarity
+14,11,A250,A50,Alpha,Alpha,6.0,1097,2,12192,similarity
+13,12,A450,A350,Alpha,Alpha,6.0,30325,2,12192,similarity
+14,12,A450,A50,Alpha,Alpha,6.0,2383,2,12192,similarity
+14,13,A350,A50,Alpha,Alpha,6.0,958,2,12192,similarity
+1,0,B550,A350,Alpha,Alpha,3.0,3030,2,12197,similarity
+2,0,B550,C1350,Beta,Gamma,3.0,583,2,12197,similarity
+3,0,B550,A250,Beta,Alpha,3.0,558,2,12197,similarity
+4,0,B550,A450,Beta,Alpha,3.0,825,2,12197,similarity
+5,0,B550,B950,Beta, Beta,3.0,479,2,12197,similarity
+6,0,B550,B750,Beta,Beta,3.0,404,2,12197,similarity
+7,0,B550,C1050,Beta,Gamma,3.0,331,2,12197,similarity
+8,0,B550,C1450,Beta,Gamma,3.0,389,2,12197,similarity
+9,0,B550,B650,Beta,Beta,3.0,531,2,12197,similarity
+10,0,B550,A150,Beta,Alpha,3.0,735,2,12197,similarity
+11,0,B550,C1250,Beta,Gamma,3.0,656,2,12197,similarity
+12,0,B550,C1150,Beta,Gamma,3.0,507,2,12197,similarity
+13,0,B550,A50,Beta,Alpha,3.0,471,2,12197,similarity
+14,0,B550,B850,Beta,Beta,3.0,244,2,12197,similarity
+2,1,A350,C1350,Alpha,Gamma,3.0,139,2,12197,similarity
+3,1,A350,A250,Alpha,Alpha,3.0,388,2,12197,similarity
+4,1,A350,A450,Alpha,Alpha,3.0,282,2,12197,similarity
+5,1,A350,B950,Alpha, Beta,3.0,353,2,12197,similarity
+6,1,A350,B750,Alpha,Beta,3.0,450,2,12197,similarity
+7,1,A350,C1050,Alpha,Gamma,3.0,279,2,12197,similarity
+8,1,A350,C1450,Alpha,Gamma,3.0,362,2,12197,similarity
+9,1,A350,B650,Alpha,Beta,3.0,394,2,12197,similarity
+10,1,A350,A150,Alpha,Alpha,3.0,196,2,12197,similarity
+11,1,A350,C1250,Alpha,Gamma,3.0,387,2,12197,similarity
+12,1,A350,C1150,Alpha,Gamma,3.0,387,2,12197,similarity
+13,1,A350,A50,Alpha,Alpha,3.0,412,2,12197,similarity
+14,1,A350,B850,Alpha,Beta,3.0,467,2,12197,similarity
+3,2,C1350,A250,Gamma,Alpha,3.0,192,2,12197,similarity
+4,2,C1350,A450,Gamma,Alpha,3.0,278,2,12197,similarity
+5,2,C1350,B950,Gamma, Beta,3.0,258,2,12197,similarity
+6,2,C1350,B750,Gamma,Beta,3.0,264,2,12197,similarity
+7,2,C1350,C1050,Gamma,Gamma,3.0,213,2,12197,similarity
+8,2,C1350,C1450,Gamma,Gamma,3.0,1315,2,12197,similarity
+9,2,C1350,B650,Gamma,Beta,3.0,684,2,12197,similarity
+10,2,C1350,A150,Gamma,Alpha,3.0,562,2,12197,similarity
+11,2,C1350,C1250,Gamma,Gamma,3.0,682,2,12197,similarity
+12,2,C1350,C1150,Gamma,Gamma,3.0,438,2,12197,similarity
+13,2,C1350,A50,Gamma,Alpha,3.0,467,2,12197,similarity
+14,2,C1350,B850,Gamma,Beta,3.0,240,2,12197,similarity
+4,3,A250,A450,Alpha,Alpha,3.0,200,2,12197,similarity
+5,3,A250,B950,Alpha, Beta,3.0,502,2,12197,similarity
+6,3,A250,B750,Alpha,Beta,3.0,508,2,12197,similarity
+7,3,A250,C1050,Alpha,Gamma,3.0,356,2,12197,similarity
+8,3,A250,C1450,Alpha,Gamma,3.0,277,2,12197,similarity
+9,3,A250,B650,Alpha,Beta,3.0,209,2,12197,similarity
+10,3,A250,A150,Alpha,Alpha,3.0,215,2,12197,similarity
+11,3,A250,C1250,Alpha,Gamma,3.0,182,2,12197,similarity
+12,3,A250,C1150,Alpha,Gamma,3.0,199,2,12197,similarity
+13,3,A250,A50,Alpha,Alpha,3.0,175,2,12197,similarity
+14,3,A250,B850,Alpha,Beta,3.0,239,2,12197,similarity
+5,4,A450,B950,Alpha, Beta,3.0,205,2,12197,similarity
+6,4,A450,B750,Alpha,Beta,3.0,244,2,12197,similarity
+7,4,A450,C1050,Alpha,Gamma,3.0,234,2,12197,similarity
+8,4,A450,C1450,Alpha,Gamma,3.0,224,2,12197,similarity
+9,4,A450,B650,Alpha,Beta,3.0,237,2,12197,similarity
+10,4,A450,A150,Alpha,Alpha,3.0,268,2,12197,similarity
+11,4,A450,C1250,Alpha,Gamma,3.0,225,2,12197,similarity
+12,4,A450,C1150,Alpha,Gamma,3.0,271,2,12197,similarity
+13,4,A450,A50,Alpha,Alpha,3.0,188,2,12197,similarity
+14,4,A450,B850,Alpha,Beta,3.0,348,2,12197,similarity
+6,5,B950,B750, Beta,Beta,3.0,253,2,12197,similarity
+7,5,B950,C1050, Beta,Gamma,3.0,272,2,12197,similarity
+8,5,B950,C1450, Beta,Gamma,3.0,244,2,12197,similarity
+9,5,B950,B650, Beta,Beta,3.0,269,2,12197,similarity
+10,5,B950,A150, Beta,Alpha,3.0,231,2,12197,similarity
+11,5,B950,C1250, Beta,Gamma,3.0,262,2,12197,similarity
+12,5,B950,C1150, Beta,Gamma,3.0,259,2,12197,similarity
+13,5,B950,A50, Beta,Alpha,3.0,296,2,12197,similarity
+14,5,B950,B850, Beta,Beta,3.0,252,2,12197,similarity
+7,6,B750,C1050,Beta,Gamma,3.0,279,2,12197,similarity
+8,6,B750,C1450,Beta,Gamma,3.0,252,2,12197,similarity
+9,6,B750,B650,Beta,Beta,3.0,265,2,12197,similarity
+10,6,B750,A150,Beta,Alpha,3.0,246,2,12197,similarity
+11,6,B750,C1250,Beta,Gamma,3.0,260,2,12197,similarity
+12,6,B750,C1150,Beta,Gamma,3.0,270,2,12197,similarity
+13,6,B750,A50,Beta,Alpha,3.0,292,2,12197,similarity
+14,6,B750,B850,Beta,Beta,3.0,296,2,12197,similarity
+8,7,C1050,C1450,Gamma,Gamma,3.0,264,2,12197,similarity
+9,7,C1050,B650,Gamma,Beta,3.0,234,2,12197,similarity
+10,7,C1050,A150,Gamma,Alpha,3.0,311,2,12197,similarity
+11,7,C1050,C1250,Gamma,Gamma,3.0,266,2,12197,similarity
+12,7,C1050,C1150,Gamma,Gamma,3.0,294,2,12197,similarity
+13,7,C1050,A50,Gamma,Alpha,3.0,314,2,12197,similarity
+14,7,C1050,B850,Gamma,Beta,3.0,309,2,12197,similarity
+9,8,C1450,B650,Gamma,Beta,3.0,286,2,12197,similarity
+10,8,C1450,A150,Gamma,Alpha,3.0,292,2,12197,similarity
+11,8,C1450,C1250,Gamma,Gamma,3.0,287,2,12197,similarity
+12,8,C1450,C1150,Gamma,Gamma,3.0,259,2,12197,similarity
+13,8,C1450,A50,Gamma,Alpha,3.0,256,2,12197,similarity
+14,8,C1450,B850,Gamma,Beta,3.0,269,2,12197,similarity
+10,9,B650,A150,Beta,Alpha,3.0,264,2,12197,similarity
+11,9,B650,C1250,Beta,Gamma,3.0,255,2,12197,similarity
+12,9,B650,C1150,Beta,Gamma,3.0,258,2,12197,similarity
+13,9,B650,A50,Beta,Alpha,3.0,296,2,12197,similarity
+14,9,B650,B850,Beta,Beta,3.0,274,2,12197,similarity
+11,10,A150,C1250,Alpha,Gamma,3.0,290,2,12197,similarity
+12,10,A150,C1150,Alpha,Gamma,3.0,269,2,12197,similarity
+13,10,A150,A50,Alpha,Alpha,3.0,257,2,12197,similarity
+14,10,A150,B850,Alpha,Beta,3.0,287,2,12197,similarity
+12,11,C1250,C1150,Gamma,Gamma,3.0,267,2,12197,similarity
+13,11,C1250,A50,Gamma,Alpha,3.0,270,2,12197,similarity
+14,11,C1250,B850,Gamma,Beta,3.0,292,2,12197,similarity
+13,12,C1150,A50,Gamma,Alpha,3.0,261,2,12197,similarity
+14,12,C1150,B850,Gamma,Beta,3.0,332,2,12197,similarity
+14,13,A50,B850,Alpha,Beta,3.0,279,2,12197,similarity
+1,0,A450,C1250,Gamma,Gamma,0.9999999999999998,23468,2,12219,similarity
+2,0,A450,C1050,Alpha,Gamma,0.9999999999999998,5612,2,12219,similarity
+3,0,A450,A350,Alpha,Alpha,5.0,9785,2,12219,similarity
+4,0,A450,A250,Alpha,Alpha,5.0,19342,2,12219,similarity
+5,0,A450,C1350,Alpha,Gamma,0.9999999999999998,5418,2,12219,similarity
+6,0,A450,C1450,Alpha,Gamma,0.9999999999999998,3352,2,12219,similarity
+7,0,A450,B950,Alpha, Beta,5.0,10528,2,12219,similarity
+8,0,A450,B650,Alpha,Beta,5.0,3711,2,12219,similarity
+9,0,A450,A150,Alpha,Alpha,4.0,24032,2,12219,similarity
+10,0,A450,B750,Alpha,Beta,4.0,6958,2,12219,similarity
+11,0,A450,C1150,Alpha,Gamma,0.9999999999999998,4530,2,12219,similarity
+12,0,A450,A50,Alpha,Alpha,4.0,18357,2,12219,similarity
+13,0,A450,B550,Alpha,Beta,5.0,4755,2,12219,similarity
+14,0,A450,B850,Alpha,Beta,5.0,3131,2,12219,similarity
+2,1,C1250,C1050,Gamma,Gamma,5.0,2348,2,12219,similarity
+3,1,C1250,A350,Gamma,Alpha,0.9999999999999998,24357,2,12219,similarity
+4,1,C1250,A250,Gamma,Alpha,0.9999999999999998,2043,2,12219,similarity
+5,1,C1250,C1350,Gamma,Gamma,5.0,3005,2,12219,similarity
+6,1,C1250,C1450,Gamma,Gamma,5.0,1114,2,12219,similarity
+7,1,C1250,B950,Gamma, Beta,5.0,5011,2,12219,similarity
+8,1,C1250,B650,Gamma,Beta,4.0,2714,2,12219,similarity
+9,1,C1250,A150,Gamma,Alpha,0.9999999999999998,3092,2,12219,similarity
+10,1,C1250,B750,Gamma,Beta,2.0,6018,2,12219,similarity
+11,1,C1250,C1150,Gamma,Gamma,5.0,2868,2,12219,similarity
+12,1,C1250,A50,Gamma,Alpha,0.0,6882,2,12219,similarity
+13,1,C1250,B550,Gamma,Beta,2.0,8498,2,12219,similarity
+14,1,C1250,B850,Gamma,Beta,4.0,3692,2,12219,similarity
+3,2,C1050,A350,Gamma,Alpha,2.0,6910,2,12219,similarity
+4,2,C1050,A250,Gamma,Alpha,2.0,10207,2,12219,similarity
+5,2,C1050,C1350,Gamma,Gamma,5.0,5812,2,12219,similarity
+6,2,C1050,C1450,Gamma,Gamma,5.0,1241,2,12219,similarity
+7,2,C1050,B950,Gamma, Beta,6.0,3963,2,12219,similarity
+8,2,C1050,B650,Gamma,Beta,5.0,5901,2,12219,similarity
+9,2,C1050,A150,Gamma,Alpha,2.0,11843,2,12219,similarity
+10,2,C1050,B750,Gamma,Beta,5.0,11365,2,12219,similarity
+11,2,C1050,C1150,Gamma,Gamma,6.0,3562,2,12219,similarity
+12,2,C1050,A50,Gamma,Alpha,0.9999999999999998,6043,2,12219,similarity
+13,2,C1050,B550,Gamma,Beta,2.0,3892,2,12219,similarity
+14,2,C1050,B850,Gamma,Beta,5.0,2902,2,12219,similarity
+4,3,A350,A250,Alpha,Alpha,5.0,2539,2,12219,similarity
+5,3,A350,C1350,Alpha,Gamma,0.9999999999999998,6387,2,12219,similarity
+6,3,A350,C1450,Alpha,Gamma,0.9999999999999998,3387,2,12219,similarity
+7,3,A350,B950,Alpha, Beta,2.0,13823,2,12219,similarity
+8,3,A350,B650,Alpha,Beta,4.0,5122,2,12219,similarity
+9,3,A350,A150,Alpha,Alpha,4.0,2211,2,12219,similarity
+10,3,A350,B750,Alpha,Beta,2.0,8378,2,12219,similarity
+11,3,A350,C1150,Alpha,Gamma,0.9999999999999998,5970,2,12219,similarity
+12,3,A350,A50,Alpha,Alpha,4.0,5169,2,12219,similarity
+13,3,A350,B550,Alpha,Beta,5.0,3638,2,12219,similarity
+14,3,A350,B850,Alpha,Beta,4.0,6378,2,12219,similarity
+5,4,A250,C1350,Alpha,Gamma,0.9999999999999998,4266,2,12219,similarity
+6,4,A250,C1450,Alpha,Gamma,0.9999999999999998,3860,2,12219,similarity
+7,4,A250,B950,Alpha, Beta,2.0,4545,2,12219,similarity
+8,4,A250,B650,Alpha,Beta,3.0,5856,2,12219,similarity
+9,4,A250,A150,Alpha,Alpha,5.0,3196,2,12219,similarity
+10,4,A250,B750,Alpha,Beta,4.0,4419,2,12219,similarity
+11,4,A250,C1150,Alpha,Gamma,0.9999999999999998,4891,2,12219,similarity
+12,4,A250,A50,Alpha,Alpha,4.0,2731,2,12219,similarity
+13,4,A250,B550,Alpha,Beta,2.0,10933,2,12219,similarity
+14,4,A250,B850,Alpha,Beta,2.0,14058,2,12219,similarity
+6,5,C1350,C1450,Gamma,Gamma,6.0,2579,2,12219,similarity
+7,5,C1350,B950,Gamma, Beta,5.0,8443,2,12219,similarity
+8,5,C1350,B650,Gamma,Beta,2.0,6778,2,12219,similarity
+9,5,C1350,A150,Gamma,Alpha,0.9999999999999998,2310,2,12219,similarity
+10,5,C1350,B750,Gamma,Beta,2.0,3782,2,12219,similarity
+11,5,C1350,C1150,Gamma,Gamma,4.0,6176,2,12219,similarity
+12,5,C1350,A50,Gamma,Alpha,0.0,3433,2,12219,similarity
+13,5,C1350,B550,Gamma,Beta,0.9999999999999998,6538,2,12219,similarity
+14,5,C1350,B850,Gamma,Beta,3.0,11530,2,12219,similarity
+7,6,C1450,B950,Gamma, Beta,3.0,3003,2,12219,similarity
+8,6,C1450,B650,Gamma,Beta,2.0,4353,2,12219,similarity
+9,6,C1450,A150,Gamma,Alpha,0.0,5602,2,12219,similarity
+10,6,C1450,B750,Gamma,Beta,2.0,4607,2,12219,similarity
+11,6,C1450,C1150,Gamma,Gamma,5.0,4733,2,12219,similarity
+12,6,C1450,A50,Gamma,Alpha,0.0,2778,2,12219,similarity
+13,6,C1450,B550,Gamma,Beta,0.9999999999999998,8771,2,12219,similarity
+14,6,C1450,B850,Gamma,Beta,2.0,3193,2,12219,similarity
+8,7,B950,B650, Beta,Beta,5.0,7069,2,12219,similarity
+9,7,B950,A150, Beta,Alpha,2.0,5451,2,12219,similarity
+10,7,B950,B750, Beta,Beta,5.0,3698,2,12219,similarity
+11,7,B950,C1150, Beta,Gamma,5.0,1395,2,12219,similarity
+12,7,B950,A50, Beta,Alpha,0.9999999999999998,2713,2,12219,similarity
+13,7,B950,B550, Beta,Beta,2.0,4044,2,12219,similarity
+14,7,B950,B850, Beta,Beta,6.0,3168,2,12219,similarity
+9,8,B650,A150,Beta,Alpha,3.0,8147,2,12219,similarity
+10,8,B650,B750,Beta,Beta,6.0,2307,2,12219,similarity
+11,8,B650,C1150,Beta,Gamma,5.0,2755,2,12219,similarity
+12,8,B650,A50,Beta,Alpha,3.0,6985,2,12219,similarity
+13,8,B650,B550,Beta,Beta,6.0,6019,2,12219,similarity
+14,8,B650,B850,Beta,Beta,5.0,4112,2,12219,similarity
+10,9,A150,B750,Alpha,Beta,2.0,7051,2,12219,similarity
+11,9,A150,C1150,Alpha,Gamma,0.9999999999999998,2770,2,12219,similarity
+12,9,A150,A50,Alpha,Alpha,5.0,4763,2,12219,similarity
+13,9,A150,B550,Alpha,Beta,3.0,7373,2,12219,similarity
+14,9,A150,B850,Alpha,Beta,3.0,3409,2,12219,similarity
+11,10,B750,C1150,Beta,Gamma,4.0,2337,2,12219,similarity
+12,10,B750,A50,Beta,Alpha,0.9999999999999998,3539,2,12219,similarity
+13,10,B750,B550,Beta,Beta,4.0,3892,2,12219,similarity
+14,10,B750,B850,Beta,Beta,6.0,2310,2,12219,similarity
+12,11,C1150,A50,Gamma,Alpha,0.0,4411,2,12219,similarity
+13,11,C1150,B550,Gamma,Beta,4.0,4868,2,12219,similarity
+14,11,C1150,B850,Gamma,Beta,4.0,1515,2,12219,similarity
+13,12,A50,B550,Alpha,Beta,3.0,6603,2,12219,similarity
+14,12,A50,B850,Alpha,Beta,0.9999999999999998,6051,2,12219,similarity
+14,13,B550,B850,Beta,Beta,4.0,2588,2,12219,similarity
+1,0,C1450,C1250,Gamma,Gamma,6.0,9745,2,12222,similarity
+2,0,C1450,C1050,Gamma,Gamma,6.0,3255,2,12222,similarity
+3,0,C1450,B650,Gamma,Beta,3.0,5650,2,12222,similarity
+4,0,C1450,A350,Gamma,Alpha,0.9999999999999998,2872,2,12222,similarity
+5,0,C1450,A150,Gamma,Alpha,0.0,3466,2,12222,similarity
+6,0,C1450,B850,Gamma,Beta,3.0,3670,2,12222,similarity
+7,0,C1450,C1150,Gamma,Gamma,5.0,3437,2,12222,similarity
+8,0,C1450,C1350,Gamma,Gamma,6.0,2147,2,12222,similarity
+9,0,C1450,A450,Gamma,Alpha,3.0,2393,2,12222,similarity
+10,0,C1450,B750,Gamma,Beta,4.0,3092,2,12222,similarity
+11,0,C1450,A50,Gamma,Alpha,0.0,1682,2,12222,similarity
+12,0,C1450,B550,Gamma,Beta,3.0,2511,2,12222,similarity
+13,0,C1450,B950,Gamma, Beta,4.0,3017,2,12222,similarity
+14,0,C1450,A250,Gamma,Alpha,2.0,1875,2,12222,similarity
+2,1,C1250,C1050,Gamma,Gamma,5.0,2275,2,12222,similarity
+3,1,C1250,B650,Gamma,Beta,4.0,2452,2,12222,similarity
+4,1,C1250,A350,Gamma,Alpha,2.0,2178,2,12222,similarity
+5,1,C1250,A150,Gamma,Alpha,0.0,1675,2,12222,similarity
+6,1,C1250,B850,Gamma,Beta,4.0,2707,2,12222,similarity
+7,1,C1250,C1150,Gamma,Gamma,6.0,2953,2,12222,similarity
+8,1,C1250,C1350,Gamma,Gamma,6.0,1553,2,12222,similarity
+9,1,C1250,A450,Gamma,Alpha,4.0,4008,2,12222,similarity
+10,1,C1250,B750,Gamma,Beta,4.0,5090,2,12222,similarity
+11,1,C1250,A50,Gamma,Alpha,0.0,2307,2,12222,similarity
+12,1,C1250,B550,Gamma,Beta,2.0,2638,2,12222,similarity
+13,1,C1250,B950,Gamma, Beta,5.0,2675,2,12222,similarity
+14,1,C1250,A250,Gamma,Alpha,2.0,2104,2,12222,similarity
+3,2,C1050,B650,Gamma,Beta,4.0,3249,2,12222,similarity
+4,2,C1050,A350,Gamma,Alpha,0.9999999999999998,2850,2,12222,similarity
+5,2,C1050,A150,Gamma,Alpha,0.9999999999999998,794,2,12222,similarity
+6,2,C1050,B850,Gamma,Beta,5.0,3469,2,12222,similarity
+7,2,C1050,C1150,Gamma,Gamma,6.0,2090,2,12222,similarity
+8,2,C1050,C1350,Gamma,Gamma,6.0,578,2,12222,similarity
+9,2,C1050,A450,Gamma,Alpha,4.0,4690,2,12222,similarity
+10,2,C1050,B750,Gamma,Beta,4.0,6986,2,12222,similarity
+11,2,C1050,A50,Gamma,Alpha,0.0,1885,2,12222,similarity
+12,2,C1050,B550,Gamma,Beta,2.0,3673,2,12222,similarity
+13,2,C1050,B950,Gamma, Beta,5.0,3090,2,12222,similarity
+14,2,C1050,A250,Gamma,Alpha,3.0,3127,2,12222,similarity
+4,3,B650,A350,Beta,Alpha,4.0,1931,2,12222,similarity
+5,3,B650,A150,Beta,Alpha,0.9999999999999998,2328,2,12222,similarity
+6,3,B650,B850,Beta,Beta,6.0,3171,2,12222,similarity
+7,3,B650,C1150,Beta,Gamma,4.0,4795,2,12222,similarity
+8,3,B650,C1350,Beta,Gamma,4.0,4375,2,12222,similarity
+9,3,B650,A450,Beta,Alpha,6.0,4355,2,12222,similarity
+10,3,B650,B750,Beta,Beta,6.0,939,2,12222,similarity
+11,3,B650,A50,Beta,Alpha,0.0,2524,2,12222,similarity
+12,3,B650,B550,Beta,Beta,4.0,4603,2,12222,similarity
+13,3,B650,B950,Beta, Beta,4.0,4259,2,12222,similarity
+14,3,B650,A250,Beta,Alpha,2.0,2010,2,12222,similarity
+5,4,A350,A150,Alpha,Alpha,5.0,7220,2,12222,similarity
+6,4,A350,B850,Alpha,Beta,4.0,2059,2,12222,similarity
+7,4,A350,C1150,Alpha,Gamma,0.9999999999999998,2098,2,12222,similarity
+8,4,A350,C1350,Alpha,Gamma,0.0,2163,2,12222,similarity
+9,4,A350,A450,Alpha,Alpha,6.0,3067,2,12222,similarity
+10,4,A350,B750,Alpha,Beta,3.0,3109,2,12222,similarity
+11,4,A350,A50,Alpha,Alpha,0.9999999999999998,3386,2,12222,similarity
+12,4,A350,B550,Alpha,Beta,4.0,3883,2,12222,similarity
+13,4,A350,B950,Alpha, Beta,0.9999999999999998,7314,2,12222,similarity
+14,4,A350,A250,Alpha,Alpha,4.0,2497,2,12222,similarity
+6,5,A150,B850,Alpha,Beta,0.9999999999999998,1810,2,12222,similarity
+7,5,A150,C1150,Alpha,Gamma,0.9999999999999998,522,2,12222,similarity
+8,5,A150,C1350,Alpha,Gamma,0.0,2296,2,12222,similarity
+9,5,A150,A450,Alpha,Alpha,2.0,3410,2,12222,similarity
+10,5,A150,B750,Alpha,Beta,2.0,1227,2,12222,similarity
+11,5,A150,A50,Alpha,Alpha,5.0,2386,2,12222,similarity
+12,5,A150,B550,Alpha,Beta,3.0,2246,2,12222,similarity
+13,5,A150,B950,Alpha, Beta,2.0,2547,2,12222,similarity
+14,5,A150,A250,Alpha,Alpha,5.0,5572,2,12222,similarity
+7,6,B850,C1150,Beta,Gamma,5.0,1123,2,12222,similarity
+8,6,B850,C1350,Beta,Gamma,5.0,1195,2,12222,similarity
+9,6,B850,A450,Beta,Alpha,3.0,1948,2,12222,similarity
+10,6,B850,B750,Beta,Beta,6.0,1675,2,12222,similarity
+11,6,B850,A50,Beta,Alpha,0.9999999999999998,1954,2,12222,similarity
+12,6,B850,B550,Beta,Beta,5.0,3482,2,12222,similarity
+13,6,B850,B950,Beta, Beta,5.0,883,2,12222,similarity
+14,6,B850,A250,Beta,Alpha,3.0,1779,2,12222,similarity
+8,7,C1150,C1350,Gamma,Gamma,6.0,1890,2,12222,similarity
+9,7,C1150,A450,Gamma,Alpha,4.0,1939,2,12222,similarity
+10,7,C1150,B750,Gamma,Beta,4.0,1889,2,12222,similarity
+11,7,C1150,A50,Gamma,Alpha,0.0,1908,2,12222,similarity
+12,7,C1150,B550,Gamma,Beta,3.0,2179,2,12222,similarity
+13,7,C1150,B950,Gamma, Beta,5.0,2883,2,12222,similarity
+14,7,C1150,A250,Gamma,Alpha,2.0,1624,2,12222,similarity
+9,8,C1350,A450,Gamma,Alpha,0.9999999999999998,2155,2,12222,similarity
+10,8,C1350,B750,Gamma,Beta,0.9999999999999998,989,2,12222,similarity
+11,8,C1350,A50,Gamma,Alpha,0.0,1784,2,12222,similarity
+12,8,C1350,B550,Gamma,Beta,0.9999999999999998,2369,2,12222,similarity
+13,8,C1350,B950,Gamma, Beta,4.0,2801,2,12222,similarity
+14,8,C1350,A250,Gamma,Alpha,0.9999999999999998,2786,2,12222,similarity
+10,9,A450,B750,Alpha,Beta,2.0,1706,2,12222,similarity
+11,9,A450,A50,Alpha,Alpha,0.0,2723,2,12222,similarity
+12,9,A450,B550,Alpha,Beta,5.0,2491,2,12222,similarity
+13,9,A450,B950,Alpha, Beta,4.0,1757,2,12222,similarity
+14,9,A450,A250,Alpha,Alpha,4.0,5411,2,12222,similarity
+11,10,B750,A50,Beta,Alpha,2.0,2065,2,12222,similarity
+12,10,B750,B550,Beta,Beta,5.0,2914,2,12222,similarity
+13,10,B750,B950,Beta, Beta,5.0,5755,2,12222,similarity
+14,10,B750,A250,Beta,Alpha,2.0,1989,2,12222,similarity
+12,11,A50,B550,Alpha,Beta,0.9999999999999998,1715,2,12222,similarity
+13,11,A50,B950,Alpha, Beta,0.9999999999999998,1158,2,12222,similarity
+14,11,A50,A250,Alpha,Alpha,4.0,2653,2,12222,similarity
+13,12,B550,B950,Beta, Beta,5.0,2051,2,12222,similarity
+14,12,B550,A250,Beta,Alpha,5.0,972,2,12222,similarity
+14,13,B950,A250, Beta,Alpha,4.0,1808,2,12222,similarity
+1,0,C1450,B550,Beta,Beta,4.0,14803,2,12250,similarity
+2,0,C1450,A450,Gamma,Alpha,4.0,2274,2,12250,similarity
+3,0,C1450,A350,Gamma,Alpha,4.0,2867,2,12250,similarity
+4,0,C1450,B750,Gamma,Beta,4.0,5287,2,12250,similarity
+5,0,C1450,B950,Gamma, Beta,4.0,1601,2,12250,similarity
+6,0,C1450,B850,Gamma,Beta,4.0,923,2,12250,similarity
+7,0,C1450,C1150,Gamma,Gamma,5.0,2106,2,12250,similarity
+8,0,C1450,C1250,Gamma,Gamma,5.0,898,2,12250,similarity
+9,0,C1450,A250,Gamma,Alpha,3.0,4203,2,12250,similarity
+10,0,C1450,A50,Gamma,Alpha,2.0,1963,2,12250,similarity
+11,0,C1450,A150,Gamma,Alpha,2.0,1453,2,12250,similarity
+12,0,C1450,C1350,Gamma,Gamma,6.0,5394,2,12250,similarity
+13,0,C1450,C1050,Gamma,Gamma,5.0,2731,2,12250,similarity
+14,0,C1450,B650,Gamma,Beta,4.0,1966,2,12250,similarity
+2,1,B550,A450,Beta,Alpha,5.0,10208,2,12250,similarity
+3,1,B550,A350,Beta,Alpha,5.0,7386,2,12250,similarity
+4,1,B550,B750,Beta,Beta,5.0,10212,2,12250,similarity
+5,1,B550,B950,Beta, Beta,4.0,3691,2,12250,similarity
+6,1,B550,B850,Beta,Beta,4.0,1738,2,12250,similarity
+7,1,B550,C1150,Beta,Gamma,3.0,3483,2,12250,similarity
+8,1,B550,C1250,Beta,Gamma,3.0,3539,2,12250,similarity
+9,1,B550,A250,Beta,Alpha,4.0,3392,2,12250,similarity
+10,1,B550,A50,Beta,Alpha,3.0,2131,2,12250,similarity
+11,1,B550,A150,Beta,Alpha,4.0,1881,2,12250,similarity
+12,1,B550,C1350,Beta,Gamma,3.0,2363,2,12250,similarity
+13,1,B550,C1050,Beta,Gamma,4.0,3089,2,12250,similarity
+14,1,B550,B650,Beta,Beta,5.0,3651,2,12250,similarity
+3,2,A450,A350,Alpha,Alpha,5.0,2138,2,12250,similarity
+4,2,A450,B750,Alpha,Beta,4.0,2203,2,12250,similarity
+5,2,A450,B950,Alpha, Beta,4.0,2048,2,12250,similarity
+6,2,A450,B850,Alpha,Beta,4.0,3385,2,12250,similarity
+7,2,A450,C1150,Alpha,Gamma,4.0,1363,2,12250,similarity
+8,2,A450,C1250,Alpha,Gamma,4.0,867,2,12250,similarity
+9,2,A450,A250,Alpha,Alpha,4.0,914,2,12250,similarity
+10,2,A450,A50,Alpha,Alpha,3.0,2346,2,12250,similarity
+11,2,A450,A150,Alpha,Alpha,3.0,1611,2,12250,similarity
+12,2,A450,C1350,Alpha,Gamma,3.0,1600,2,12250,similarity
+13,2,A450,C1050,Alpha,Gamma,4.0,1643,2,12250,similarity
+14,2,A450,B650,Alpha,Beta,5.0,2259,2,12250,similarity
+4,3,A350,B750,Alpha,Beta,5.0,970,2,12250,similarity
+5,3,A350,B950,Alpha, Beta,4.0,1538,2,12250,similarity
+6,3,A350,B850,Alpha,Beta,4.0,2019,2,12250,similarity
+7,3,A350,C1150,Alpha,Gamma,3.0,4588,2,12250,similarity
+8,3,A350,C1250,Alpha,Gamma,3.0,1387,2,12250,similarity
+9,3,A350,A250,Alpha,Alpha,5.0,2711,2,12250,similarity
+10,3,A350,A50,Alpha,Alpha,2.0,3394,2,12250,similarity
+11,3,A350,A150,Alpha,Alpha,3.0,2995,2,12250,similarity
+12,3,A350,C1350,Alpha,Gamma,2.0,3114,2,12250,similarity
+13,3,A350,C1050,Alpha,Gamma,3.0,1403,2,12250,similarity
+14,3,A350,B650,Alpha,Beta,4.0,2091,2,12250,similarity
+5,4,B750,B950,Beta, Beta,5.0,1435,2,12250,similarity
+6,4,B750,B850,Beta,Beta,5.0,1427,2,12250,similarity
+7,4,B750,C1150,Beta,Gamma,5.0,4275,2,12250,similarity
+8,4,B750,C1250,Beta,Gamma,5.0,1467,2,12250,similarity
+9,4,B750,A250,Beta,Alpha,3.0,2019,2,12250,similarity
+10,4,B750,A50,Beta,Alpha,2.0,1987,2,12250,similarity
+11,4,B750,A150,Beta,Alpha,3.0,1939,2,12250,similarity
+12,4,B750,C1350,Beta,Gamma,3.0,4307,2,12250,similarity
+13,4,B750,C1050,Beta,Gamma,5.0,3299,2,12250,similarity
+14,4,B750,B650,Beta,Beta,5.0,1233,2,12250,similarity
+6,5,B950,B850, Beta,Beta,5.0,966,2,12250,similarity
+7,5,B950,C1150, Beta,Gamma,5.0,731,2,12250,similarity
+8,5,B950,C1250, Beta,Gamma,5.0,501,2,12250,similarity
+9,5,B950,A250, Beta,Alpha,3.0,1804,2,12250,similarity
+10,5,B950,A50, Beta,Alpha,2.0,1763,2,12250,similarity
+11,5,B950,A150, Beta,Alpha,3.0,2443,2,12250,similarity
+12,5,B950,C1350, Beta,Gamma,5.0,2459,2,12250,similarity
+13,5,B950,C1050, Beta,Gamma,5.0,859,2,12250,similarity
+14,5,B950,B650, Beta,Beta,4.0,2298,2,12250,similarity
+7,6,B850,C1150,Beta,Gamma,5.0,1595,2,12250,similarity
+8,6,B850,C1250,Beta,Gamma,5.0,757,2,12250,similarity
+9,6,B850,A250,Beta,Alpha,3.0,2042,2,12250,similarity
+10,6,B850,A50,Beta,Alpha,2.0,1378,2,12250,similarity
+11,6,B850,A150,Beta,Alpha,3.0,1146,2,12250,similarity
+12,6,B850,C1350,Beta,Gamma,5.0,1914,2,12250,similarity
+13,6,B850,C1050,Beta,Gamma,5.0,524,2,12250,similarity
+14,6,B850,B650,Beta,Beta,5.0,1178,2,12250,similarity
+8,7,C1150,C1250,Gamma,Gamma,5.0,634,2,12250,similarity
+9,7,C1150,A250,Gamma,Alpha,3.0,1915,2,12250,similarity
+10,7,C1150,A50,Gamma,Alpha,2.0,1009,2,12250,similarity
+11,7,C1150,A150,Gamma,Alpha,3.0,1162,2,12250,similarity
+12,7,C1150,C1350,Gamma,Gamma,5.0,1851,2,12250,similarity
+13,7,C1150,C1050,Gamma,Gamma,5.0,738,2,12250,similarity
+14,7,C1150,B650,Gamma,Beta,4.0,1564,2,12250,similarity
+9,8,C1250,A250,Gamma,Alpha,3.0,1490,2,12250,similarity
+10,8,C1250,A50,Gamma,Alpha,2.0,1129,2,12250,similarity
+11,8,C1250,A150,Gamma,Alpha,3.0,1315,2,12250,similarity
+12,8,C1250,C1350,Gamma,Gamma,5.0,1539,2,12250,similarity
+13,8,C1250,C1050,Gamma,Gamma,5.0,924,2,12250,similarity
+14,8,C1250,B650,Gamma,Beta,4.0,2649,2,12250,similarity
+10,9,A250,A50,Alpha,Alpha,2.0,1715,2,12250,similarity
+11,9,A250,A150,Alpha,Alpha,5.0,2778,2,12250,similarity
+12,9,A250,C1350,Alpha,Gamma,2.0,3931,2,12250,similarity
+13,9,A250,C1050,Alpha,Gamma,3.0,3523,2,12250,similarity
+14,9,A250,B650,Alpha,Beta,4.0,3106,2,12250,similarity
+11,10,A50,A150,Alpha,Alpha,4.0,5395,2,12250,similarity
+12,10,A50,C1350,Alpha,Gamma,0.9999999999999998,4521,2,12250,similarity
+13,10,A50,C1050,Alpha,Gamma,0.9999999999999998,2244,2,12250,similarity
+14,10,A50,B650,Alpha,Beta,2.0,1435,2,12250,similarity
+12,11,A150,C1350,Alpha,Gamma,0.9999999999999998,2817,2,12250,similarity
+13,11,A150,C1050,Alpha,Gamma,2.0,7516,2,12250,similarity
+14,11,A150,B650,Alpha,Beta,3.0,1586,2,12250,similarity
+13,12,C1350,C1050,Gamma,Gamma,5.0,2459,2,12250,similarity
+14,12,C1350,B650,Gamma,Beta,4.0,2003,2,12250,similarity
+14,13,C1050,B650,Gamma,Beta,4.0,3683,2,12250,similarity
+1,0,A350,A50,Alpha,Alpha,0.0,5640,2,12276,similarity
+2,0,A350,A150,Alpha,Alpha,0.0,2210,2,12276,similarity
+3,0,A350,C1150,Alpha,Gamma,0.0,1301,2,12276,similarity
+4,0,A350,C1450,Alpha,Gamma,0.0,1545,2,12276,similarity
+5,0,A350,B950,Alpha, Beta,0.0,2266,2,12276,similarity
+6,0,A350,B550,Alpha,Beta,0.9999999999999998,4215,2,12276,similarity
+7,0,A350,C1050,Alpha,Gamma,0.0,1718,2,12276,similarity
+8,0,A350,A450,Alpha,Alpha,0.9999999999999998,5859,2,12276,similarity
+9,0,A350,C1350,Alpha,Gamma,0.0,1979,2,12276,similarity
+10,0,A350,B850,Alpha,Beta,0.0,819,2,12276,similarity
+11,0,A350,B750,Alpha,Beta,0.0,665,2,12276,similarity
+12,0,A350,B650,Alpha,Beta,0.0,660,2,12276,similarity
+13,0,A350,A250,Alpha,Alpha,2.0,8528,2,12276,similarity
+14,0,A350,C1250,Alpha,Gamma,0.0,1409,2,12276,similarity
+2,1,A50,A150,Alpha,Alpha,0.0,1813,2,12276,similarity
+3,1,A50,C1150,Alpha,Gamma,0.0,925,2,12276,similarity
+4,1,A50,C1450,Alpha,Gamma,0.0,560,2,12276,similarity
+5,1,A50,B950,Alpha, Beta,0.0,601,2,12276,similarity
+6,1,A50,B550,Alpha,Beta,0.0,495,2,12276,similarity
+7,1,A50,C1050,Alpha,Gamma,0.0,810,2,12276,similarity
+8,1,A50,A450,Alpha,Alpha,0.0,484,2,12276,similarity
+9,1,A50,C1350,Alpha,Gamma,0.0,465,2,12276,similarity
+10,1,A50,B850,Alpha,Beta,0.0,449,2,12276,similarity
+11,1,A50,B750,Alpha,Beta,0.0,528,2,12276,similarity
+12,1,A50,B650,Alpha,Beta,0.0,498,2,12276,similarity
+13,1,A50,A250,Alpha,Alpha,0.0,477,2,12276,similarity
+14,1,A50,C1250,Alpha,Gamma,0.0,518,2,12276,similarity
+3,2,A150,C1150,Alpha,Gamma,0.0,449,2,12276,similarity
+4,2,A150,C1450,Alpha,Gamma,0.0,472,2,12276,similarity
+5,2,A150,B950,Alpha, Beta,0.0,484,2,12276,similarity
+6,2,A150,B550,Alpha,Beta,0.0,490,2,12276,similarity
+7,2,A150,C1050,Alpha,Gamma,0.0,489,2,12276,similarity
+8,2,A150,A450,Alpha,Alpha,0.0,425,2,12276,similarity
+9,2,A150,C1350,Alpha,Gamma,0.0,446,2,12276,similarity
+10,2,A150,B850,Alpha,Beta,0.0,435,2,12276,similarity
+11,2,A150,B750,Alpha,Beta,0.0,442,2,12276,similarity
+12,2,A150,B650,Alpha,Beta,0.0,409,2,12276,similarity
+13,2,A150,A250,Alpha,Alpha,0.0,413,2,12276,similarity
+14,2,A150,C1250,Alpha,Gamma,0.0,397,2,12276,similarity
+4,3,C1150,C1450,Gamma,Gamma,0.0,726,2,12276,similarity
+5,3,C1150,B950,Gamma, Beta,0.9999999999999998,3952,2,12276,similarity
+6,3,C1150,B550,Gamma,Beta,0.0,1698,2,12276,similarity
+7,3,C1150,C1050,Gamma,Gamma,5.0,8346,2,12276,similarity
+8,3,C1150,A450,Gamma,Alpha,0.0,1893,2,12276,similarity
+9,3,C1150,C1350,Gamma,Gamma,0.9999999999999998,1978,2,12276,similarity
+10,3,C1150,B850,Gamma,Beta,0.9999999999999998,5003,2,12276,similarity
+11,3,C1150,B750,Gamma,Beta,0.9999999999999998,4531,2,12276,similarity
+12,3,C1150,B650,Gamma,Beta,0.0,4196,2,12276,similarity
+13,3,C1150,A250,Gamma,Alpha,0.0,672,2,12276,similarity
+14,3,C1150,C1250,Gamma,Gamma,5.0,4426,2,12276,similarity
+5,4,C1450,B950,Gamma, Beta,0.9999999999999998,4045,2,12276,similarity
+6,4,C1450,B550,Gamma,Beta,0.0,1674,2,12276,similarity
+7,4,C1450,C1050,Gamma,Gamma,0.9999999999999998,4942,2,12276,similarity
+8,4,C1450,A450,Gamma,Alpha,0.9999999999999998,918,2,12276,similarity
+9,4,C1450,C1350,Gamma,Gamma,5.0,4625,2,12276,similarity
+10,4,C1450,B850,Gamma,Beta,0.0,2917,2,12276,similarity
+11,4,C1450,B750,Gamma,Beta,0.0,615,2,12276,similarity
+12,4,C1450,B650,Gamma,Beta,0.0,659,2,12276,similarity
+13,4,C1450,A250,Gamma,Alpha,0.0,618,2,12276,similarity
+14,4,C1450,C1250,Gamma,Gamma,5.0,2679,2,12276,similarity
+6,5,B950,B550, Beta,Beta,0.9999999999999998,8515,2,12276,similarity
+7,5,B950,C1050, Beta,Gamma,5.0,3092,2,12276,similarity
+8,5,B950,A450, Beta,Alpha,0.0,4698,2,12276,similarity
+9,5,B950,C1350, Beta,Gamma,0.0,1882,2,12276,similarity
+10,5,B950,B850, Beta,Beta,5.0,2371,2,12276,similarity
+11,5,B950,B750, Beta,Beta,5.0,922,2,12276,similarity
+12,5,B950,B650, Beta,Beta,2.0,4409,2,12276,similarity
+13,5,B950,A250, Beta,Alpha,0.0,1578,2,12276,similarity
+14,5,B950,C1250, Beta,Gamma,0.9999999999999998,7281,2,12276,similarity
+7,6,B550,C1050,Beta,Gamma,0.0,1464,2,12276,similarity
+8,6,B550,A450,Beta,Alpha,6.0,4530,2,12276,similarity
+9,6,B550,C1350,Beta,Gamma,0.0,2251,2,12276,similarity
+10,6,B550,B850,Beta,Beta,5.0,3633,2,12276,similarity
+11,6,B550,B750,Beta,Beta,5.0,2315,2,12276,similarity
+12,6,B550,B650,Beta,Beta,4.0,2114,2,12276,similarity
+13,6,B550,A250,Beta,Alpha,0.9999999999999998,3875,2,12276,similarity
+14,6,B550,C1250,Beta,Gamma,0.0,2234,2,12276,similarity
+8,7,C1050,A450,Gamma,Alpha,0.0,635,2,12276,similarity
+9,7,C1050,C1350,Gamma,Gamma,0.9999999999999998,2091,2,12276,similarity
+10,7,C1050,B850,Gamma,Beta,4.0,7434,2,12276,similarity
+11,7,C1050,B750,Gamma,Beta,0.9999999999999998,6111,2,12276,similarity
+12,7,C1050,B650,Gamma,Beta,0.9999999999999998,730,2,12276,similarity
+13,7,C1050,A250,Gamma,Alpha,0.0,1348,2,12276,similarity
+14,7,C1050,C1250,Gamma,Gamma,4.0,4927,2,12276,similarity
+9,8,A450,C1350,Alpha,Gamma,0.0,1570,2,12276,similarity
+10,8,A450,B850,Alpha,Beta,0.9999999999999998,5773,2,12276,similarity
+11,8,A450,B750,Alpha,Beta,0.9999999999999998,1056,2,12276,similarity
+12,8,A450,B650,Alpha,Beta,0.9999999999999998,749,2,12276,similarity
+13,8,A450,A250,Alpha,Alpha,0.9999999999999998,5569,2,12276,similarity
+14,8,A450,C1250,Alpha,Gamma,0.0,2051,2,12276,similarity
+10,9,C1350,B850,Gamma,Beta,0.0,770,2,12276,similarity
+11,9,C1350,B750,Gamma,Beta,0.0,569,2,12276,similarity
+12,9,C1350,B650,Gamma,Beta,0.0,594,2,12276,similarity
+13,9,C1350,A250,Gamma,Alpha,0.0,881,2,12276,similarity
+14,9,C1350,C1250,Gamma,Gamma,5.0,2245,2,12276,similarity
+11,10,B850,B750,Beta,Beta,5.0,1217,2,12276,similarity
+12,10,B850,B650,Beta,Beta,4.0,2257,2,12276,similarity
+13,10,B850,A250,Beta,Alpha,0.0,2749,2,12276,similarity
+14,10,B850,C1250,Beta,Gamma,0.0,1085,2,12276,similarity
+12,11,B750,B650,Beta,Beta,5.0,2626,2,12276,similarity
+13,11,B750,A250,Beta,Alpha,0.0,9491,2,12276,similarity
+14,11,B750,C1250,Beta,Gamma,0.0,678,2,12276,similarity
+13,12,B650,A250,Beta,Alpha,0.0,515,2,12276,similarity
+14,12,B650,C1250,Beta,Gamma,0.0,605,2,12276,similarity
+14,13,A250,C1250,Alpha,Gamma,0.0,565,2,12276,similarity
+1,0,A450,C1350,Gamma,Gamma,0.9999999999999998,5463,2,12281,similarity
+2,0,A450,B750,Alpha,Beta,2.0,3675,2,12281,similarity
+3,0,A450,B650,Alpha,Beta,3.0,3489,2,12281,similarity
+4,0,A450,A150,Alpha,Alpha,0.9999999999999998,4753,2,12281,similarity
+5,0,A450,B950,Alpha, Beta,0.0,2651,2,12281,similarity
+6,0,A450,C1050,Alpha,Gamma,0.0,1291,2,12281,similarity
+7,0,A450,C1450,Alpha,Gamma,0.0,987,2,12281,similarity
+8,0,A450,A50,Alpha,Alpha,0.0,1733,2,12281,similarity
+9,0,A450,B550,Alpha,Beta,6.0,5554,2,12281,similarity
+10,0,A450,A250,Alpha,Alpha,3.0,3243,2,12281,similarity
+11,0,A450,C1250,Alpha,Gamma,0.9999999999999998,4154,2,12281,similarity
+12,0,A450,A350,Alpha,Alpha,6.0,2299,2,12281,similarity
+13,0,A450,B850,Alpha,Beta,2.0,6203,2,12281,similarity
+14,0,A450,C1150,Alpha,Gamma,0.9999999999999998,4450,2,12281,similarity
+2,1,C1350,B750,Gamma,Beta,0.9999999999999998,3929,2,12281,similarity
+3,1,C1350,B650,Gamma,Beta,0.9999999999999998,4897,2,12281,similarity
+4,1,C1350,A150,Gamma,Alpha,0.0,2890,2,12281,similarity
+5,1,C1350,B950,Gamma, Beta,6.0,3371,2,12281,similarity
+6,1,C1350,C1050,Gamma,Gamma,6.0,1842,2,12281,similarity
+7,1,C1350,C1450,Gamma,Gamma,6.0,1661,2,12281,similarity
+8,1,C1350,A50,Gamma,Alpha,0.0,3042,2,12281,similarity
+9,1,C1350,B550,Gamma,Beta,0.9999999999999998,4451,2,12281,similarity
+10,1,C1350,A250,Gamma,Alpha,0.0,2315,2,12281,similarity
+11,1,C1350,C1250,Gamma,Gamma,6.0,2547,2,12281,similarity
+12,1,C1350,A350,Gamma,Alpha,0.9999999999999998,4098,2,12281,similarity
+13,1,C1350,B850,Gamma,Beta,2.0,11370,2,12281,similarity
+14,1,C1350,C1150,Gamma,Gamma,6.0,5003,2,12281,similarity
+3,2,B750,B650,Beta,Beta,6.0,1475,2,12281,similarity
+4,2,B750,A150,Beta,Alpha,0.9999999999999998,2523,2,12281,similarity
+5,2,B750,B950,Beta, Beta,6.0,2899,2,12281,similarity
+6,2,B750,C1050,Beta,Gamma,5.0,2955,2,12281,similarity
+7,2,B750,C1450,Beta,Gamma,2.0,4228,2,12281,similarity
+8,2,B750,A50,Beta,Alpha,0.0,2290,2,12281,similarity
+9,2,B750,B550,Beta,Beta,5.0,3746,2,12281,similarity
+10,2,B750,A250,Beta,Alpha,0.9999999999999998,3947,2,12281,similarity
+11,2,B750,C1250,Beta,Gamma,4.0,4139,2,12281,similarity
+12,2,B750,A350,Beta,Alpha,2.0,6188,2,12281,similarity
+13,2,B750,B850,Beta,Beta,6.0,2363,2,12281,similarity
+14,2,B750,C1150,Beta,Gamma,5.0,4091,2,12281,similarity
+4,3,B650,A150,Beta,Alpha,0.0,4924,2,12281,similarity
+5,3,B650,B950,Beta, Beta,5.0,2867,2,12281,similarity
+6,3,B650,C1050,Beta,Gamma,4.0,3908,2,12281,similarity
+7,3,B650,C1450,Beta,Gamma,0.9999999999999998,5372,2,12281,similarity
+8,3,B650,A50,Beta,Alpha,0.0,1881,2,12281,similarity
+9,3,B650,B550,Beta,Beta,6.0,6099,2,12281,similarity
+10,3,B650,A250,Beta,Alpha,0.9999999999999998,3187,2,12281,similarity
+11,3,B650,C1250,Beta,Gamma,3.0,2994,2,12281,similarity
+12,3,B650,A350,Beta,Alpha,2.0,2675,2,12281,similarity
+13,3,B650,B850,Beta,Beta,5.0,4041,2,12281,similarity
+14,3,B650,C1150,Beta,Gamma,3.0,4019,2,12281,similarity
+5,4,A150,B950,Alpha, Beta,0.0,4547,2,12281,similarity
+6,4,A150,C1050,Alpha,Gamma,0.0,1355,2,12281,similarity
+7,4,A150,C1450,Alpha,Gamma,0.0,678,2,12281,similarity
+8,4,A150,A50,Alpha,Alpha,5.0,3426,2,12281,similarity
+9,4,A150,B550,Alpha,Beta,2.0,5035,2,12281,similarity
+10,4,A150,A250,Alpha,Alpha,6.0,2738,2,12281,similarity
+11,4,A150,C1250,Alpha,Gamma,0.0,2507,2,12281,similarity
+12,4,A150,A350,Alpha,Alpha,4.0,9859,2,12281,similarity
+13,4,A150,B850,Alpha,Beta,0.0,6972,2,12281,similarity
+14,4,A150,C1150,Alpha,Gamma,0.0,1041,2,12281,similarity
+6,5,B950,C1050, Beta,Gamma,6.0,2330,2,12281,similarity
+7,5,B950,C1450, Beta,Gamma,5.0,4816,2,12281,similarity
+8,5,B950,A50, Beta,Alpha,0.0,2283,2,12281,similarity
+9,5,B950,B550, Beta,Beta,5.0,8395,2,12281,similarity
+10,5,B950,A250, Beta,Alpha,0.9999999999999998,8355,2,12281,similarity
+11,5,B950,C1250, Beta,Gamma,6.0,4012,2,12281,similarity
+12,5,B950,A350, Beta,Alpha,0.9999999999999998,5443,2,12281,similarity
+13,5,B950,B850, Beta,Beta,6.0,2235,2,12281,similarity
+14,5,B950,C1150, Beta,Gamma,6.0,1731,2,12281,similarity
+7,6,C1050,C1450,Gamma,Gamma,5.0,2548,2,12281,similarity
+8,6,C1050,A50,Gamma,Alpha,0.0,2132,2,12281,similarity
+9,6,C1050,B550,Gamma,Beta,4.0,3676,2,12281,similarity
+10,6,C1050,A250,Gamma,Alpha,2.0,2586,2,12281,similarity
+11,6,C1050,C1250,Gamma,Gamma,6.0,3417,2,12281,similarity
+12,6,C1050,A350,Gamma,Alpha,2.0,3305,2,12281,similarity
+13,6,C1050,B850,Gamma,Beta,5.0,6097,2,12281,similarity
+14,6,C1050,C1150,Gamma,Gamma,6.0,1594,2,12281,similarity
+8,7,C1450,A50,Gamma,Alpha,0.0,1978,2,12281,similarity
+9,7,C1450,B550,Gamma,Beta,2.0,3866,2,12281,similarity
+10,7,C1450,A250,Gamma,Alpha,0.0,3467,2,12281,similarity
+11,7,C1450,C1250,Gamma,Gamma,6.0,2803,2,12281,similarity
+12,7,C1450,A350,Gamma,Alpha,0.9999999999999998,2755,2,12281,similarity
+13,7,C1450,B850,Gamma,Beta,3.0,3555,2,12281,similarity
+14,7,C1450,C1150,Gamma,Gamma,6.0,3481,2,12281,similarity
+9,8,A50,B550,Alpha,Beta,0.0,3466,2,12281,similarity
+10,8,A50,A250,Alpha,Alpha,2.0,4707,2,12281,similarity
+11,8,A50,C1250,Alpha,Gamma,0.0,3284,2,12281,similarity
+12,8,A50,A350,Alpha,Alpha,0.0,2042,2,12281,similarity
+13,8,A50,B850,Alpha,Beta,0.0,1275,2,12281,similarity
+14,8,A50,C1150,Alpha,Gamma,0.0,882,2,12281,similarity
+10,9,B550,A250,Beta,Alpha,5.0,3067,2,12281,similarity
+11,9,B550,C1250,Beta,Gamma,2.0,5298,2,12281,similarity
+12,9,B550,A350,Beta,Alpha,6.0,3627,2,12281,similarity
+13,9,B550,B850,Beta,Beta,5.0,8467,2,12281,similarity
+14,9,B550,C1150,Beta,Gamma,4.0,3595,2,12281,similarity
+11,10,A250,C1250,Alpha,Gamma,2.0,1719,2,12281,similarity
+12,10,A250,A350,Alpha,Alpha,6.0,2410,2,12281,similarity
+13,10,A250,B850,Alpha,Beta,2.0,4658,2,12281,similarity
+14,10,A250,C1150,Alpha,Gamma,0.0,3099,2,12281,similarity
+12,11,C1250,A350,Gamma,Alpha,0.9999999999999998,5266,2,12281,similarity
+13,11,C1250,B850,Gamma,Beta,5.0,6402,2,12281,similarity
+14,11,C1250,C1150,Gamma,Gamma,6.0,1667,2,12281,similarity
+13,12,A350,B850,Alpha,Beta,4.0,7243,2,12281,similarity
+14,12,A350,C1150,Alpha,Gamma,3.0,3298,2,12281,similarity
+14,13,B850,C1150,Beta,Gamma,6.0,3323,2,12281,similarity
+1,0,A250,C1150,Gamma,Gamma,0.9999999999999998,4647,2,12287,similarity
+2,0,A250,B850,Alpha,Beta,2.0,1801,2,12287,similarity
+3,0,A250,C1050,Alpha,Gamma,0.9999999999999998,2122,2,12287,similarity
+4,0,A250,B750,Alpha,Beta,3.0,3269,2,12287,similarity
+5,0,A250,C1450,Alpha,Gamma,0.0,1897,2,12287,similarity
+6,0,A250,A150,Alpha,Alpha,3.0,6350,2,12287,similarity
+7,0,A250,B950,Alpha, Beta,2.0,2981,2,12287,similarity
+8,0,A250,B550,Alpha,Beta,2.0,2676,2,12287,similarity
+9,0,A250,A50,Alpha,Alpha,3.0,2869,2,12287,similarity
+10,0,A250,B650,Alpha,Beta,3.0,3836,2,12287,similarity
+11,0,A250,C1350,Alpha,Gamma,0.9999999999999998,4160,2,12287,similarity
+12,0,A250,A450,Alpha,Alpha,2.0,4591,2,12287,similarity
+13,0,A250,A350,Alpha,Alpha,2.0,4543,2,12287,similarity
+14,0,A250,C1250,Alpha,Gamma,0.0,2391,2,12287,similarity
+2,1,C1150,B850,Gamma,Beta,3.0,2607,2,12287,similarity
+3,1,C1150,C1050,Gamma,Gamma,4.0,2051,2,12287,similarity
+4,1,C1150,B750,Gamma,Beta,3.0,2082,2,12287,similarity
+5,1,C1150,C1450,Gamma,Gamma,4.0,2756,2,12287,similarity
+6,1,C1150,A150,Gamma,Alpha,0.0,2812,2,12287,similarity
+7,1,C1150,B950,Gamma, Beta,4.0,2771,2,12287,similarity
+8,1,C1150,B550,Gamma,Beta,2.0,2116,2,12287,similarity
+9,1,C1150,A50,Gamma,Alpha,0.0,2006,2,12287,similarity
+10,1,C1150,B650,Gamma,Beta,2.0,2074,2,12287,similarity
+11,1,C1150,C1350,Gamma,Gamma,4.0,2555,2,12287,similarity
+12,1,C1150,A450,Gamma,Alpha,2.0,1963,2,12287,similarity
+13,1,C1150,A350,Gamma,Alpha,0.9999999999999998,1681,2,12287,similarity
+14,1,C1150,C1250,Gamma,Gamma,5.0,3453,2,12287,similarity
+3,2,B850,C1050,Beta,Gamma,5.0,2602,2,12287,similarity
+4,2,B850,B750,Beta,Beta,5.0,1543,2,12287,similarity
+5,2,B850,C1450,Beta,Gamma,2.0,2264,2,12287,similarity
+6,2,B850,A150,Beta,Alpha,0.9999999999999998,2157,2,12287,similarity
+7,2,B850,B950,Beta, Beta,5.0,3101,2,12287,similarity
+8,2,B850,B550,Beta,Beta,3.0,2848,2,12287,similarity
+9,2,B850,A50,Beta,Alpha,0.0,1940,2,12287,similarity
+10,2,B850,B650,Beta,Beta,2.0,4124,2,12287,similarity
+11,2,B850,C1350,Beta,Gamma,2.0,1958,2,12287,similarity
+12,2,B850,A450,Beta,Alpha,2.0,1304,2,12287,similarity
+13,2,B850,A350,Beta,Alpha,0.9999999999999998,2155,2,12287,similarity
+14,2,B850,C1250,Beta,Gamma,3.0,2226,2,12287,similarity
+4,3,C1050,B750,Gamma,Beta,3.0,1104,2,12287,similarity
+5,3,C1050,C1450,Gamma,Gamma,3.0,1603,2,12287,similarity
+6,3,C1050,A150,Gamma,Alpha,0.9999999999999998,1904,2,12287,similarity
+7,3,C1050,B950,Gamma, Beta,5.0,3997,2,12287,similarity
+8,3,C1050,B550,Gamma,Beta,2.0,2283,2,12287,similarity
+9,3,C1050,A50,Gamma,Alpha,0.0,1935,2,12287,similarity
+10,3,C1050,B650,Gamma,Beta,2.0,3968,2,12287,similarity
+11,3,C1050,C1350,Gamma,Gamma,3.0,1931,2,12287,similarity
+12,3,C1050,A450,Gamma,Alpha,0.9999999999999998,1768,2,12287,similarity
+13,3,C1050,A350,Gamma,Alpha,0.9999999999999998,1104,2,12287,similarity
+14,3,C1050,C1250,Gamma,Gamma,3.0,1984,2,12287,similarity
+5,4,B750,C1450,Beta,Gamma,0.9999999999999998,2547,2,12287,similarity
+6,4,B750,A150,Beta,Alpha,0.9999999999999998,1219,2,12287,similarity
+7,4,B750,B950,Beta, Beta,3.0,2610,2,12287,similarity
+8,4,B750,B550,Beta,Beta,2.0,2023,2,12287,similarity
+9,4,B750,A50,Beta,Alpha,0.0,1807,2,12287,similarity
+10,4,B750,B650,Beta,Beta,2.0,3975,2,12287,similarity
+11,4,B750,C1350,Beta,Gamma,0.9999999999999998,2540,2,12287,similarity
+12,4,B750,A450,Beta,Alpha,2.0,3539,2,12287,similarity
+13,4,B750,A350,Beta,Alpha,2.0,1774,2,12287,similarity
+14,4,B750,C1250,Beta,Gamma,2.0,1037,2,12287,similarity
+6,5,C1450,A150,Gamma,Alpha,0.0,1827,2,12287,similarity
+7,5,C1450,B950,Gamma, Beta,0.9999999999999998,3969,2,12287,similarity
+8,5,C1450,B550,Gamma,Beta,0.9999999999999998,798,2,12287,similarity
+9,5,C1450,A50,Gamma,Alpha,0.0,2079,2,12287,similarity
+10,5,C1450,B650,Gamma,Beta,0.9999999999999998,5321,2,12287,similarity
+11,5,C1450,C1350,Gamma,Gamma,5.0,5054,2,12287,similarity
+12,5,C1450,A450,Gamma,Alpha,0.9999999999999998,2878,2,12287,similarity
+13,5,C1450,A350,Gamma,Alpha,0.9999999999999998,716,2,12287,similarity
+14,5,C1450,C1250,Gamma,Gamma,3.0,2499,2,12287,similarity
+7,6,A150,B950,Alpha, Beta,0.9999999999999998,2945,2,12287,similarity
+8,6,A150,B550,Alpha,Beta,3.0,2001,2,12287,similarity
+9,6,A150,A50,Alpha,Alpha,4.0,4001,2,12287,similarity
+10,6,A150,B650,Alpha,Beta,3.0,1814,2,12287,similarity
+11,6,A150,C1350,Alpha,Gamma,0.9999999999999998,4683,2,12287,similarity
+12,6,A150,A450,Alpha,Alpha,3.0,3055,2,12287,similarity
+13,6,A150,A350,Alpha,Alpha,3.0,2531,2,12287,similarity
+14,6,A150,C1250,Alpha,Gamma,0.9999999999999998,2000,2,12287,similarity
+8,7,B950,B550, Beta,Beta,3.0,1894,2,12287,similarity
+9,7,B950,A50, Beta,Alpha,0.0,1824,2,12287,similarity
+10,7,B950,B650, Beta,Beta,2.0,3230,2,12287,similarity
+11,7,B950,C1350, Beta,Gamma,2.0,3522,2,12287,similarity
+12,7,B950,A450, Beta,Alpha,2.0,861,2,12287,similarity
+13,7,B950,A350, Beta,Alpha,2.0,633,2,12287,similarity
+14,7,B950,C1250, Beta,Gamma,3.0,3631,2,12287,similarity
+9,8,B550,A50,Beta,Alpha,0.0,1657,2,12287,similarity
+10,8,B550,B650,Beta,Beta,4.0,4186,2,12287,similarity
+11,8,B550,C1350,Beta,Gamma,0.9999999999999998,2016,2,12287,similarity
+12,8,B550,A450,Beta,Alpha,4.0,2843,2,12287,similarity
+13,8,B550,A350,Beta,Alpha,3.0,1692,2,12287,similarity
+14,8,B550,C1250,Beta,Gamma,0.9999999999999998,2358,2,12287,similarity
+10,9,A50,B650,Alpha,Beta,0.0,2375,2,12287,similarity
+11,9,A50,C1350,Alpha,Gamma,0.0,703,2,12287,similarity
+12,9,A50,A450,Alpha,Alpha,0.0,2275,2,12287,similarity
+13,9,A50,A350,Alpha,Alpha,0.0,831,2,12287,similarity
+14,9,A50,C1250,Alpha,Gamma,0.0,741,2,12287,similarity
+11,10,B650,C1350,Beta,Gamma,0.0,4604,2,12287,similarity
+12,10,B650,A450,Beta,Alpha,3.0,2257,2,12287,similarity
+13,10,B650,A350,Beta,Alpha,2.0,3094,2,12287,similarity
+14,10,B650,C1250,Beta,Gamma,0.9999999999999998,2699,2,12287,similarity
+12,11,C1350,A450,Gamma,Alpha,0.9999999999999998,982,2,12287,similarity
+13,11,C1350,A350,Gamma,Alpha,0.9999999999999998,559,2,12287,similarity
+14,11,C1350,C1250,Gamma,Gamma,4.0,2054,2,12287,similarity
+13,12,A450,A350,Alpha,Alpha,5.0,2890,2,12287,similarity
+14,12,A450,C1250,Alpha,Gamma,0.9999999999999998,4085,2,12287,similarity
+14,13,A350,C1250,Alpha,Gamma,0.0,1929,2,12287,similarity
+1,0,C1150,B950, Beta, Beta,4.0,16362,2,12290,similarity
+2,0,C1150,C1350,Gamma,Gamma,5.0,6054,2,12290,similarity
+3,0,C1150,A150,Gamma,Alpha,0.0,3014,2,12290,similarity
+4,0,C1150,A50,Gamma,Alpha,0.0,1687,2,12290,similarity
+5,0,C1150,C1050,Gamma,Gamma,5.0,13105,2,12290,similarity
+6,0,C1150,B850,Gamma,Beta,3.0,6326,2,12290,similarity
+7,0,C1150,B550,Gamma,Beta,0.0,12213,2,12290,similarity
+8,0,C1150,B750,Gamma,Beta,0.9999999999999998,12600,2,12290,similarity
+9,0,C1150,B650,Gamma,Beta,0.9999999999999998,2853,2,12290,similarity
+10,0,C1150,C1250,Gamma,Gamma,6.0,4611,2,12290,similarity
+11,0,C1150,C1450,Gamma,Gamma,0.9999999999999998,18798,2,12290,similarity
+12,0,C1150,A250,Gamma,Alpha,0.0,4017,2,12290,similarity
+13,0,C1150,A450,Gamma,Alpha,0.0,5135,2,12290,similarity
+14,0,C1150,A350,Gamma,Alpha,0.0,1367,2,12290,similarity
+2,1,B950,C1350, Beta,Gamma,2.0,11487,2,12290,similarity
+3,1,B950,A150, Beta,Alpha,0.0,2735,2,12290,similarity
+4,1,B950,A50, Beta,Alpha,0.0,1137,2,12290,similarity
+5,1,B950,C1050, Beta,Gamma,5.0,4803,2,12290,similarity
+6,1,B950,B850, Beta,Beta,5.0,10551,2,12290,similarity
+7,1,B950,B550, Beta,Beta,0.0,5206,2,12290,similarity
+8,1,B950,B750, Beta,Beta,2.0,7804,2,12290,similarity
+9,1,B950,B650, Beta,Beta,0.9999999999999998,3912,2,12290,similarity
+10,1,B950,C1250, Beta,Gamma,2.0,8330,2,12290,similarity
+11,1,B950,C1450, Beta,Gamma,0.0,3049,2,12290,similarity
+12,1,B950,A250, Beta,Alpha,0.0,1543,2,12290,similarity
+13,1,B950,A450, Beta,Alpha,0.9999999999999998,5959,2,12290,similarity
+14,1,B950,A350, Beta,Alpha,0.0,2239,2,12290,similarity
+3,2,C1350,A150,Gamma,Alpha,0.0,1833,2,12290,similarity
+4,2,C1350,A50,Gamma,Alpha,0.0,1274,2,12290,similarity
+5,2,C1350,C1050,Gamma,Gamma,2.0,5655,2,12290,similarity
+6,2,C1350,B850,Gamma,Beta,0.9999999999999998,7946,2,12290,similarity
+7,2,C1350,B550,Gamma,Beta,0.0,2682,2,12290,similarity
+8,2,C1350,B750,Gamma,Beta,0.0,4389,2,12290,similarity
+9,2,C1350,B650,Gamma,Beta,0.0,1300,2,12290,similarity
+10,2,C1350,C1250,Gamma,Gamma,5.0,6076,2,12290,similarity
+11,2,C1350,C1450,Gamma,Gamma,5.0,3620,2,12290,similarity
+12,2,C1350,A250,Gamma,Alpha,0.0,2968,2,12290,similarity
+13,2,C1350,A450,Gamma,Alpha,0.0,1118,2,12290,similarity
+14,2,C1350,A350,Gamma,Alpha,0.0,817,2,12290,similarity
+4,3,A150,A50,Alpha,Alpha,0.0,10208,2,12290,similarity
+5,3,A150,C1050,Alpha,Gamma,0.0,1156,2,12290,similarity
+6,3,A150,B850,Alpha,Beta,0.0,1093,2,12290,similarity
+7,3,A150,B550,Alpha,Beta,0.0,3200,2,12290,similarity
+8,3,A150,B750,Alpha,Beta,0.0,831,2,12290,similarity
+9,3,A150,B650,Alpha,Beta,0.0,1348,2,12290,similarity
+10,3,A150,C1250,Alpha,Gamma,0.0,1094,2,12290,similarity
+11,3,A150,C1450,Alpha,Gamma,0.0,1128,2,12290,similarity
+12,3,A150,A250,Alpha,Alpha,2.0,10458,2,12290,similarity
+13,3,A150,A450,Alpha,Alpha,0.0,4432,2,12290,similarity
+14,3,A150,A350,Alpha,Alpha,0.0,5992,2,12290,similarity
+5,4,A50,C1050,Alpha,Gamma,0.0,807,2,12290,similarity
+6,4,A50,B850,Alpha,Beta,0.0,726,2,12290,similarity
+7,4,A50,B550,Alpha,Beta,0.0,880,2,12290,similarity
+8,4,A50,B750,Alpha,Beta,0.0,836,2,12290,similarity
+9,4,A50,B650,Alpha,Beta,0.0,842,2,12290,similarity
+10,4,A50,C1250,Alpha,Gamma,0.0,1054,2,12290,similarity
+11,4,A50,C1450,Alpha,Gamma,0.0,858,2,12290,similarity
+12,4,A50,A250,Alpha,Alpha,0.0,2232,2,12290,similarity
+13,4,A50,A450,Alpha,Alpha,0.0,719,2,12290,similarity
+14,4,A50,A350,Alpha,Alpha,0.0,650,2,12290,similarity
+6,5,C1050,B850,Gamma,Beta,2.0,6710,2,12290,similarity
+7,5,C1050,B550,Gamma,Beta,0.0,8638,2,12290,similarity
+8,5,C1050,B750,Gamma,Beta,0.9999999999999998,4890,2,12290,similarity
+9,5,C1050,B650,Gamma,Beta,0.0,2493,2,12290,similarity
+10,5,C1050,C1250,Gamma,Gamma,3.0,19915,2,12290,similarity
+11,5,C1050,C1450,Gamma,Gamma,0.0,4700,2,12290,similarity
+12,5,C1050,A250,Gamma,Alpha,0.0,1792,2,12290,similarity
+13,5,C1050,A450,Gamma,Alpha,0.0,1711,2,12290,similarity
+14,5,C1050,A350,Gamma,Alpha,0.0,897,2,12290,similarity
+7,6,B850,B550,Beta,Beta,0.9999999999999998,5939,2,12290,similarity
+8,6,B850,B750,Beta,Beta,6.0,10115,2,12290,similarity
+9,6,B850,B650,Beta,Beta,3.0,14276,2,12290,similarity
+10,6,B850,C1250,Beta,Gamma,0.9999999999999998,8554,2,12290,similarity
+11,6,B850,C1450,Beta,Gamma,0.0,2219,2,12290,similarity
+12,6,B850,A250,Beta,Alpha,0.0,1271,2,12290,similarity
+13,6,B850,A450,Beta,Alpha,0.9999999999999998,6133,2,12290,similarity
+14,6,B850,A350,Beta,Alpha,0.0,4445,2,12290,similarity
+8,7,B550,B750,Beta,Beta,4.0,7217,2,12290,similarity
+9,7,B550,B650,Beta,Beta,5.0,5343,2,12290,similarity
+10,7,B550,C1250,Beta,Gamma,0.0,2703,2,12290,similarity
+11,7,B550,C1450,Beta,Gamma,0.0,1561,2,12290,similarity
+12,7,B550,A250,Beta,Alpha,0.0,4121,2,12290,similarity
+13,7,B550,A450,Beta,Alpha,4.0,6450,2,12290,similarity
+14,7,B550,A350,Beta,Alpha,0.9999999999999998,8614,2,12290,similarity
+9,8,B750,B650,Beta,Beta,5.0,9794,2,12290,similarity
+10,8,B750,C1250,Beta,Gamma,0.0,3798,2,12290,similarity
+11,8,B750,C1450,Beta,Gamma,0.0,1094,2,12290,similarity
+12,8,B750,A250,Beta,Alpha,0.0,1216,2,12290,similarity
+13,8,B750,A450,Beta,Alpha,0.0,2374,2,12290,similarity
+14,8,B750,A350,Beta,Alpha,0.0,947,2,12290,similarity
+10,9,B650,C1250,Beta,Gamma,0.0,1064,2,12290,similarity
+11,9,B650,C1450,Beta,Gamma,0.0,733,2,12290,similarity
+12,9,B650,A250,Beta,Alpha,0.0,1111,2,12290,similarity
+13,9,B650,A450,Beta,Alpha,0.9999999999999998,6921,2,12290,similarity
+14,9,B650,A350,Beta,Alpha,0.0,2807,2,12290,similarity
+11,10,C1250,C1450,Gamma,Gamma,0.0,5775,2,12290,similarity
+12,10,C1250,A250,Gamma,Alpha,0.0,2376,2,12290,similarity
+13,10,C1250,A450,Gamma,Alpha,0.0,1632,2,12290,similarity
+14,10,C1250,A350,Gamma,Alpha,0.0,1157,2,12290,similarity
+12,11,C1450,A250,Gamma,Alpha,0.0,1222,2,12290,similarity
+13,11,C1450,A450,Gamma,Alpha,0.0,1146,2,12290,similarity
+14,11,C1450,A350,Gamma,Alpha,0.0,1550,2,12290,similarity
+13,12,A250,A450,Alpha,Alpha,0.9999999999999998,5941,2,12290,similarity
+14,12,A250,A350,Alpha,Alpha,3.0,7105,2,12290,similarity
+14,13,A450,A350,Alpha,Alpha,5.0,4190,2,12290,similarity
+1,0,A50,C1250,Gamma,Gamma,0.0,6274,2,12299,similarity
+2,0,A50,C1050,Alpha,Gamma,0.0,2579,2,12299,similarity
+3,0,A50,B850,Alpha,Beta,0.0,2394,2,12299,similarity
+4,0,A50,A350,Alpha,Alpha,6.0,4254,2,12299,similarity
+5,0,A50,A450,Alpha,Alpha,6.0,2334,2,12299,similarity
+6,0,A50,B750,Alpha,Beta,3.0,3210,2,12299,similarity
+7,0,A50,A150,Alpha,Alpha,6.0,2577,2,12299,similarity
+8,0,A50,B550,Alpha,Beta,3.0,2363,2,12299,similarity
+9,0,A50,C1350,Alpha,Gamma,0.0,2785,2,12299,similarity
+10,0,A50,C1450,Alpha,Gamma,0.0,1259,2,12299,similarity
+11,0,A50,A250,Alpha,Alpha,6.0,2650,2,12299,similarity
+12,0,A50,B950,Alpha, Beta,0.0,4962,2,12299,similarity
+13,0,A50,C1150,Alpha,Gamma,0.0,1198,2,12299,similarity
+14,0,A50,B650,Alpha,Beta,3.0,3963,2,12299,similarity
+2,1,C1250,C1050,Gamma,Gamma,6.0,3580,2,12299,similarity
+3,1,C1250,B850,Gamma,Beta,6.0,913,2,12299,similarity
+4,1,C1250,A350,Gamma,Alpha,2.0,4962,2,12299,similarity
+5,1,C1250,A450,Gamma,Alpha,3.0,2242,2,12299,similarity
+6,1,C1250,B750,Gamma,Beta,3.0,1754,2,12299,similarity
+7,1,C1250,A150,Gamma,Alpha,0.0,4098,2,12299,similarity
+8,1,C1250,B550,Gamma,Beta,3.0,2451,2,12299,similarity
+9,1,C1250,C1350,Gamma,Gamma,6.0,1762,2,12299,similarity
+10,1,C1250,C1450,Gamma,Gamma,6.0,1075,2,12299,similarity
+11,1,C1250,A250,Gamma,Alpha,0.0,2477,2,12299,similarity
+12,1,C1250,B950,Gamma, Beta,6.0,2859,2,12299,similarity
+13,1,C1250,C1150,Gamma,Gamma,6.0,1100,2,12299,similarity
+14,1,C1250,B650,Gamma,Beta,6.0,1044,2,12299,similarity
+3,2,C1050,B850,Gamma,Beta,6.0,874,2,12299,similarity
+4,2,C1050,A350,Gamma,Alpha,3.0,2844,2,12299,similarity
+5,2,C1050,A450,Gamma,Alpha,3.0,960,2,12299,similarity
+6,2,C1050,B750,Gamma,Beta,6.0,4482,2,12299,similarity
+7,2,C1050,A150,Gamma,Alpha,0.0,2765,2,12299,similarity
+8,2,C1050,B550,Gamma,Beta,3.0,2322,2,12299,similarity
+9,2,C1050,C1350,Gamma,Gamma,6.0,2318,2,12299,similarity
+10,2,C1050,C1450,Gamma,Gamma,6.0,1570,2,12299,similarity
+11,2,C1050,A250,Gamma,Alpha,0.0,2728,2,12299,similarity
+12,2,C1050,B950,Gamma, Beta,6.0,5620,2,12299,similarity
+13,2,C1050,C1150,Gamma,Gamma,6.0,748,2,12299,similarity
+14,2,C1050,B650,Gamma,Beta,6.0,1067,2,12299,similarity
+4,3,B850,A350,Beta,Alpha,3.0,1961,2,12299,similarity
+5,3,B850,A450,Beta,Alpha,3.0,1113,2,12299,similarity
+6,3,B850,B750,Beta,Beta,6.0,3273,2,12299,similarity
+7,3,B850,A150,Beta,Alpha,0.0,2525,2,12299,similarity
+8,3,B850,B550,Beta,Beta,6.0,5475,2,12299,similarity
+9,3,B850,C1350,Beta,Gamma,6.0,2249,2,12299,similarity
+10,3,B850,C1450,Beta,Gamma,6.0,749,2,12299,similarity
+11,3,B850,A250,Beta,Alpha,3.0,2563,2,12299,similarity
+12,3,B850,B950,Beta, Beta,6.0,2474,2,12299,similarity
+13,3,B850,C1150,Beta,Gamma,6.0,2118,2,12299,similarity
+14,3,B850,B650,Beta,Beta,6.0,2053,2,12299,similarity
+5,4,A350,A450,Alpha,Alpha,6.0,2394,2,12299,similarity
+6,4,A350,B750,Alpha,Beta,3.0,3216,2,12299,similarity
+7,4,A350,A150,Alpha,Alpha,6.0,3036,2,12299,similarity
+8,4,A350,B550,Alpha,Beta,6.0,1505,2,12299,similarity
+9,4,A350,C1350,Alpha,Gamma,3.0,2763,2,12299,similarity
+10,4,A350,C1450,Alpha,Gamma,3.0,899,2,12299,similarity
+11,4,A350,A250,Alpha,Alpha,6.0,2338,2,12299,similarity
+12,4,A350,B950,Alpha, Beta,3.0,3461,2,12299,similarity
+13,4,A350,C1150,Alpha,Gamma,0.0,2562,2,12299,similarity
+14,4,A350,B650,Alpha,Beta,0.0,2905,2,12299,similarity
+6,5,A450,B750,Alpha,Beta,6.0,3109,2,12299,similarity
+7,5,A450,A150,Alpha,Alpha,3.0,2091,2,12299,similarity
+8,5,A450,B550,Alpha,Beta,3.0,812,2,12299,similarity
+9,5,A450,C1350,Alpha,Gamma,0.0,3536,2,12299,similarity
+10,5,A450,C1450,Alpha,Gamma,0.0,10677,2,12299,similarity
+11,5,A450,A250,Alpha,Alpha,6.0,2562,2,12299,similarity
+12,5,A450,B950,Alpha, Beta,6.0,2122,2,12299,similarity
+13,5,A450,C1150,Alpha,Gamma,3.0,3163,2,12299,similarity
+14,5,A450,B650,Alpha,Beta,0.0,5848,2,12299,similarity
+7,6,B750,A150,Beta,Alpha,0.0,3803,2,12299,similarity
+8,6,B750,B550,Beta,Beta,4.0,2322,2,12299,similarity
+9,6,B750,C1350,Beta,Gamma,3.0,2538,2,12299,similarity
+10,6,B750,C1450,Beta,Gamma,2.0,1921,2,12299,similarity
+11,6,B750,A250,Beta,Alpha,0.9999999999999998,2476,2,12299,similarity
+12,6,B750,B950,Beta, Beta,4.0,2087,2,12299,similarity
+13,6,B750,C1150,Beta,Gamma,6.0,4947,2,12299,similarity
+14,6,B750,B650,Beta,Beta,6.0,1698,2,12299,similarity
+8,7,A150,B550,Alpha,Beta,2.0,2122,2,12299,similarity
+9,7,A150,C1350,Alpha,Gamma,0.0,3762,2,12299,similarity
+10,7,A150,C1450,Alpha,Gamma,0.0,961,2,12299,similarity
+11,7,A150,A250,Alpha,Alpha,6.0,2298,2,12299,similarity
+12,7,A150,B950,Alpha, Beta,0.0,2636,2,12299,similarity
+13,7,A150,C1150,Alpha,Gamma,0.0,1442,2,12299,similarity
+14,7,A150,B650,Alpha,Beta,3.0,3090,2,12299,similarity
+9,8,B550,C1350,Beta,Gamma,0.0,2154,2,12299,similarity
+10,8,B550,C1450,Beta,Gamma,0.0,785,2,12299,similarity
+11,8,B550,A250,Beta,Alpha,6.0,5361,2,12299,similarity
+12,8,B550,B950,Beta, Beta,6.0,1012,2,12299,similarity
+13,8,B550,C1150,Beta,Gamma,6.0,1201,2,12299,similarity
+14,8,B550,B650,Beta,Beta,6.0,5173,2,12299,similarity
+10,9,C1350,C1450,Gamma,Gamma,6.0,1675,2,12299,similarity
+11,9,C1350,A250,Gamma,Alpha,0.0,2153,2,12299,similarity
+12,9,C1350,B950,Gamma, Beta,6.0,4570,2,12299,similarity
+13,9,C1350,C1150,Gamma,Gamma,6.0,882,2,12299,similarity
+14,9,C1350,B650,Gamma,Beta,3.0,4478,2,12299,similarity
+11,10,C1450,A250,Gamma,Alpha,0.0,2043,2,12299,similarity
+12,10,C1450,B950,Gamma, Beta,6.0,3110,2,12299,similarity
+13,10,C1450,C1150,Gamma,Gamma,6.0,1059,2,12299,similarity
+14,10,C1450,B650,Gamma,Beta,3.0,2476,2,12299,similarity
+12,11,A250,B950,Alpha, Beta,0.0,3103,2,12299,similarity
+13,11,A250,C1150,Alpha,Gamma,0.0,4107,2,12299,similarity
+14,11,A250,B650,Alpha,Beta,3.0,5339,2,12299,similarity
+13,12,B950,C1150, Beta,Gamma,6.0,1972,2,12299,similarity
+14,12,B950,B650, Beta,Beta,6.0,1440,2,12299,similarity
+14,13,C1150,B650,Gamma,Beta,3.0,2754,2,12299,similarity
+1,0,B750,B550,Beta,Beta,2.0,6199,2,12321,similarity
+2,0,B750,C1050,Beta,Gamma,5.0,11099,2,12321,similarity
+3,0,B750,C1250,Beta,Gamma,5.0,4196,2,12321,similarity
+4,0,B750,B850,Beta,Beta,5.0,2106,2,12321,similarity
+5,0,B750,C1150,Beta,Gamma,4.0,1757,2,12321,similarity
+6,0,B750,A450,Beta,Alpha,2.0,3026,2,12321,similarity
+7,0,B750,A150,Beta,Alpha,0.0,2426,2,12321,similarity
+8,0,B750,B950,Beta, Beta,5.0,10754,2,12321,similarity
+9,0,B750,A250,Beta,Alpha,0.0,6544,2,12321,similarity
+10,0,B750,A350,Beta,Alpha,0.0,10514,2,12321,similarity
+11,0,B750,B650,Beta,Beta,6.0,2839,2,12321,similarity
+12,0,B750,C1350,Beta,Gamma,0.9999999999999998,4803,2,12321,similarity
+13,0,B750,C1450,Beta,Gamma,0.0,2493,2,12321,similarity
+14,0,B750,A50,Beta,Alpha,0.0,1216,2,12321,similarity
+2,1,B550,C1050,Beta,Gamma,2.0,12346,2,12321,similarity
+3,1,B550,C1250,Beta,Gamma,0.0,3979,2,12321,similarity
+4,1,B550,B850,Beta,Beta,0.9999999999999998,2059,2,12321,similarity
+5,1,B550,C1150,Beta,Gamma,0.0,1689,2,12321,similarity
+6,1,B550,A450,Beta,Alpha,6.0,4379,2,12321,similarity
+7,1,B550,A150,Beta,Alpha,0.9999999999999998,3891,2,12321,similarity
+8,1,B550,B950,Beta, Beta,0.9999999999999998,1666,2,12321,similarity
+9,1,B550,A250,Beta,Alpha,2.0,4494,2,12321,similarity
+10,1,B550,A350,Beta,Alpha,2.0,1427,2,12321,similarity
+11,1,B550,B650,Beta,Beta,2.0,1491,2,12321,similarity
+12,1,B550,C1350,Beta,Gamma,0.0,2723,2,12321,similarity
+13,1,B550,C1450,Beta,Gamma,0.0,707,2,12321,similarity
+14,1,B550,A50,Beta,Alpha,0.0,1056,2,12321,similarity
+3,2,C1050,C1250,Gamma,Gamma,6.0,4876,2,12321,similarity
+4,2,C1050,B850,Gamma,Beta,6.0,1309,2,12321,similarity
+5,2,C1050,C1150,Gamma,Gamma,6.0,773,2,12321,similarity
+6,2,C1050,A450,Gamma,Alpha,0.9999999999999998,5372,2,12321,similarity
+7,2,C1050,A150,Gamma,Alpha,0.0,1746,2,12321,similarity
+8,2,C1050,B950,Gamma, Beta,6.0,2339,2,12321,similarity
+9,2,C1050,A250,Gamma,Alpha,0.9999999999999998,6803,2,12321,similarity
+10,2,C1050,A350,Gamma,Alpha,0.9999999999999998,1243,2,12321,similarity
+11,2,C1050,B650,Gamma,Beta,2.0,4539,2,12321,similarity
+12,2,C1050,C1350,Gamma,Gamma,2.0,2144,2,12321,similarity
+13,2,C1050,C1450,Gamma,Gamma,6.0,4628,2,12321,similarity
+14,2,C1050,A50,Gamma,Alpha,0.0,2839,2,12321,similarity
+4,3,C1250,B850,Gamma,Beta,5.0,7282,2,12321,similarity
+5,3,C1250,C1150,Gamma,Gamma,5.0,842,2,12321,similarity
+6,3,C1250,A450,Gamma,Alpha,3.0,4483,2,12321,similarity
+7,3,C1250,A150,Gamma,Alpha,0.0,1846,2,12321,similarity
+8,3,C1250,B950,Gamma, Beta,5.0,4098,2,12321,similarity
+9,3,C1250,A250,Gamma,Alpha,0.0,2618,2,12321,similarity
+10,3,C1250,A350,Gamma,Alpha,0.9999999999999998,2595,2,12321,similarity
+11,3,C1250,B650,Gamma,Beta,2.0,1754,2,12321,similarity
+12,3,C1250,C1350,Gamma,Gamma,6.0,5155,2,12321,similarity
+13,3,C1250,C1450,Gamma,Gamma,6.0,1252,2,12321,similarity
+14,3,C1250,A50,Gamma,Alpha,0.0,2832,2,12321,similarity
+5,4,B850,C1150,Beta,Gamma,4.0,3759,2,12321,similarity
+6,4,B850,A450,Beta,Alpha,4.0,1218,2,12321,similarity
+7,4,B850,A150,Beta,Alpha,0.9999999999999998,7122,2,12321,similarity
+8,4,B850,B950,Beta, Beta,5.0,2346,2,12321,similarity
+9,4,B850,A250,Beta,Alpha,0.9999999999999998,5079,2,12321,similarity
+10,4,B850,A350,Beta,Alpha,2.0,5090,2,12321,similarity
+11,4,B850,B650,Beta,Beta,4.0,3316,2,12321,similarity
+12,4,B850,C1350,Beta,Gamma,4.0,2578,2,12321,similarity
+13,4,B850,C1450,Beta,Gamma,6.0,3771,2,12321,similarity
+14,4,B850,A50,Beta,Alpha,0.0,7395,2,12321,similarity
+6,5,C1150,A450,Gamma,Alpha,2.0,13642,2,12321,similarity
+7,5,C1150,A150,Gamma,Alpha,0.0,2358,2,12321,similarity
+8,5,C1150,B950,Gamma, Beta,5.0,2094,2,12321,similarity
+9,5,C1150,A250,Gamma,Alpha,0.9999999999999998,2726,2,12321,similarity
+10,5,C1150,A350,Gamma,Alpha,0.9999999999999998,1435,2,12321,similarity
+11,5,C1150,B650,Gamma,Beta,2.0,1315,2,12321,similarity
+12,5,C1150,C1350,Gamma,Gamma,4.0,2451,2,12321,similarity
+13,5,C1150,C1450,Gamma,Gamma,5.0,3894,2,12321,similarity
+14,5,C1150,A50,Gamma,Alpha,0.0,2075,2,12321,similarity
+7,6,A450,A150,Alpha,Alpha,3.0,11363,2,12321,similarity
+8,6,A450,B950,Alpha, Beta,0.9999999999999998,5419,2,12321,similarity
+9,6,A450,A250,Alpha,Alpha,5.0,4018,2,12321,similarity
+10,6,A450,A350,Alpha,Alpha,5.0,1009,2,12321,similarity
+11,6,A450,B650,Alpha,Beta,5.0,1379,2,12321,similarity
+12,6,A450,C1350,Alpha,Gamma,0.9999999999999998,3178,2,12321,similarity
+13,6,A450,C1450,Alpha,Gamma,0.0,1819,2,12321,similarity
+14,6,A450,A50,Alpha,Alpha,0.0,1427,2,12321,similarity
+8,7,A150,B950,Alpha, Beta,0.0,1865,2,12321,similarity
+9,7,A150,A250,Alpha,Alpha,4.0,5335,2,12321,similarity
+10,7,A150,A350,Alpha,Alpha,4.0,2362,2,12321,similarity
+11,7,A150,B650,Alpha,Beta,0.9999999999999998,2249,2,12321,similarity
+12,7,A150,C1350,Alpha,Gamma,0.0,2011,2,12321,similarity
+13,7,A150,C1450,Alpha,Gamma,0.0,416,2,12321,similarity
+14,7,A150,A50,Alpha,Alpha,5.0,6231,2,12321,similarity
+9,8,B950,A250, Beta,Alpha,0.9999999999999998,9806,2,12321,similarity
+10,8,B950,A350, Beta,Alpha,0.9999999999999998,1145,2,12321,similarity
+11,8,B950,B650, Beta,Beta,4.0,2640,2,12321,similarity
+12,8,B950,C1350, Beta,Gamma,3.0,2557,2,12321,similarity
+13,8,B950,C1450, Beta,Gamma,2.0,4554,2,12321,similarity
+14,8,B950,A50, Beta,Alpha,0.0,1523,2,12321,similarity
+10,9,A250,A350,Alpha,Alpha,5.0,4349,2,12321,similarity
+11,9,A250,B650,Alpha,Beta,3.0,4660,2,12321,similarity
+12,9,A250,C1350,Alpha,Gamma,0.0,2370,2,12321,similarity
+13,9,A250,C1450,Alpha,Gamma,0.0,635,2,12321,similarity
+14,9,A250,A50,Alpha,Alpha,3.0,5429,2,12321,similarity
+11,10,A350,B650,Alpha,Beta,3.0,3044,2,12321,similarity
+12,10,A350,C1350,Alpha,Gamma,0.0,1531,2,12321,similarity
+13,10,A350,C1450,Alpha,Gamma,0.0,450,2,12321,similarity
+14,10,A350,A50,Alpha,Alpha,2.0,3911,2,12321,similarity
+12,11,B650,C1350,Beta,Gamma,0.0,2050,2,12321,similarity
+13,11,B650,C1450,Beta,Gamma,0.0,872,2,12321,similarity
+14,11,B650,A50,Beta,Alpha,0.0,1331,2,12321,similarity
+13,12,C1350,C1450,Gamma,Gamma,6.0,2393,2,12321,similarity
+14,12,C1350,A50,Gamma,Alpha,0.0,3113,2,12321,similarity
+14,13,C1450,A50,Gamma,Alpha,0.0,636,2,12321,similarity
