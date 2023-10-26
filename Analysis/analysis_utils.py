@@ -63,9 +63,9 @@ def plotTyps(path, title, changestimID, changes):
     fig, ax = plt.subplots()
     #plt.figure(figsize=(20, 3))
     #plt.ylim(0,1)
-    ax.bar(x_pos[0:5], means[0:5], yerr=sem[0:5], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '.')
-    ax.bar(x_pos[5:10], means[5:10], yerr=sem[5:10], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '/')
-    ax.bar(x_pos[10:15], means[10:15], yerr=sem[10:15], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= 'o')
+    ax.bar(x_pos[0:5], means[0:5], yerr=sem[0:5], align='center',color='r',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '.')
+    ax.bar(x_pos[5:10], means[5:10], yerr=sem[5:10], align='center',color='b',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '/')
+    ax.bar(x_pos[10:15], means[10:15], yerr=sem[10:15], align='center',color='g',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= 'o')
     
     ax.set_ylabel('Typicalty')
     ax.set_xticks(x_pos)
@@ -82,15 +82,18 @@ def plotTyps(path, title, changestimID, changes):
 
 
 
-def getgens(path, title):
+def threeGetGens(path, title):
     df = pd.read_csv(str(path))
     newdf = df.drop(index = df[df['category'] != 'test'].index)
     group= newdf.groupby(['stimId','response'], as_index= True)['id'].describe()
     group.rename(columns = {'count':'counts'}, inplace = True)
+    
+    print(title)
+    print(group)
 
     counts= np.array(group['counts'])
     numsubs = len(np.array(df['id'].unique()))
-    data = counts/numsubs
+    data = counts
     
     
     T1000= np.array(group['counts'].index[0][0]) #T1000
@@ -121,28 +124,28 @@ def getgens(path, title):
     fig, ax = plt.subplots()
     #plt.figure(figsize=(20, 3))
     #plt.ylim(0,1)
-    ax.bar(x_pos[0], data[0], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '.')
-    ax.bar(x_pos[1], data[1], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '/')
-    ax.bar(x_pos[2], data[2], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= 'o')
+    ax.bar(x_pos[0], data[0], align='center',color='r',edgecolor='black',linewidth=3, alpha=0.9, ecolor='r', capsize=4, width=0.7)
+    ax.bar(x_pos[1], data[1], align='center',color='b',edgecolor='black',linewidth=3, alpha=0.9, ecolor='b', capsize=4, width=0.7)
+    ax.bar(x_pos[2], data[2], align='center',color='g',edgecolor='black',linewidth=3, alpha=0.9, ecolor='g', capsize=4, width=0.7)
     
-    ax.set_ylabel('Proportion of Subjects')
+    ax.set_ylabel('Count of Subjects')
     ax.set_xticks(x_pos)
     ax.set_xticklabels(regions)
     ax.set_title(str(T1000)+'\n'+str(title)+"(n="+str(numsubs)+")")
     ax.yaxis.grid(False)
     ax.tick_params(axis='x', which='major', labelsize=10)
 
-    #plt.savefig('Analysis/graphs/'+str(T1000)  +' '+ str(title)+'.png')
+    plt.savefig('Analysis/graphs/'+str(T1000)  +' '+ str(title)+'.png')
     #plt.show()
     plt.clf()
 
     fig1, ax1 = plt.subplots()
 
-    ax1.bar(x_pos2[0], data[3], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '.')
-    ax1.bar(x_pos2[1], data[4], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '/')
-    ax1.bar(x_pos2[2], data[5], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= 'o')
+    ax1.bar(x_pos2[0], data[3], align='center',color='r',edgecolor='black',linewidth=3, alpha=0.9, ecolor='r', capsize=4, width=0.7)
+    ax1.bar(x_pos2[1], data[4], align='center',color='b',edgecolor='black',linewidth=3, alpha=0.9, ecolor='b', capsize=4, width=0.7)
+    ax1.bar(x_pos2[2], data[5], align='center',color='g',edgecolor='black',linewidth=3, alpha=0.9, ecolor='g', capsize=4, width=0.7)
     
-    ax1.set_ylabel('Proportion of Subjects')
+    ax1.set_ylabel('Count of Subjects')
     ax1.set_xticks(x_pos2)
     ax1.set_xticklabels(regions2)
     ax1.set_title('T500'+'\n'+str(title)+"(n="+str(numsubs)+")")
@@ -150,9 +153,89 @@ def getgens(path, title):
     ax1.tick_params(axis='x', which='major', labelsize=10)
 
     plt.savefig('Analysis/graphs/'+'T500' +' '+ str(title)+'.png')
-    plt.show()
+    #plt.show()
     plt.clf()
 
+
+
+
+
+
+
+
+
+
+def twoGetGens(path, title):
+    df = pd.read_csv(str(path))
+    newdf = df.drop(index = df[df['category'] != 'test'].index)
+    group= newdf.groupby(['stimId','response'], as_index= True)['id'].describe()
+    group.rename(columns = {'count':'counts'}, inplace = True)
+    
+
+
+    print(title)
+    print(group)
+
+    counts= np.array(group['counts'])
+    numsubs = len(np.array(df['id'].unique()))
+    data = counts
+    
+    
+    T1000= np.array(group['counts'].index[0][0]) #T1000
+    B1000=np.array(group['counts'].index[0][1]) #TBeta
+    G1000= np.array(group['counts'].index[1][1]) #TGamma
+
+
+
+    T500= np.array(group['counts'].index[2][0]) #T500
+    A500= np.array(group['counts'].index[2][1]) #TAlpha
+    B500= np.array(group['counts'].index[3][1]) #TBeta
+
+
+
+
+
+    regions = np.array([B1000, G1000])
+    print(regions,"regions")
+    x_pos = np.arange(len(regions))
+    regions2 = np.array([A500,B500])
+    print(regions2, "regions2")
+
+    x_pos2 = np.arange(len(regions2))
+
+    # Build the plot
+    fig, ax = plt.subplots()
+    #plt.figure(figsize=(20, 3))
+    #plt.ylim(0,1)
+    ax.bar(x_pos[0], data[0], align='center',color='b',edgecolor='black',linewidth=3, alpha=0.9, ecolor='k', capsize=4, width=0.7)
+    ax.bar(x_pos[1], data[1], align='center',color='g',edgecolor='black',linewidth=3, alpha=0.9, ecolor='k', capsize=4, width=0.7)
+    
+    ax.set_ylabel('Count of Subjects')
+    ax.set_xticks(x_pos)
+    ax.set_xticklabels(regions)
+    ax.set_title(str(T1000)+'\n'+str(title)+"(n="+str(numsubs)+")")
+    ax.yaxis.grid(False)
+    ax.tick_params(axis='x', which='major', labelsize=10)
+
+    plt.savefig('Analysis/graphs/'+str(T1000)  +' '+ str(title)+'.png')
+    #plt.show()
+    plt.clf()
+
+    fig1, ax1 = plt.subplots()
+
+    ax1.bar(x_pos2[0], data[2], align='center',color='r',edgecolor='black',linewidth=3, alpha=0.9, ecolor='b', capsize=4, width=0.7)
+    ax1.bar(x_pos2[1], data[3], align='center',color='b',edgecolor='black',linewidth=3, alpha=0.9, ecolor='g', capsize=4, width=0.7)
+    
+    ax1.set_ylabel('Count of Subjects')
+    ax1.set_xticks(x_pos2)
+    ax1.set_xticklabels(regions2)
+    ax1.set_title('T500'+'\n'+str(title)+"(n="+str(numsubs)+")")
+    ax1.yaxis.grid(False)
+    ax1.tick_params(axis='x', which='major', labelsize=10)
+
+    plt.savefig('Analysis/graphs/'+'T500' +' '+ str(title)+'.png')
+    #plt.show()
+    plt.clf()
 
 
 
@@ -166,71 +249,11 @@ title= 'Observe A - Classify B & C'
 getgens(path=path, title=title)'''
 
 
-def getWithinSim(path, stim, title):
-    df = pd.read_csv(path)
-    for i in stim:
-        df.drop(index = df[df['stimId1'] == i].index, inplace=True)
-        df.drop(index = df[df['stimID2'] == i].index, inplace=True)
-
-
-    group= df.groupby(['stimId1'], as_index= True)['response'].describe()
-    print(group)
-    numSubs= len(df['id'].unique())
-
-
-    group.rename(columns = {'mean':'means', 'std':'stndDev'}, inplace = True)
-    means = np.array(group['means'])
-    sem = np.array(group['stndDev']/np.sqrt(numSubs))
-    regions = np.array(group['means'].index)
-    x_pos = np.arange(len(regions))
-
-    # Build the plot
-    fig, ax = plt.subplots()
-    #plt.figure(figsize=(20, 3))
-    #plt.ylim(0,1)
-    ax.bar(x_pos[0:5], means[0:5], yerr=sem[0:5], align='center',color='white',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '.')
-    
-    ax.set_ylabel('Similarity')
-    ax.set_xticks(x_pos)
-    ax.set_xticklabels(regions)
-    ax.set_title(str(title)+"(n="+str(numSubs)+")")
-    ax.yaxis.grid(False)
-    ax.tick_params(axis='x', which='major', labelsize=10)
-
-    plt.savefig('Analysis/graphs/'+str(title) + '.png')
-    plt.clf()
-    #df2.to_csv('justcheck.csv')
-
-path = 'C:/Users/apers/line_data/cond_3_similarity_results.csv'
-stim = [
-    'A50', 'A150', 'A250', 'A350', 'A450',
-    'B550', 'B650', 'B750', 'B850', 'B950',
-    'C1050', 'C1250', 'C1350', 'C1450', 'C1550',
-    ]
-
-Astim =[
-    'B550', 'B650', 'B750', 'B850', 'B950',
-    'C1050', 'C1150', 'C1250', 'C1350', 'C1450',
-    ]
-
-Bstim = [
-    'A50', 'A150', 'A250', 'A350', 'A450',
-    'C1050', 'C1250', 'C1350', 'C1450', 'C1550',
-    ]
-
-Cstim = [
-    'A50', 'A150', 'A250', 'A350', 'A450',
-    'B550', 'B650', 'B750', 'B850', 'B950',
-    ]
-
-title= 'Within Gamma Item Similarity (No Obs)'
-#getSimToGens(path=path, stim=Cstim, title=title)
 
 
 
 
-
-
+'''
 def getSims(path):
     df = pd.read_csv(path)
     group= df.groupby(['stimId1','stimID2'], as_index= True)['response'].describe()
@@ -238,5 +261,5 @@ def getSims(path):
     group.to_csv('cond_1_grouped_sims.csv')
 
 path = 'C:/Users/apers/line_data/cond_1_similarity_results.csv'   
-getSims(path=path)
+getSims(path=path)'''
 

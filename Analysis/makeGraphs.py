@@ -5,10 +5,12 @@ learn_curve_paths = {
     'C:/Users/apers/line_data/cond_2_trainPhase_results.csv' : 'Learning Curve Full Classsification',
     'C:/Users/apers/line_data/cond_3_trainPhase_results.csv' : 'Learning Curve No Observation',
 }
-gen_paths = {
+two_gen_paths = {
+    'C:/Users/apers/line_data/cond_2_testPhase_results.csv' : 'Generalization Full Classification',
+    'C:/Users/apers/line_data/cond_3_testPhase_results.csv' : 'Generalization No Observation',
+}
+three_gen_paths = {
     'C:/Users/apers/line_data/cond_1_testPhase_results.csv' : 'Generalization Reduced Classification',
-    #'C:/Users/apers/line_data/cond_2_testPhase_results.csv' : 'Generalization Full Classification',
-    #'C:/Users/apers/line_data/cond_3_testPhase_results.csv' : 'Generalization No Observation',
 }
 typ_paths = {
     'C:/Users/apers/line_data/cond_1_typicality1_results.csv' : 'Typ1 Reduced Classification',
@@ -32,12 +34,13 @@ changes= {
     'B850': 'B4',
     'B950': 'B5',
 
-    'C1050': 'C1',
-    'C1150': 'C2',
-    'C1250': 'C3',
-    'C1350': 'C4',
-    'C1450': 'C5',
+    'C1050': 'G1',
+    'C1150': 'G2',
+    'C1250': 'G3',
+    'C1350': 'G4',
+    'C1450': 'G5',
 }
+
 
 
 for key in learn_curve_paths:
@@ -48,5 +51,11 @@ for key in typ_paths:
 
 
 
-#for key in gen_paths:
-    #au.getgens(path=key, title=gen_paths[key])
+for key in two_gen_paths:
+    au.twoGetGens(path=key, title=two_gen_paths[key])
+
+
+
+
+for key in three_gen_paths:
+    au.threeGetGens(path=key, title=three_gen_paths[key])
