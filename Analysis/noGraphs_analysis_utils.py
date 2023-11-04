@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 from scipy.stats import sem
 from scipy.stats import f_oneway
 from scipy.stats import tukey_hsd
+from scipy.stats import ttest_rel
+import scipy.stats as stats
+
 import scikit_posthocs as skpost
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
@@ -112,31 +115,23 @@ def PerCatLearnDescriptives(path, title, changestimID, changes):
 
 
 
-def getTestAcc(path, title, changestimID, changes):
+def TestAccDescriptives(path, title, changestimID, changes):
     df = pd.read_csv(path)
+    #fix the weird Beta thing
     df = df.replace(' Beta', 'Beta')
-
     for index, row in df.iterrows():
-        #print(row['category'], row['response'], row['accuracy'], index)
         if row['response'] == row['category']:
             df.at[index, 'accuracy'] = 1
 
+    #make sure acc is an int
     df = df.replace('True', 1)
     df = df.replace('False', 0)
     df = df.drop(index = df[df['category'] == 'test'].index)
-    numSubs= len(df['id'].unique())
 
-    print(title)
-    print('Overall: ', df['accuracy'].mean(), df['accuracy'].std())
-    print('Alpha: ',df[df['category']=='Alpha']['accuracy'].mean(), ',', df[df['category']=='Alpha']['accuracy'].std())
-    print('Beta: ',df[df['category']=='Beta']['accuracy'].mean(), ',', df[df['category']=='Beta']['accuracy'].std())
-    print('Gamma: ',df[df['category']=='Gamma']['accuracy'].mean(), ',', df[df['category']=='Gamma']['accuracy'].std())
-    print(f_oneway(df[df['category']=='Alpha']['accuracy'],df[df['category']=='Beta']['accuracy'],df[df['category']=='Gamma']['accuracy']))
-    print(skpost.posthoc_scheffe(a=[df[df['category']=='Alpha']['accuracy'],df[df['category']=='Beta']['accuracy'],df[df['category']=='Gamma']['accuracy']]))
-    print('              ')
+    
 
-
-
+    meansdf = df.groupby(['category'], as_index= True)['accuracy'].describe()
+    meansdf.to_csv('Analysis/stats_output/'+str(title)+'_CatTestAcc.csv')
 
 
     if changestimID == True:
@@ -144,12 +139,9 @@ def getTestAcc(path, title, changestimID, changes):
             df= df.replace(i, changes[i])
 
 
+    item_means = df.groupby(['stimId'], as_index= True)['accuracy'].describe()
+    meansdf.to_csv('Analysis/stats_output/'+str(title)+'_ItemTestAcc.csv')
 
-    
-
-    means = np.array(df.groupby(['stimId'], as_index= True)['accuracy'].mean())
-    #print(means)
-    sem = np.array(df.groupby(['stimId'], as_index= True)['accuracy'].sem())
 
     
     
@@ -159,56 +151,109 @@ def getTestAcc(path, title, changestimID, changes):
 
 
 
-
-def plotTyps(path, title, changestimID, changes):
+def TypsDescriptives(path, title, changestimID, changes):
     df = pd.read_csv(path)
     if changestimID == True:
         for i in changes:
             df= df.replace(i, changes[i])
-
-    numSubs= len(df['id'].unique())
-
-
-    
-
     means_df = df.groupby(['stimId'], as_index= True)['response'].describe()
+    means_df.to_csv('Analysis/stats_output/'+str(title)+'_Descriptives.csv')
+
+
+
+
+
+
+
+def prePostTypReg(prePath,postPath, title, changestimID, changes):
+    predf = pd.read_csv(prePath)
+    postdf = pd.read_csv(postPath)
+
+
+
+    if changestimID == True:
+        for i in changes:
+            predf= predf.replace(i, int(changes[i]))
+            postdf= postdf.replace(i, int(changes[i]))
+
+    postdfA = postdf.drop(index = postdf[postdf['category'] != 'Alpha'].index)
     
-    means_df.rename(columns = {'mean':'means', 'std':'stndDev'}, inplace = True)
-    means = np.array(means_df['means'])
-    sem = np.array(means_df['stndDev']/np.sqrt(numSubs))
-
-
-
 
     
+    preSlopes=[]
+    for subject in predf['id'].unique():
+        Y= np.array(predf[predf['id']==subject]['response'])        
+        X =np.array(list(predf[predf['id']==subject]['stimId']))
+        X = np.log10(X)
+        X = sm.add_constant(X)
+       
+
+        model= sm.OLS(Y,X)
+        results = model.fit()
+        preSlopes.append(results.params[1])
+                
 
 
 
-def threeGetGens(path, title):
+
+
+
+    postSlopes=[]
+    for subject in postdfA['id'].unique():
+        Y= np.array(postdfA[postdfA['id']==subject]['response'])        
+        X =np.array(list(postdfA[postdfA['id']==subject]['stimId']))
+        X = np.log10(X)
+        X = sm.add_constant(X)
+
+        model= sm.OLS(Y,X)
+        results = model.fit()
+        postSlopes.append(results.params[1])
+
+
+    ttestRes = ttest_rel(preSlopes,postSlopes, #alternative='greater'
+                         )
+    print(ttestRes)
+
+    resultsdf = pd.DataFrame({
+        'preSlopes Mean': np.array(preSlopes).mean(),
+        'preSlopes std':  np.array(preSlopes).std(),
+        'postSlopes Mean': np.array(postSlopes).mean(),
+        'postSlopes std':  np.array(postSlopes).std(),
+        'ttest stat' : ttestRes[0],
+        'pval' : ttestRes[1],
+        'numsubs': len(list(predf['id'].unique()))}, index=[0])
+    
+    print(resultsdf)
+
+    resultsdf.to_csv('Analysis/stats_output/'+str(title)+'_reg.csv')
+
+
+
+
+
+
+
+
+changes= {
+    'A50': '50',
+    'A150': '150',
+    'A250': '250',
+    'A350': '350',
+    'A450': '450',
+}
+#prePostTypReg(prePath='cond_2_typicality1_results.csv', postPath='cond_2_typicality2_results.csv', title='FullClass', changestimID=True, changes=changes)
+
+
+
+
+
+
+def GetGens(path, title):
     df = pd.read_csv(str(path))
     newdf = df.drop(index = df[df['category'] != 'test'].index)
     group= newdf.groupby(['stimId','response'], as_index= True)['id'].describe()
     group.rename(columns = {'count':'counts'}, inplace = True)
-    
-   
-
-    counts= np.array(group['counts'])
-    numsubs = len(np.array(df['id'].unique()))
-    data = counts
-    
-    
-    T1000= np.array(group['counts'].index[0][0]) #T1000
-    A1000= np.array(group['counts'].index[0][1]) #TAlpha
-    B1000=np.array(group['counts'].index[1][1]) #TBeta
-    G1000= np.array(group['counts'].index[2][1]) #TGamma
-
-
-
-    T500= np.array(group['counts'].index[2][0]) #T500
-    A500= np.array(group['counts'].index[3][1]) #TAlpha
-    B500= np.array(group['counts'].index[4][1]) #TBeta
-
-    G500= np.array(group['counts'].index[5][1]) #TGamma
+    group.to_csv('Analysis/stats_output/'+'Overall_'+str(title)+'.csv')
 
 
 
@@ -228,9 +273,23 @@ def threeGetGens(path, title):
 
 
 
+def HardTestStats(pathtest,pathlearn, title):
+    df = pd.read_csv(str(pathtest))
+    dflearn = pd.read_csv(str(pathlearn))
 
-def HardTestRight_GetGens(path, title):
-    df = pd.read_csv(str(path))
+    dflearn = dflearn.drop(index = dflearn[dflearn['block'] != 4].index)
+
+    dflearnA = dflearn.drop(index = dflearn[dflearn['stimId'] != 'A450'].index)
+    dflearnFailA = dflearnA.drop(index = dflearnA[dflearnA['response'] == 'Alpha'].index)
+    learnFailA = list(dflearnFailA['id'])
+    print(learnFailA)
+    print('')
+    dflearnB = dflearn.drop(index = dflearn[dflearn['stimId'] != 'B950'].index)
+    dflearnFailB = dflearnB.drop(index = dflearnB[dflearnB['response'] != 'Beta'].index)
+    learnFailB = list(dflearnFailB['id'])
+    print(learnFailB)
+
+
     df = df.replace(' Beta', 'Beta')
 
     for index, row in df.iterrows():
@@ -239,8 +298,7 @@ def HardTestRight_GetGens(path, title):
 
     dfFailedAPnums = df[df['stimId']=='A450']
     dfFailedAPnums = dfFailedAPnums.drop(index = dfFailedAPnums[dfFailedAPnums['response'] == 'Alpha'].index)
-    failedAPnums= list(dfFailedAPnums['id'])
-    #print(dfFailedAPnums)
+    failedAPnums= list(dfFailedAPnums['id']) + learnFailA
 
     dfA = df
     for item in failedAPnums:
@@ -248,10 +306,8 @@ def HardTestRight_GetGens(path, title):
 
 
     dfFailedBPnums = df[df['stimId']=='B950']
-    #print(dfFailedBPnums['accuracy'].mean())
     dfFailedBPnums = dfFailedBPnums.drop(index = dfFailedBPnums[dfFailedBPnums['response'] == 'Beta'].index)
-    failedBPnums= list(dfFailedBPnums['id'])
-    #print(dfFailedBPnums)
+    failedBPnums= list(dfFailedBPnums['id']) + learnFailB
 
     dfB = df
     for item in failedBPnums:
@@ -261,36 +317,52 @@ def HardTestRight_GetGens(path, title):
     newdfB = dfB.drop(index = dfB[dfB['category'] != 'test'].index)
     groupB= newdfB.groupby(['stimId','response'], as_index= True)['id'].describe()
     groupB.rename(columns = {'count':'counts'}, inplace = True)
-    print(groupB)
-
+    groupB.to_csv('Analysis/stats_output/'+'HardB_'+str(title)+'.csv')
 
     newdfA = dfA.drop(index = dfA[dfA['category'] != 'test'].index)
     groupA= newdfA.groupby(['stimId','response'], as_index= True)['id'].describe()
     groupA.rename(columns = {'count':'counts'}, inplace = True)
-    #print(groupA)
-   
+    groupA.to_csv('Analysis/stats_output/'+'HardA_'+str(title)+'.csv')
 
-    countsB= np.array(groupB['counts'])
-    numsubsB = len(np.array(dfB['id'].unique()))
-    dataB = countsB
 
 
     countsA= np.array(groupA['counts'])
     numsubsA = len(np.array(dfA['id'].unique()))
     dataA = countsA
-    
-    
-    T1000= np.array(groupB['counts'].index[0][0]) #T1000
-    B1000= np.array(groupB['counts'].index[0][1]) #TBeta
-    G1000=np.array(groupB['counts'].index[1][1]) #TGamma
+    AT500=dataA[2]
+    BT500=dataA[3]
 
 
 
-    T500= np.array(groupA['counts'].index[1][0]) #T500
-    A500= np.array(groupA['counts'].index[2][1]) #TAlpha
-    B500= np.array(groupA['counts'].index[3][1]) #TBeta
+    countsB= np.array(groupB['counts'])
+    numsubsB = len(np.array(dfB['id'].unique()))
+    dataB = countsB
+    BT1000 = dataB[0]
+    GT1000 = dataB[1]
 
 
+    table1 = np.array([[AT500, (numsubsA-AT500)], [BT500, (numsubsA-BT500)]])
+    res500=stats.fisher_exact(table1, alternative='less')
+
+
+    table2 = np.array([[BT1000, (numsubsB-BT1000)], [BT1000, (numsubsB-BT1000)]])
+    res1000= stats.fisher_exact(table2, alternative='less')
+
+
+
+    resdf = pd.DataFrame([{
+        'T500 pval' : res500[1],
+        'T1000 pval' : res1000[1]
+    }], index=[0])
+
+    resdf.to_csv('Analysis/stats_output/'+'FisherExact'+str(title)+'.csv')
+    print(resdf)
+   
+
+
+
+
+#HardTestStats(pathlearn='cond_1_trainPhase_results.csv', pathtest='cond_1_testPhase_results.csv',title='at Train And Test (Reduced Classification)')
 
 
 
@@ -305,57 +377,7 @@ def HardTestRight_GetGens(path, title):
 
 
 
-
-def twoGetGens(path, title):
-    df = pd.read_csv(str(path))
-    newdf = df.drop(index = df[df['category'] != 'test'].index)
-    group= newdf.groupby(['stimId','response'], as_index= True)['id'].describe()
-    group.rename(columns = {'count':'counts'}, inplace = True)
-    
-
-
-    
-
-    counts= np.array(group['counts'])
-    numsubs = len(np.array(df['id'].unique()))
-    data = counts
-    
-    
-    T1000= np.array(group['counts'].index[0][0]) #T1000
-    B1000=np.array(group['counts'].index[0][1]) #TBeta
-    G1000= np.array(group['counts'].index[1][1]) #TGamma
-
-
-
-    T500= np.array(group['counts'].index[2][0]) #T500
-    A500= np.array(group['counts'].index[2][1]) #TAlpha
-    B500= np.array(group['counts'].index[3][1]) #TBeta
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def checkCBSWithin(cold, fullClass, reducedClass, noObs):
+def checkCBSWithin_BoundaryItems(cold, fullClass, reducedClass, noObs):
     
     
     #Get the data for the cold similarity ratings
@@ -363,20 +385,21 @@ def checkCBSWithin(cold, fullClass, reducedClass, noObs):
     dfCold = pd.read_csv(cold)
     dfCold = dfCold.replace(' Beta', 'Beta')
 
-    dfColdA = dfCold.drop(index = dfCold[dfCold['category1'] != 'Alpha'].index)
-    dfColdA = dfColdA.drop(index = dfColdA[dfColdA['category2'] != 'Alpha'].index)
-    print(dfColdA['response'].mean(), dfColdA['response'].std()) #average within category similarity
+    dfColdA = dfCold.drop(index = dfCold[dfCold['stimId1'] != 'A50'].index)
+    dfColdA = dfColdA.drop(index = dfColdA[dfColdA['stimID2'] != 'A450'].index)
+    print(dfColdA['response'].mean())
 
-    dfColdB = dfCold.drop(index = dfCold[dfCold['category1'] != 'Beta'].index)
-    dfColdB = dfColdB.drop(index = dfColdB[dfColdB['category2'] != 'Beta'].index)
-    print(dfColdB['response'].mean(), dfColdB['response'].std()) #average within category similarity
+    dfColdB = dfCold.drop(index = dfCold[dfCold['stimId1'] != 'B550'].index)
+    dfColdB = dfColdB.drop(index = dfColdB[dfColdB['stimID2'] != 'B950'].index)
+    print(dfColdB['response'].mean())
 
-    dfColdG = dfCold.drop(index = dfCold[dfCold['category1'] != 'Gamma'].index)
-    dfColdG = dfColdG.drop(index = dfColdG[dfColdG['category2'] != 'Gamma'].index)
-    print(dfColdG['response'].mean(), dfColdG['response'].std()) #average within category similarity
-    print('                  ')
+    dfColdG = dfCold.drop(index = dfCold[dfCold['stimId1'] != 'C1050'].index)
+    dfColdG = dfColdG.drop(index = dfColdG[dfColdG['stimID2'] != 'C1250'].index)
+    print(dfColdG['response'].mean())
 
-
+    
+    coldMeans= [dfColdA['response'].mean(),dfColdB['response'].mean(), dfColdG['response'].mean()]
+    coldSD = [dfColdA['response'].std(),dfColdB['response'].std(), dfColdG['response'].std()]
 
 
 
@@ -392,18 +415,23 @@ def checkCBSWithin(cold, fullClass, reducedClass, noObs):
     dfFull = dfFull.drop(index = dfFull[dfFull['stimId1'] == 'C1450'].index)
     dfFull = dfFull.drop(index = dfFull[dfFull['stimID2'] == 'C1450'].index)
 
-    dfFullA = dfFull.drop(index = dfFull[dfFull['category1'] != 'Alpha'].index)
-    dfFullA = dfFullA.drop(index = dfFullA[dfFullA['category2'] != 'Alpha'].index)
-    print(dfFullA['response'].mean(), dfFullA['response'].std()) #average within category similarity
+    dfFullA = dfFull.drop(index = dfFull[dfFull['stimId1'] != 'A50'].index)
+    dfFullA = dfFullA.drop(index = dfFullA[dfFullA['stimID2'] != 'A450'].index)
+    print(dfFullA['response'].mean())
 
-    dfFullB = dfFull.drop(index = dfFull[dfFull['category1'] != 'Beta'].index)
-    dfFullB = dfFullB.drop(index = dfFullB[dfFullB['category2'] != 'Beta'].index)
-    print(dfFullB['response'].mean(), dfFullB['response'].std()) #average within category similarity
 
-    dfFullG = dfFull.drop(index = dfFull[dfFull['category1'] != 'Gamma'].index)
-    dfFullG = dfFullG.drop(index = dfFullG[dfFullG['category2'] != 'Gamma'].index)
-    print(dfFullG['response'].mean(), dfFullG['response'].std()) #average within category similarity
-    print('                  ')
+
+    dfFullB = dfFull.drop(index = dfFull[dfFull['stimId1'] != 'B550'].index)
+    dfFullB = dfFullB.drop(index = dfFullB[dfFullB['stimID2'] != 'B950'].index)
+    print(dfFullB['response'].mean())
+
+    dfFullG = dfFull.drop(index = dfFull[dfFull['stimId1'] != 'C1050'].index)
+    dfFullG = dfFullG.drop(index = dfFullG[dfFullG['stimID2'] != 'C1250'].index)
+    print(dfFullG['response'].mean())
+
+    FullMeans= [dfFullA['response'].mean(),dfFullB['response'].mean(), dfFullG['response'].mean()]
+    FullSD = [dfFullA['response'].std(),dfFullB['response'].std(), dfFullG['response'].std()]
+
 
 
 
@@ -421,23 +449,24 @@ def checkCBSWithin(cold, fullClass, reducedClass, noObs):
 
     dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] == 'C1350'].index)
     dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimID2'] == 'C1350'].index)
-    dfREduced = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] == 'C1450'].index)
+    dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] == 'C1450'].index)
     dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimID2'] == 'C1450'].index)
 
-    dfReducedA = dfReduced.drop(index = dfReduced[dfReduced['category1'] != 'Alpha'].index)
-    dfReducedA = dfReducedA.drop(index = dfReducedA[dfReducedA['category2'] != 'Alpha'].index)
-    print(dfReducedA['response'].mean(), dfReducedA['response'].std()) #average within category similarity
+    dfReducedA = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] != 'A50'].index)
+    dfReducedA = dfReducedA.drop(index = dfReducedA[dfReducedA['stimID2'] != 'A450'].index)
+    print(dfReducedA['response'].mean())
 
-    dfReducedB = dfReduced.drop(index = dfReduced[dfReduced['category1'] != 'Beta'].index)
-    dfReducedB = dfReducedB.drop(index = dfReducedB[dfReducedB['category2'] != 'Beta'].index)
-    print(dfReducedB['response'].mean(), dfReducedB['response'].std()) #average within category similarity
+    dfReducedB = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] != 'B550'].index)
+    dfReducedB = dfReducedB.drop(index = dfReducedB[dfReducedB['stimID2'] != 'B950'].index)
+    print(dfReducedB['response'].mean())
 
-    dfReducedG = dfReduced.drop(index = dfReduced[dfReduced['category1'] != 'Gamma'].index)
-    dfReducedG = dfReducedG.drop(index = dfReducedG[dfReducedG['category2'] != 'Gamma'].index)
-    print(dfReducedG['response'].mean(), dfReducedG['response'].std()) #average within category similarity
-    print('                  ')
+    dfReducedG = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] != 'C1050'].index)
+    dfReducedG = dfReducedG.drop(index = dfReducedG[dfReducedG['stimID2'] != 'C1250'].index)
+    print(dfReducedG['response'].mean())
 
 
+    ReducedMeans= [dfReducedA['response'].mean(),dfReducedB['response'].mean(), dfReducedG['response'].mean()]
+    ReducedSD = [dfReducedA['response'].std(),dfReducedB['response'].std(), dfReducedG['response'].std()]
 
 
 
@@ -456,95 +485,92 @@ def checkCBSWithin(cold, fullClass, reducedClass, noObs):
     dfNoObs = dfNoObs.drop(index = dfNoObs[dfNoObs['stimID2'] == 'C1450'].index)
 
 
-    dfNoObsA = dfNoObs.drop(index = dfNoObs[dfNoObs['category1'] != 'Alpha'].index)
-    dfNoObsA = dfNoObsA.drop(index = dfNoObsA[dfNoObsA['category2'] != 'Alpha'].index)
-    print(dfNoObsA['response'].mean(), dfNoObsA['response'].std()) #average within category similarity
+    dfNoObsA = dfNoObs.drop(index = dfNoObs[dfNoObs['stimId1'] != 'A50'].index)
+    dfNoObsA = dfNoObsA.drop(index = dfNoObsA[dfNoObsA['stimID2'] != 'A450'].index)
+    print(dfNoObsA['response'].mean())
 
-    dfNoObsB = dfNoObs.drop(index = dfNoObs[dfNoObs['category1'] != 'Beta'].index)
-    dfNoObsB = dfNoObsB.drop(index = dfNoObsB[dfNoObsB['category2'] != 'Beta'].index)
-    print(dfNoObsB['response'].mean(), dfNoObsB['response'].std()) #average within category similarity
+    dfNoObsB = dfNoObs.drop(index = dfNoObs[dfNoObs['stimId1'] != 'B550'].index)
+    dfNoObsB = dfNoObsB.drop(index = dfNoObsB[dfNoObsB['stimID2'] != 'B950'].index)
+    print(dfNoObsB['response'].mean())
 
-    dfNoObsG = dfNoObs.drop(index = dfNoObs[dfNoObs['category1'] != 'Gamma'].index)
-    dfNoObsG = dfNoObsG.drop(index = dfNoObsG[dfNoObsG['category2'] != 'Gamma'].index)
-    print(dfNoObsG['response'].mean(), dfNoObsG['response'].std()) #average within category similarity
-    print('                  ')
-
+    dfNoObsG = dfNoObs.drop(index = dfNoObs[dfNoObs['stimId1'] != 'C1050'].index)
+    dfNoObsG = dfNoObsG.drop(index = dfNoObsG[dfNoObsG['stimID2'] != 'C1250'].index)
+    print(dfNoObsG['response'].mean())
 
 
 
+    NoObsMeans= [dfNoObsA['response'].mean(), dfNoObsB['response'].mean(), dfNoObsG['response'].mean()]
+    NoObsSD = [dfNoObsA['response'].std(), dfNoObsB['response'].std(), dfNoObsG['response'].std()]
 
 
 
 
 
+
+    numsubs = len(dfCold['id'].unique()) + len(dfFull['id'].unique()) +len(dfReduced['id'].unique()) + len(dfNoObs['id'].unique())
 
     #quick anaova with scipy because more simple to set up than the stats models ols
     print('ANOVAs')
-    print(f_oneway(dfColdA['response'], dfFullA['response'], dfReducedA['response'], dfNoObsA['response']))
-    print('                         ')
-    print(f_oneway(dfColdB['response'], dfFullB['response'], dfReducedB['response'], dfNoObsB['response']))
-    print('                         ')
-    print(f_oneway(dfColdG['response'], dfFullG['response'], dfReducedG['response'], dfNoObsG['response']))
-    print('                         ')
+    Astat, Apval= f_oneway(dfColdA['response'], dfFullA['response'], dfReducedA['response'], dfNoObsA['response'])
 
-    #now that I know the ALPHA anova is sig, anova with statsmodels ols so I can get partial eta squared
-    olsdata = np.array(list(dfColdA['response']) + list(dfFullA['response']) + list(dfReducedA['response']) + list(dfNoObsA['response']))
-    olslabels = (['ColdA'] * len(dfColdA['response'])) + (['FullA'] * len(dfFullA['response']))+ (['ReducedA'] * len(dfReducedA['response'])) + (['NoObsA'] * len(dfNoObsA['response']))
-    olsdf = pd.DataFrame({'data': olsdata, 'group': olslabels})
-    model = ols('data ~ C(group)', data=olsdf).fit()
-    anova_table = sm.stats.anova_lm(model)
-    print(anova_table)
-    # Calculate eta-squared
-    ss_between = anova_table['sum_sq'][0]
-    ss_total = ss_between + anova_table['sum_sq'][1]
-    eta_squared = ss_between / ss_total
-
-    print("Eta-squared value:", eta_squared)
-
-
-    print('POST HOC THSD on ALPHAS')
-    posthoc = tukey_hsd(dfColdA['response'], dfFullA['response'], dfReducedA['response'], dfNoObsA['response'])
-    print(posthoc)
-    effectSize = cohend(d1=dfColdA['response'], d2=dfReducedA['response'])
-    print(effectSize)
-    
-    print(len(dfCold['id'].unique()))
-
-
-
-
-
-
-
-
-
-
-
-
-
-def checkCBSBetween(cold, fullClass, reducedClass, noObs):
+    Bstat, Bpval= f_oneway(dfColdB['response'], dfFullB['response'], dfReducedB['response'], dfNoObsB['response'])
     
     
-    #Get the data for the cold similarity ratings
+    Gstat, Gpval= f_oneway(dfColdG['response'], dfFullG['response'], dfReducedG['response'], dfNoObsG['response'])
+
+    output = pd.DataFrame(
+        {
+            'Category' : ['Alpha', 'Beta', 'Gamma'],
+            'Cold Means': coldMeans,
+            'Cold SD' : coldSD,
+            'Full Means' : FullMeans,
+            'Full SD' : FullSD,
+            'Reduced Means' : ReducedMeans,
+            'Reduced SD' : ReducedSD,
+            'No Obs Means' : NoObsMeans,
+            'No Obs SD' : NoObsSD,
+            'F statistic' : [Astat, Bstat, Gstat],
+            'p value' : [Apval, Bpval, Gpval],
+            'n': [numsubs,numsubs,numsubs]
+        },
+    )
+
+    output.to_csv('Analysis/stats_output/within_Sim_Boundary_Items.csv')
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def checkCBSBetween_BoundaryItems(cold, fullClass, reducedClass, noObs):
+    
+    
+   #Get the data for the cold similarity ratings
     print('cold sim descriptives:')
     dfCold = pd.read_csv(cold)
-
     dfCold = dfCold.replace(' Beta', 'Beta')
 
-    dfColdA = dfCold.drop(index = dfCold[dfCold['category1'] != 'Alpha'].index)
-    dfColdA = dfColdA.drop(index = dfColdA[dfColdA['category2'] == 'Alpha'].index)
-    print(dfColdA['response'].mean(), dfColdA['response'].std()) #average Between category similarity
+    dfColdAB = dfCold.drop(index = dfCold[dfCold['stimId1'] != 'A450'].index)
+    dfColdAB = dfColdAB.drop(index = dfColdAB[dfColdAB['stimID2'] != 'B550'].index)
 
-    dfColdB = dfCold.drop(index = dfCold[dfCold['category1'] != 'Beta'].index)
-    dfColdB = dfColdB.drop(index = dfColdB[dfColdB['category2'] == 'Beta'].index)
-    print(dfColdB['response'].mean(), dfColdB['response'].std()) #average between category similarity
+    dfColdBG = dfCold.drop(index = dfCold[dfCold['stimId1'] != 'B950'].index)
+    dfColdBG = dfColdBG.drop(index = dfColdBG[dfColdBG['stimID2'] != 'C1050'].index)
 
-    dfColdG = dfCold.drop(index = dfCold[dfCold['category1'] != 'Gamma'].index)
-    dfColdG = dfColdG.drop(index = dfColdG[dfColdG['category2'] == 'Gamma'].index)
-    print(dfColdG['response'].mean(), dfColdG['response'].std()) #average between category similarity
-    print('                  ')
+   
 
-
+    
+    coldMeans= [dfColdAB['response'].mean(),dfColdBG['response'].mean()]
+    coldSD = [dfColdAB['response'].std(),dfColdBG['response'].std()]
 
 
 
@@ -553,24 +579,25 @@ def checkCBSBetween(cold, fullClass, reducedClass, noObs):
     dfFull = pd.read_csv(fullClass)
 
     dfFull = dfFull.replace(' Beta', 'Beta')
+  
 
     dfFull = dfFull.drop(index = dfFull[dfFull['stimId1'] == 'C1350'].index)
     dfFull = dfFull.drop(index = dfFull[dfFull['stimID2'] == 'C1350'].index)
     dfFull = dfFull.drop(index = dfFull[dfFull['stimId1'] == 'C1450'].index)
     dfFull = dfFull.drop(index = dfFull[dfFull['stimID2'] == 'C1450'].index)
 
-    dfFullA = dfFull.drop(index = dfFull[dfFull['category1'] != 'Alpha'].index)
-    dfFullA = dfFullA.drop(index = dfFullA[dfFullA['category2'] == 'Alpha'].index)
-    print(dfFullA['response'].mean(), dfFullA['response'].std()) #average between category similarity
+    dfFullAB = dfFull.drop(index = dfFull[dfFull['stimId1'] != 'A450'].index)
+    dfFullAB = dfFullAB.drop(index = dfFullAB[dfFullAB['stimID2'] != 'B550'].index)
 
-    dfFullB = dfFull.drop(index = dfFull[dfFull['category1'] != 'Beta'].index)
-    dfFullB = dfFullB.drop(index = dfFullB[dfFullB['category2'] == 'Beta'].index)
-    print(dfFullB['response'].mean(), dfFullB['response'].std()) #average between category similarity
 
-    dfFullG = dfFull.drop(index = dfFull[dfFull['category1'] != 'Gamma'].index)
-    dfFullG = dfFullG.drop(index = dfFullG[dfFullG['category2'] == 'Gamma'].index)
-    print(dfFullG['response'].mean(), dfFullG['response'].std()) #average between category similarity
-    print('                  ')
+
+    dfFullBG = dfFull.drop(index = dfFull[dfFull['stimId1'] != 'B950'].index)
+    dfFullBG = dfFullBG.drop(index = dfFullBG[dfFullBG['stimID2'] != 'C1050'].index)
+
+
+    FullMeans= [dfFullAB['response'].mean(),dfFullBG['response'].mean()]
+    FullSD = [dfFullAB['response'].std(),dfFullBG['response'].std()]
+
 
 
 
@@ -580,28 +607,27 @@ def checkCBSBetween(cold, fullClass, reducedClass, noObs):
     #get the data for the reduced classification condition similarity ratings
     print('reduced calss sim descriptives:')
     dfReduced = pd.read_csv(reducedClass)
+
     dfReduced = dfReduced.replace(' Beta', 'Beta')
+
+
 
 
     dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] == 'C1350'].index)
     dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimID2'] == 'C1350'].index)
-    dfREduced = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] == 'C1450'].index)
+    dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] == 'C1450'].index)
     dfReduced = dfReduced.drop(index = dfReduced[dfReduced['stimID2'] == 'C1450'].index)
 
-    dfReducedA = dfReduced.drop(index = dfReduced[dfReduced['category1'] != 'Alpha'].index)
-    dfReducedA = dfReducedA.drop(index = dfReducedA[dfReducedA['category2'] == 'Alpha'].index)
-    print(dfReducedA['response'].mean(), dfReducedA['response'].std()) #average between category similarity
+    dfReducedAB = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] != 'A450'].index)
+    dfReducedAB = dfReducedAB.drop(index = dfReducedAB[dfReducedAB['stimID2'] != 'B550'].index)
 
-    dfReducedB = dfReduced.drop(index = dfReduced[dfReduced['category1'] != 'Beta'].index)
-    dfReducedB = dfReducedB.drop(index = dfReducedB[dfReducedB['category2'] == 'Beta'].index)
-    print(dfReducedB['response'].mean(), dfReducedB['response'].std()) #average between category similarity
-
-    dfReducedG = dfReduced.drop(index = dfReduced[dfReduced['category1'] != 'Gamma'].index)
-    dfReducedG = dfReducedG.drop(index = dfReducedG[dfReducedG['category2'] == 'Gamma'].index)
-    print(dfReducedG['response'].mean(), dfReducedG['response'].std()) #average between category similarity
-    print('                  ')
+    dfReducedBG = dfReduced.drop(index = dfReduced[dfReduced['stimId1'] != 'B950'].index)
+    dfReducedBG = dfReducedBG.drop(index = dfReducedBG[dfReducedBG['stimID2'] != 'C1050'].index)
 
 
+
+    ReducedMeans= [dfReducedAB['response'].mean(),dfReducedBG['response'].mean()]
+    ReducedSD = [dfReducedAB['response'].std(),dfReducedBG['response'].std()]
 
 
 
@@ -609,8 +635,10 @@ def checkCBSBetween(cold, fullClass, reducedClass, noObs):
 
     #get the data for the no observation condition similarity data
     print('no obs calss sim descriptives:')
-    dfNoObs = pd.read_csv(noObs) 
+    dfNoObs = pd.read_csv(noObs)
+
     dfNoObs = dfNoObs.replace(' Beta', 'Beta')
+
 
     dfNoObs = dfNoObs.drop(index = dfNoObs[dfNoObs['stimId1'] == 'C1350'].index)
     dfNoObs = dfNoObs.drop(index = dfNoObs[dfNoObs['stimID2'] == 'C1350'].index)
@@ -618,70 +646,65 @@ def checkCBSBetween(cold, fullClass, reducedClass, noObs):
     dfNoObs = dfNoObs.drop(index = dfNoObs[dfNoObs['stimID2'] == 'C1450'].index)
 
 
-    dfNoObsA = dfNoObs.drop(index = dfNoObs[dfNoObs['category1'] != 'Alpha'].index)
-    dfNoObsA = dfNoObsA.drop(index = dfNoObsA[dfNoObsA['category2'] == 'Alpha'].index)
-    print(dfNoObsA['response'].mean(), dfNoObsA['response'].std()) #average between category similarity
+    dfNoObsAB = dfNoObs.drop(index = dfNoObs[dfNoObs['stimId1'] != 'A450'].index)
+    dfNoObsAB = dfNoObsAB.drop(index = dfNoObsAB[dfNoObsAB['stimID2'] != 'B550'].index)
 
-    dfNoObsB = dfNoObs.drop(index = dfNoObs[dfNoObs['category1'] != 'Beta'].index)
-    dfNoObsB = dfNoObsB.drop(index = dfNoObsB[dfNoObsB['category2'] == 'Beta'].index)
-    print(dfNoObsB['response'].mean(), dfNoObsB['response'].std()) #average between category similarity
+    dfNoObsBG = dfNoObs.drop(index = dfNoObs[dfNoObs['stimId1'] != 'B950'].index)
+    dfNoObsBG = dfNoObsBG.drop(index = dfNoObsBG[dfNoObsBG['stimID2'] != 'C1050'].index)
 
-    dfNoObsG = dfNoObs.drop(index = dfNoObs[dfNoObs['category1'] != 'Gamma'].index)
-    dfNoObsG = dfNoObsG.drop(index = dfNoObsG[dfNoObsG['category2'] == 'Gamma'].index)
-    print(dfNoObsG['response'].mean(), dfNoObsG['response'].std()) #average between category similarity
-    print('                  ')
 
+
+
+    NoObsMeans= [dfNoObsAB['response'].mean(), dfNoObsBG['response'].mean()]
+    NoObsSD = [dfNoObsAB['response'].std(), dfNoObsBG['response'].std()]
 
 
 
 
 
 
-    #do scipy anovas fisrt because they're simple to set up
+    numsubs = len(dfCold['id'].unique()) + len(dfFull['id'].unique()) +len(dfReduced['id'].unique()) + len(dfNoObs['id'].unique())
+
+    #quick anaova with scipy because more simple to set up than the stats models ols
     print('ANOVAs')
-    print(f_oneway(dfColdA['response'], dfFullA['response'], dfReducedA['response'], dfNoObsA['response']))
-    print('                         ')
-    print(f_oneway(dfColdB['response'], dfFullB['response'], dfReducedB['response'], dfNoObsB['response']))
-    print('                         ')
-    print(f_oneway(dfColdG['response'], dfFullG['response'], dfReducedG['response'], dfNoObsG['response']))
-    print('                         ')
+    ABstat, ABpval= f_oneway(dfColdAB['response'], dfFullAB['response'], dfReducedAB['response'], dfNoObsAB['response'])
 
-
-    #now that I know the BETA anova is sig, anova with statsmodels ols so I can get partial eta squared
-    olsdata = np.array(list(dfColdB['response']) + list(dfFullB['response']) + list(dfReducedB['response']) + list(dfNoObsB['response']))
-    olslabels = (['ColdB'] * len(dfColdB['response'])) + (['FullB'] * len(dfFullB['response']))+ (['ReducedB'] * len(dfReducedB['response'])) + (['NoObsB'] * len(dfNoObsB['response']))
-    olsdf = pd.DataFrame({'data': olsdata, 'group': olslabels})
-    model = ols('data ~ C(group)', data=olsdf).fit()
-    anova_table = sm.stats.anova_lm(model)
-    print(anova_table)
-    # Calculate eta-squared
-    ss_between = anova_table['sum_sq'][0]
-    ss_total = ss_between + anova_table['sum_sq'][1]
-    eta_squared = ss_between / ss_total
-
-    print("Eta-squared value:", eta_squared)
-
-
-    print('POST HOC on BETAS')
-    M = np.array([dfColdB['response'].mean(),dfFullB['response'].mean(), dfReducedB['response'].mean(), dfNoObsB['response'].mean()])
-    var = np.array([dfColdB['response'].sem(),dfFullB['response'].sem(), dfReducedB['response'].sem(), dfNoObsB['response'].sem()])
-
-    comparisons= [dfColdB['response'], dfFullB['response'], dfReducedB['response'], dfNoObsB['response']]
+    BGstat, BGpval= f_oneway(dfColdBG['response'], dfFullBG['response'], dfReducedBG['response'], dfNoObsBG['response'])
     
-    posthoc = skpost.posthoc_scheffe(a=comparisons)
-    print(posthoc)
-    effectSize = cohend(d1=dfFullB['response'], d2=dfReducedB['response'])
-    print(effectSize)
+    
+
+    output = pd.DataFrame(
+        {
+            'Category-Diff' : ['Alpha-Beta', 'Beta-Gamma',],
+            'Cold Means': coldMeans,
+            'Cold SD' : coldSD,
+            'Full Means' : FullMeans,
+            'Full SD' : FullSD,
+            'Reduced Means' : ReducedMeans,
+            'Reduced SD' : ReducedSD,
+            'No Obs Means' : NoObsMeans,
+            'No Obs SD' : NoObsSD,
+            'F statistic' : [ABstat, BGstat],
+            'p value' : [ABpval, BGpval],
+            'n': [numsubs,numsubs]
+        },
+    )
+    print(output)
+    output.to_csv('Analysis/stats_output/Between_Sim_Boundary_Items.csv')
     
 
 
 
 
 
-
-
-
-
-
-
-
+'''
+cold= 'cold_sim_results.csv'
+fullClass= 'cond_2_similarity_results.csv'
+reducedClass = 'cond_1_similarity_results.csv'
+noObs= 'cond_3_similarity_results.csv'
+checkCBSBetween_BoundaryItems(
+    cold=cold,
+    fullClass=fullClass,
+    reducedClass=reducedClass,
+    noObs=noObs
+    )'''

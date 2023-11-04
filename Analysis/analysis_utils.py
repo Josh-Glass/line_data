@@ -8,6 +8,7 @@ import scikit_posthocs as skpost
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 import itertools
+import matplotlib.colors as colors
 
 
 # function to calculate Cohen's d for independent samples-- taken from https://machinelearningmastery.com/effect-size-measures-in-python/
@@ -444,6 +445,176 @@ def plotTyps(path, title, changestimID, changes):
 
 
 
+
+def logPlotTyp2(path, title, changestimID, changes):
+    df = pd.read_csv(path)
+    df = df.replace(' Beta', 'Beta')
+
+    #change the stim ID to pixel value of the line
+    if changestimID == True:
+        for i in changes:
+            df= df.replace(i, int(changes[i])) #needs to be an int
+
+    numSubs= len(df['id'].unique())
+
+    dfA = df.drop(index = df[df['category'] != 'Alpha'].index)
+    dfB = df.drop(index = df[df['category'] != 'Beta'].index)
+    dfG = df.drop(index = df[df['category'] != 'Gamma'].index)
+
+
+    Ax = np.log10(np.array(dfA['stimId']))
+    Ay = np.array(dfA['response']) +1
+
+
+    Bx = np.log10(np.array(dfB['stimId']))
+    By = np.array(dfB['response']) +1
+
+    Gx = np.log10(np.array(dfG['stimId']))
+    Gy = np.array(dfG['response']) +1
+
+    #Alpha regression Line
+    YA= Ay        
+    XA = Ax
+    XA = XA
+    XA = sm.add_constant(XA)
+    modelA= sm.OLS(YA,XA)
+    resultsA = modelA.fit()
+    Aregx= np.linspace(np.min(Ax), np.max(Ax), 1000)
+    Aregy= resultsA.params[1]*Aregx + resultsA.params[0]
+    plt.plot(Aregx, Aregy, c='red', linewidth=3.5)
+
+
+    #Beta regression Line
+    YB= By        
+    XB = Bx
+    XB = XB
+    XB = sm.add_constant(XB)
+    modelB= sm.OLS(YB,XB)
+    resultsB = modelB.fit()
+    Bregx= np.linspace(np.min(Bx), np.max(Bx), 1000)
+    Bregy= resultsB.params[1]*Bregx + resultsB.params[0]
+    plt.plot(Bregx, Bregy, c='blue', linewidth=3.5)
+
+
+    #Gamma regression Line
+    YG= Gy        
+    XG = Gx
+    XG = XG
+    XG = sm.add_constant(XG)
+    modelG= sm.OLS(YG,XG)
+    resultsG = modelG.fit()
+    Gregx= np.linspace(np.min(Gx), np.max(Gx), 1000)
+    Gregy= resultsG.params[1]*Gregx + resultsG.params[0]
+    plt.plot(Gregx, Gregy, c='green', linewidth=3.5)
+
+    plt.scatter(x=Ax, y=Ay, marker='o', s=100, ec=colors.to_rgba('black',1), fc=colors.to_rgba('red',0.1), label=r'$\alpha$')
+    plt.scatter(x=Bx, y=By, marker='s',s=100, ec=colors.to_rgba('black',1), fc=colors.to_rgba('blue',0.1), label=r'$\beta$')
+    plt.scatter(x=Gx, y=Gy, marker='^', s=100, ec=colors.to_rgba('black',1), fc=colors.to_rgba('green',0.1), label=r'$\gamma$')
+    plt.ylabel('Typicality Rating')
+    plt.xlabel('log(line length)')
+    plt.title(str(title)+'\nn='+ str(numSubs))
+
+    plt.subplots_adjust(left=0.1, bottom=0.1, right=0.80, top=0.85)
+    plt.legend(bbox_to_anchor=(1,1), loc="upper left")
+    #plt.show()
+    plt.savefig('Analysis/graphs/'+str(title) + '.png')
+    plt.clf()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def logPlotTyp1(path, title, changestimID, changes):
+    df = pd.read_csv(path)
+    df = df.replace(' Beta', 'Beta')
+
+    #change the stim ID to pixel value of the line
+    if changestimID == True:
+        for i in changes:
+            df= df.replace(i, int(changes[i])) #needs to be an int
+
+    numSubs= len(df['id'].unique())
+
+    dfA = df.drop(index = df[df['category'] != 'Alpha'].index)
+
+
+    Ax = np.log10(np.array(dfA['stimId']))
+    Ay = np.array(dfA['response']) +1
+
+
+
+    #Alpha regression Line
+    YA= Ay        
+    XA = Ax
+    XA = XA
+    XA = sm.add_constant(XA)
+    modelA= sm.OLS(YA,XA)
+    resultsA = modelA.fit()
+    Aregx= np.linspace(np.min(Ax), np.max(Ax), 1000)
+    Aregy= resultsA.params[1]*Aregx + resultsA.params[0]
+    plt.plot(Aregx, Aregy, c='red', linewidth=3.5)
+
+
+
+    plt.scatter(x=Ax, y=Ay, marker='o', s=100, ec=colors.to_rgba('black',1), fc=colors.to_rgba('red',0.1), label=r'$\alpha$')
+    plt.ylabel('Typicality Rating')
+    plt.xlabel('log(line length)')
+    plt.title(str(title)+'\nn='+ str(numSubs))
+
+    plt.subplots_adjust(left=0.1, bottom=0.1, right=0.80, top=0.85)
+    plt.legend(bbox_to_anchor=(1,1), loc="upper left")
+    #plt.show()
+    plt.savefig('Analysis/graphs/'+str(title) + '.png')
+    plt.clf()
+
+
+
+
+changes= {
+    'A50': '50',
+    'A150': '150',
+    'A250': '250',
+    'A350': '350',
+    'A450': '450',
+
+    'B550': '550',
+    'B650': '650',
+    'B750': '750',
+    'B850': '850',
+    'B950': '950',
+
+    'C1050': '1050',
+    'C1150': '1150',
+    'C1250': '1250',
+    'C1350': '1350',
+    'C1450': '1450',
+}
+
+
+#logPlotTyp2(path='cond_2_typicality2_results.csv', title='Post-Classification Typicality- Full Classification', changestimID=True, changes=changes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def threeGetGens(path, title):
     df = pd.read_csv(str(path))
     newdf = df.drop(index = df[df['category'] != 'test'].index)
@@ -529,8 +700,23 @@ def threeGetGens(path, title):
 
 
 
-def HardTestRight_GetGens(path, title):
-    df = pd.read_csv(str(path))
+def HardTestRight_GetGens(pathtest, pathlearn, title):
+    df = pd.read_csv(str(pathtest))
+    dflearn = pd.read_csv(str(pathlearn))
+
+    dflearn = dflearn.drop(index = dflearn[dflearn['block'] != 4].index)
+
+    dflearnA = dflearn.drop(index = dflearn[dflearn['stimId'] != 'A450'].index)
+    dflearnFailA = dflearnA.drop(index = dflearnA[dflearnA['response'] == 'Alpha'].index)
+    learnFailA = list(dflearnFailA['id'])
+    print(learnFailA)
+    print('')
+    dflearnB = dflearn.drop(index = dflearn[dflearn['stimId'] != 'B950'].index)
+    dflearnFailB = dflearnB.drop(index = dflearnB[dflearnB['response'] != 'Beta'].index)
+    learnFailB = list(dflearnFailB['id'])
+    print(learnFailB)
+
+
     df = df.replace(' Beta', 'Beta')
 
     for index, row in df.iterrows():
@@ -539,8 +725,8 @@ def HardTestRight_GetGens(path, title):
 
     dfFailedAPnums = df[df['stimId']=='A450']
     dfFailedAPnums = dfFailedAPnums.drop(index = dfFailedAPnums[dfFailedAPnums['response'] == 'Alpha'].index)
-    failedAPnums= list(dfFailedAPnums['id'])
-    #print(dfFailedAPnums)
+    failedAPnums= list(dfFailedAPnums['id']) + learnFailA 
+    #print('lista ', failedAPnums)
 
     dfA = df
     for item in failedAPnums:
@@ -548,10 +734,9 @@ def HardTestRight_GetGens(path, title):
 
 
     dfFailedBPnums = df[df['stimId']=='B950']
-    #print(dfFailedBPnums['accuracy'].mean())
     dfFailedBPnums = dfFailedBPnums.drop(index = dfFailedBPnums[dfFailedBPnums['response'] == 'Beta'].index)
-    failedBPnums= list(dfFailedBPnums['id'])
-    #print(dfFailedBPnums)
+    failedBPnums= list(dfFailedBPnums['id']) + learnFailB 
+    #print('list b', failedBPnums)
 
     dfB = df
     for item in failedBPnums:
@@ -561,7 +746,7 @@ def HardTestRight_GetGens(path, title):
     newdfB = dfB.drop(index = dfB[dfB['category'] != 'test'].index)
     groupB= newdfB.groupby(['stimId','response'], as_index= True)['id'].describe()
     groupB.rename(columns = {'count':'counts'}, inplace = True)
-    print(groupB)
+    #print(groupB)
 
 
     newdfA = dfA.drop(index = dfA[dfA['category'] != 'test'].index)
@@ -610,7 +795,7 @@ def HardTestRight_GetGens(path, title):
     ax.set_ylabel('Count of Subjects')
     ax.set_xticks(x_pos)
     ax.set_xticklabels(regions)
-    ax.set_title(str(T1000)+'\n'+'B5 Correct: '+str(title)+"(n="+str(numsubsB)+")")
+    ax.set_title(str(T1000)+'\n'+'B5 Correct '+str(title)+"(n="+str(numsubsB)+")")
     ax.yaxis.grid(False)
     ax.tick_params(axis='x', which='major', labelsize=10)
 
@@ -626,7 +811,7 @@ def HardTestRight_GetGens(path, title):
     ax1.set_ylabel('Count of Subjects')
     ax1.set_xticks(x_pos2)
     ax1.set_xticklabels(regions2)
-    ax1.set_title('T500'+'\n'+'A5 Correct: '+str(title)+"(n="+str(numsubsA)+")")
+    ax1.set_title('T500'+'\n'+'A5 Correct '+str(title)+"(n="+str(numsubsA)+")")
     ax1.yaxis.grid(False)
     ax1.tick_params(axis='x', which='major', labelsize=10)
 
@@ -635,6 +820,7 @@ def HardTestRight_GetGens(path, title):
     plt.clf()
 
 
+#HardTestRight_GetGens(pathlearn='cond_3_trainPhase_results.csv', pathtest='cond_3_testPhase_results.csv',title='at Train And Test (No Observation)')
 
 
 
