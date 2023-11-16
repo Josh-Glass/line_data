@@ -3,6 +3,7 @@ from sklearn.manifold import MDS
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+from sklearn.metrics import euclidean_distances
 
 def getSims(path, title):
     df = pd.read_csv(path)
@@ -205,8 +206,14 @@ def Do_mds(path, title):
               random_state=3,
               )
     df_scaled= mds.fit_transform(df)
-    print(df_scaled)
-    print(mds.stress_)
+    #print(df_scaled)
+    #print(mds.stress_)
+
+    points = mds.embedding_
+    #print(points)
+    DE = euclidean_distances(points)
+    stress = mds.stress_ / (np.sum((DE - np.mean(df.values))**2))
+    print(stress)
 
     y= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     c=['r','r','r','r','r',
@@ -223,9 +230,9 @@ def Do_mds(path, title):
     ax.scatter(x=df_scaled[10:15,0], y=y[10:15],color='g',s=500, marker=r'$\gamma$')
 
 
-    ax.scatter(x=np.mean(df_scaled[0:5,0]), y=0,edgecolors='k',linewidths=2.5,color='None',s=500, marker='*')
-    ax.scatter(x=np.mean(df_scaled[5:10,0]), y=0,edgecolors='k',linewidths=2.5,color='None',s=500, marker='*')
-    ax.scatter(x=np.mean(df_scaled[10:15,0]), y=0,edgecolors='k',linewidths=2.5,color='None',s=500, marker='*')
+    #ax.scatter(x=np.mean(df_scaled[0:5,0]), y=0,edgecolors='k',linewidths=2.5,color='None',s=500, marker='*')
+    #ax.scatter(x=np.mean(df_scaled[5:10,0]), y=0,edgecolors='k',linewidths=2.5,color='None',s=500, marker='*')
+    #ax.scatter(x=np.mean(df_scaled[10:15,0]), y=0,edgecolors='k',linewidths=2.5,color='None',s=500, marker='*')
 
 
     ax.scatter(x=xT500, y=0,color='k',s=500, marker=r'$T$')
@@ -238,7 +245,7 @@ def Do_mds(path, title):
     ax.xaxis.set_ticks_position('bottom')
     ax.yaxis.set_major_locator(ticker.NullLocator())
 
-    ax.set_title(str(title) + '\nStress = ' + str(mds.stress_))
+    ax.set_title(str(title) + '\nNormalized Stress = ' + str(np.round(stress,decimals=3)))
     
 
 
@@ -250,8 +257,8 @@ def Do_mds(path, title):
         return result
 
 
-    print('distance from t500-- beta - alpha', (cityblock_distance([xT500], df_scaled[5]) - cityblock_distance([xT500], df_scaled[4])))
-    print('distance from t1000-- gamma - beta', (cityblock_distance([xT1000], df_scaled[10]) - cityblock_distance([xT1000], df_scaled[9])))
+    #print('distance from t500-- beta - alpha', (cityblock_distance([xT500], df_scaled[5]) - cityblock_distance([xT500], df_scaled[4])))
+    #print('distance from t1000-- gamma - beta', (cityblock_distance([xT1000], df_scaled[10]) - cityblock_distance([xT1000], df_scaled[9])))
 
     plt.show()
 
@@ -259,5 +266,5 @@ def Do_mds(path, title):
 
 
 mdspath= 'C:/Users/apers/line_data/MDS/ReducedClassSim.csv'
-title = 'Reduced Classification Condition'
+title = ''
 Do_mds(path =mdspath, title=title)

@@ -444,6 +444,66 @@ def plotTyps(path, title, changestimID, changes):
     
 
 
+def individualTyps(path, title, changestimID, changes):
+    df = pd.read_csv(path)
+    if changestimID == True:
+        for i in changes:
+            df= df.replace(i, changes[i])
+
+    numSubs= len(df['id'].unique())
+
+
+    
+    for subject in df['id'].unique():
+        means_df = df[df['id']== subject].groupby(['stimId'], as_index= True)['response'].mean()
+
+        print(subject)
+        print(np.array(means_df.index))
+        means = np.array(means_df)
+        regions = np.array(means_df.index)
+        x_pos = np.arange(len(regions))
+    
+        # Build the plot
+        fig, ax = plt.subplots()
+        #plt.figure(figsize=(20, 3))
+        #plt.ylim(0,1)
+        ax.bar(x_pos[0:5], means[0:5], align='center',color='r',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '.')
+        ax.bar(x_pos[5:10], means[5:10], align='center',color='b',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '/')
+        ax.bar(x_pos[10:15], means[10:15], align='center',color='g',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= 'o')
+        ax.set_ylim(0,7)
+        ax.set_ylabel('Typicality')
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(regions)
+        ax.set_title(str(title)+" subject "+str(subject))
+        ax.yaxis.grid(False)
+        ax.tick_params(axis='x', which='major', labelsize=10)
+
+        plt.savefig('Analysis/graphs/individual_typs/'+'ss'+str(subject)+'_'+str(title) + '.png')
+        plt.clf()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def logPlotTyp2(path, title, changestimID, changes):
@@ -1390,3 +1450,146 @@ def checkThatAccisCorrect(path):
 
 
 #checkThatAccisCorrect(path='cond_3_testPhase_results.csv')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##find the 4 different supprofiles for typicality<-- (1) positive slope, (2) negative slope, (3) flat gradient, (4) central tendency
+
+
+def subTypeTyps(path, title, changestimID, changes):
+    df = pd.read_csv(path)
+    if changestimID == True:
+        for i in changes:
+            df= df.replace(i, changes[i])
+
+    numSubs= len(df['id'].unique())
+
+
+    central = np.array([2,4,6,4,2])
+    pos = np.array([2,3,4,5,6])
+    neg = np.array([6,5,4,3,2])
+    flat = np.array([5,5,5,5,5])
+    regions = np.array(['1', '2', '3', '4', '5']) 
+    x_pos = np.arange(len(regions))
+
+    '''
+    # Build the plot
+    fig, (ax1, ax2, ax3, ax4) = plt.subplots(1,4, sharex=True, sharey=True)
+    #plt.figure(figsize=(20, 3))
+    #plt.ylim(0,1)
+    ax1.bar(x_pos, central, align='center',color='gray',edgecolor='black',linewidth=3, alpha=0.6, ecolor='black', capsize=4, width=0.7, )
+    ax2.bar(x_pos, pos, align='center',color='gray',edgecolor='black',linewidth=3, alpha=0.6, ecolor='black', capsize=4, width=0.7,)
+    ax3.bar(x_pos, neg, align='center',color='gray',edgecolor='black',linewidth=3, alpha=0.6, ecolor='black', capsize=4, width=0.7,)
+    ax4.bar(x_pos, flat, align='center',color='gray',edgecolor='black',linewidth=3, alpha=0.6, ecolor='black', capsize=4, width=0.7,)
+    
+    ax1.set_ylim(0,7)
+    ax1.set_xticks(x_pos)
+    ax1.set_xticklabels(regions)
+    ax1.yaxis.grid(False)
+    ax1.tick_params(axis='x', which='major', labelsize=10)
+    ax2.set_ylim(0,7)
+    ax2.set_xticks(x_pos)
+    ax2.set_xticklabels(regions)
+    ax2.yaxis.grid(False)
+    ax2.tick_params(axis='x', which='major', labelsize=10)
+    ax3.set_ylim(0,7)
+    ax3.set_xticks(x_pos)
+    ax3.set_xticklabels(regions)
+    ax3.yaxis.grid(False)
+    ax3.tick_params(axis='x', which='major', labelsize=10)
+    ax4.set_ylim(0,7)
+    ax4.set_xticks(x_pos)
+    ax4.set_xticklabels(regions)
+    ax4.yaxis.grid(False)
+    ax4.tick_params(axis='x', which='major', labelsize=10)
+
+
+    ax1.set_title('Central Tendency',fontsize=8)
+    ax2.set_title('Positive Slope', fontsize=8)
+    ax3.set_title('Negative Slope', fontsize = 8)
+    ax4.set_title('Flat Gradient', fontsize = 8)
+    fig.suptitle('Possible Subprofiles', fontsize = 20)
+    fig.supylabel('Typicality')
+    fig.supxlabel('Category Exemplars')
+
+    plt.savefig('Analysis/graphs/individual_typs/PossibleSubTypes.png')
+    plt.clf()'''
+
+
+    
+    for subject in df['id'].unique():
+        means_df = df[df['id']== subject].groupby(['stimId'], as_index= True)['response'].mean()
+
+        print(subject)
+        print(np.array(means_df.index))
+        means = np.array(means_df)
+        regions = np.array(means_df.index)
+        x_pos = np.arange(len(regions))
+    
+        # Build the plot
+        fig, ax = plt.subplots()
+        #plt.figure(figsize=(20, 3))
+        #plt.ylim(0,1)
+        ax.bar(x_pos[0:5], means[0:5], align='center',color='r',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '.')
+        ax.bar(x_pos[5:10], means[5:10], align='center',color='b',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= '/')
+        ax.bar(x_pos[10:15], means[10:15], align='center',color='g',edgecolor='black',linewidth=3, alpha=0.9, ecolor='black', capsize=4, width=0.7, hatch= 'o')
+        ax.set_ylim(0,7)
+        ax.set_ylabel('Typicality')
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(regions)
+        ax.set_title(str(title)+" subject "+str(subject))
+        ax.yaxis.grid(False)
+        ax.tick_params(axis='x', which='major', labelsize=10)
+
+        plt.savefig('Analysis/graphs/individual_typs/'+'ss'+str(subject)+'_'+str(title) + '.png')
+        
+
+
+
+
+
+
+
+
+
+
+
+changes= {
+    'A50': 'A1',
+    'A150': 'A2',
+    'A250': 'A3',
+    'A350': 'A4',
+    'A450': 'A5',
+
+    'B550': 'B1',
+    'B650': 'B2',
+    'B750': 'B3',
+    'B850': 'B4',
+    'B950': 'B5',
+
+    'C1050': 'G1',
+    'C1150': 'G2',
+    'C1250': 'G3',
+    'C1350': 'G4',
+    'C1450': 'G5',
+}
+
+subTypeTyps(path='C:/Users/apers/line_data/cond_3_typicality2_results.csv', title= 'No Observation Typicality', changestimID=True,changes=changes)
+
+

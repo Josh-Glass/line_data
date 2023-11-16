@@ -1,4 +1,4 @@
-category,count,unique,top,freq
-Alpha,150,2,1,117
-Beta,150,2,1,109
-Gamma,150,2,1,147
+,category,means,SD
+0,Alpha,0.78,0.41563406724226665
+1,Beta,0.7266666666666667,0.44716356880977404
+2,Gamma,0.98,0.14046901303903675

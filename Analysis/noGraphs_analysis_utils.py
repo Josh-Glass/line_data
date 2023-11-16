@@ -40,7 +40,24 @@ def AggLearnDescriptives(path, title):
     #GET OVERALL LEARN CURVES
     means_df = df.groupby(['block'], as_index= True)['accuracy'].describe()
     means_df.rename(columns = {'mean':'means', 'std':'stndDev'}, inplace = True)
-    means_df.to_csv('Analysis/stats_output/'+str(title)+'_Learning_Curve_AggData.csv')
+
+
+    df1 = df.drop(df[df['block']!=4].index)
+    df1 = df1.groupby(['id'], as_index=True)['accuracy'].mean()
+    print(len(np.array(df1)))
+    dftest = pd.read_csv('cond_1_testPhase_results.csv')
+    dftest = dftest.replace(' Beta', 'Beta')
+    for index, row in dftest.iterrows():
+        if row['response'] == row['category']:
+            dftest.at[index, 'accuracy'] = 1
+    dftest = dftest.drop(dftest[dftest['category']=='test'].index)
+    dftest = dftest.groupby(['id'], as_index=True)['accuracy'].mean()
+    print(np.array(dftest).mean())
+    res = stats.ttest_rel(np.array(dftest), np.array(df1), alternative='less')
+    print(res)
+
+
+   # means_df.to_csv('Analysis/stats_output/'+str(title)+'_Learning_Curve_AggData.csv')
 
 
 
@@ -117,30 +134,57 @@ def PerCatLearnDescriptives(path, title, changestimID, changes):
 
 def TestAccDescriptives(path, title, changestimID, changes):
     df = pd.read_csv(path)
+
     #fix the weird Beta thing
     df = df.replace(' Beta', 'Beta')
     for index, row in df.iterrows():
         if row['response'] == row['category']:
             df.at[index, 'accuracy'] = 1
 
+
     #make sure acc is an int
-    df = df.replace('True', 1)
-    df = df.replace('False', 0)
+    df.replace('True', 1, inplace=True)
+    df.replace('False', 0, inplace=True)
     df = df.drop(index = df[df['category'] == 'test'].index)
-
     
-
-    meansdf = df.groupby(['category'], as_index= True)['accuracy'].describe()
-    meansdf.to_csv('Analysis/stats_output/'+str(title)+'_CatTestAcc.csv')
-
+    
+    
+    overall_acc= pd.DataFrame({
+        'accuracy' : df['accuracy'].mean(),
+        'SD' : df['accuracy'].std(),
+        
+        }, index = [0]
+        )
+    
+    
+    overall_acc.to_csv('Analysis/stats_output/'+str(title)+'_OverallTestAcc.csv')
+    
+    
+    meansdf = pd.DataFrame({
+        'category' : np.array(['Alpha', 'Beta', 'Gamma']),
+        'means' : np.array(df.groupby(['category'], as_index=False)['accuracy'].mean())[:,1],
+        'SD' : np.array(df.groupby(['category'], as_index=False)['accuracy'].std())[:,1],
+                            })
+    
+    #print(meansdf)
+    #meansdf.to_csv('Analysis/stats_output/'+str(title)+'_CatTestAcc.csv')
 
     if changestimID == True:
         for i in changes:
             df= df.replace(i, changes[i])
 
+    
+    item_means = pd.DataFrame({
+        'category' : np.array(sorted(df['stimId'].unique())),
+        'means' : np.array(df.groupby(['stimId'], as_index= False)['accuracy'].mean())[:,1],
+        'SD' : np.array(df.groupby(['stimId'], as_index= False)['accuracy'].std())[:,1],
+                            })
+    
+    #print(item_means)
 
-    item_means = df.groupby(['stimId'], as_index= True)['accuracy'].describe()
-    meansdf.to_csv('Analysis/stats_output/'+str(title)+'_ItemTestAcc.csv')
+    #item_means = df.groupby(['stimId'], as_index= True)['accuracy'].describe()
+    #item_means.to_csv('Analysis/stats_output/'+str(title)+'_ItemTestAcc.csv')
+    #print(item_means)
 
 
     
@@ -232,6 +276,82 @@ def prePostTypReg(prePath,postPath, title, changestimID, changes):
 
 
 
+def slopeDescriptives(path, title, changestimID, changes):
+    df = pd.read_csv(path)
+
+
+
+    if changestimID == True:
+        for i in changes:
+            df= df.replace(i, int(changes[i]))
+
+    dfA = df.drop(index = df[df['category'] != 'Alpha'].index)
+    dfB = df.drop(index = df[df['category'] != 'Beta'].index)
+    dfG = df.drop(index = df[df['category'] != 'Gamma'].index)
+
+    
+
+    
+    ASlopes=[]
+    for subject in dfA['id'].unique():
+        Y= np.array(dfA[dfA['id']==subject]['response'])        
+        X =np.array(list(dfA[dfA['id']==subject]['stimId']))
+        X = np.log10(X)
+        X = sm.add_constant(X)
+       
+
+        model= sm.OLS(Y,X)
+        results = model.fit()
+        ASlopes.append(results.params[1])
+
+
+    BSlopes=[]
+    for subject in dfB['id'].unique():
+        Y= np.array(dfB[dfB['id']==subject]['response'])        
+        X =np.array(list(dfB[dfB['id']==subject]['stimId']))
+        X = np.log10(X)
+        X = sm.add_constant(X)
+       
+
+        model= sm.OLS(Y,X)
+        results = model.fit()
+        BSlopes.append(results.params[1])
+
+
+    GSlopes=[]
+    for subject in dfG['id'].unique():
+        Y= np.array(dfG[dfG['id']==subject]['response'])        
+        X =np.array(list(dfG[dfG['id']==subject]['stimId']))
+        X = np.log10(X)
+        X = sm.add_constant(X)
+       
+
+        model= sm.OLS(Y,X)
+        results = model.fit()
+        GSlopes.append(results.params[1])
+                
+
+
+
+
+
+
+   
+
+
+
+    resultsdf = pd.DataFrame({
+        'catgeory' : ['Alpha', 'Beta', 'Gamma'],
+        'Slopes Mean': [np.array(ASlopes).mean(), np.array(BSlopes).mean(), np.array(GSlopes).mean()],
+        'Slopes std':  [np.array(ASlopes).std(), np.array(BSlopes).std(), np.array(GSlopes).std()],
+        }
+        )
+    
+    #print(ASlopes)
+
+    resultsdf.to_csv('Analysis/stats_output/'+str(title)+'_slopeDescriptives.csv')
+
+
 
 
 changes= {
@@ -240,8 +360,20 @@ changes= {
     'A250': '250',
     'A350': '350',
     'A450': '450',
+    
+    'B550': '550',
+    'B650': '650',
+    'B750': '750',
+    'B850': '850',
+    'B950': '950',
+
+    'C1050': '1050',
+    'C1150': '1150',
+    'C1250': '1250',
+    'C1350': '1350',
+    'C1450': '1450',
 }
-#prePostTypReg(prePath='cond_2_typicality1_results.csv', postPath='cond_2_typicality2_results.csv', title='FullClass', changestimID=True, changes=changes)
+#slopeDescriptives(path='cond_3_typicality2_results.csv', title='NoObs', changestimID=True, changes=changes)
 
 
 

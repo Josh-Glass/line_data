@@ -2,8 +2,8 @@ import noGraphs_analysis_utils as utils
 
 learn_curve_paths = {
     'C:/Users/apers/line_data/cond_1_trainPhase_results.csv' : 'Learning Curve Reduced Classification',
-    'C:/Users/apers/line_data/cond_2_trainPhase_results.csv' : 'Learning Curve Full Classsification',
-    'C:/Users/apers/line_data/cond_3_trainPhase_results.csv' : 'Learning Curve No Observation',
+    #'C:/Users/apers/line_data/cond_2_trainPhase_results.csv' : 'Learning Curve Full Classsification',
+    #'C:/Users/apers/line_data/cond_3_trainPhase_results.csv' : 'Learning Curve No Observation',
 }
 
 
@@ -61,7 +61,7 @@ for key in learn_curve_paths:
 
 
 
-
+'''
 #get typicality
 for key in typ_paths:
    utils.TypsDescriptives(path=key, title= typ_paths[key], changestimID=True,changes=changes)
@@ -73,14 +73,15 @@ for key in test_accs:
    utils.TestAccDescriptives(path=key, title= test_accs[key], changestimID=True,changes=changes)
 
 
+'''
 
 
 
-
-
+'''
 #get generalization performance when subjects only ever gave two responses
 for key in gen_paths:
     utils.GetGens(path=key, title=gen_paths[key])
 
 
 
+'''
